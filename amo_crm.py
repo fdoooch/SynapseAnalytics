@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import datetime as dt
 import requests
@@ -7,9 +8,10 @@ from time import sleep
 
 filename_result = 'amocrm_stat_tsv'
 filename_amocrm = 'amocrm_raw_cntx_tsv.tsv'
-filename_amocrm_all_leads_json = 'amocrm_all_leads_json.json'
-AMO_access_token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjlkNGI5MmQ3NGZmODY5ZWNhN2M3Nzg4NzkzZjA2Yzc4MTNlNTEwNjQ0MDBkZTAwMDQzZjVhYjM1Nzc2ZDk1NTQyM2RlYWEzN2E0NTBlNWM0In0.eyJhdWQiOiIxYmEyNDUxNi1mZGQ1LTRlMTQtYWE4MS00NDc2YTQ1ZGFlZWUiLCJqdGkiOiI5ZDRiOTJkNzRmZjg2OWVjYTdjNzc4ODc5M2YwNmM3ODEzZTUxMDY0NDAwZGUwMDA0M2Y1YWIzNTc3NmQ5NTU0MjNkZWFhMzdhNDUwZTVjNCIsImlhdCI6MTYwMzM5OTEwOCwibmJmIjoxNjAzMzk5MTA4LCJleHAiOjE2MDM0ODU1MDgsInN1YiI6IjIxNjEyNCIsImFjY291bnRfaWQiOjkyMjExMDksInNjb3BlcyI6WyJwdXNoX25vdGlmaWNhdGlvbnMiLCJjcm0iLCJub3RpZmljYXRpb25zIl19.LRVG6h4lo8YGA4iFrzn31P82B9CuFv4UdrAZLrrebmaz411wPaZQCBkHajCRpB1i84mQ6KhmMT1mS8A1h7SfUEp8_3Hsw60iJSH5AaO6lmrgbC8bltOBaOGNKdxeglk4iwQvKnEwXv85WDY184IrMF8bkZ_0f6Z-wfHu6iRMubOMfQcDKuxwRFUnI34CpW99HtZY2mg6czrcb6E-_yrVRTZQ8VjQ0_AoOJCMBs6bw6ibMSnj2_I_NX0XEc-Nt1muLauTixmYFfzvZCd6xBcVkiO75_YjKzLFMASOOOfYadLybpqjOmnjmZTywzXWcyNzxg3_mku7qxz_Otxqrdl6hA'
+filename_amocrm_all_leads_ext_json = 'amocrm_all_leads_уч_json.json'
+AMO_access_token = os.getenv("AMO_ACCESS_TOKEN")
 AMO_user_agent = 'amoCRM-oAuth-client/1.0'
+AMO_content_type = 'application/json'
 AMO_SUBDOMAIN = 'syn'
 AMO_PAUSE_BETWIN_REQUESTS = 15
 AMO_PAGE_SIZE = 250
@@ -55,22 +57,6 @@ AMO_RAW_FIELDS = {'items': 648028,
                   'old_items': 562024                   
                   }
 
-
-
-
-
-
-def AmoCRMOAuth():
-    secret_key = 'kyP0zRZzyGt8sU88jreMu3ERDBpjdUN0fTQ0iWPbxCTtRuHPyBFtfdgN5FjAS2Wv'
-    integration_id = '1114de56-d014-4f0e-ae3a-a1437650a5e0'
-    authorisation_code = 'def502002deaa329c855f2c05362d9d99d80f0e0bde1e9ea467bdb23e97282fe6489ef8e9b78f8ff296e0a6a150d0d1cce1f9fac03ece3b3f9d026ff0e7c778dd3aadc6eb7beefd320355a68bae7028bc184d8fce8a38588a76250a7ac541262649d918f7915962b05c92e5ea2ba0273cc7811c3c1ac8440b72a6474724cd4a4a23b0edd5cc9f0bcfeed310e6fc90f3839d7e72309da5a8c7bd24ab0b9e59693bdfa875e989c6e4743316d41af0d8e70776477f7e10b4345f9d97eeef2f32c5fc46ffa10b1e989f0fc47415ee36b2d5cf35ca974965fb8c8a42d7610f5a44f4042c224b2774d7cb3ab9ee1a42632c4570ad0ae1dc3beda1c4e7af64e382e441dae745908a23f77a372222342194693d3b5a85e75a99bcf514085c673098cf7bd006db90f7c49b8f57552cf1b883edff456845e65ebfede8eed1f1f99f88627988679abd19a548496b4c2676a84e5b1e81a595355a0bb2564b318c4d36da417b87425ff7439d0117981021847003cd6df88c4005d742604f91581e39857578a67150b547daa07720148b26ec95d25f3d3932ec996337b3afc7560b82989e5eb18889e8e7f578085484ea22fe0b060f62646c7ad5b7feda979fed0458042806d4ed6b4'
-    AMO_access_token_URL = 'https://syn.amocrm.ru/oauth2/access_token'
-    AMO_refresh_token = 'def50200ba6d36a9fe94db8ea01ee4678cd9e5959e21766ccbc4fae00ac178089543f11cc76bccf0f56ad7e5d8ee1dcbd9ed90e54ab8b09b4c213bcf8bee15791b687208be222920c5216d8a8abe7ac9f07f792bd129d268b6aa61f16ea72ffdf7d079315d8497651481e1ae95155fbcf30359ee286190ad8cc7162d29f3c31f2e886bd4cc2282d7dc63b3f03888cc99bd56f29d4e4f75a617550db038f428c18fd3d66f71f8c40d0b40d3b0e0eaf632b583abb5f6180f33ad730d1fc823d34da1175ee7c2dc1eb27bc3d302fbbb4eebe9f54dc8549032254cc4305af3ae2c95d3368e0299aacb48e58ff0bf98dd20ef3ecc9a30badc12f20ec130d4c358ef46e2f7b6a22dd81f19167c354848f7708ff4ce8ba0253838710c8f128208636db9292097d9587cb1d19c80f55f46254775edf9510dcceff81ce37525ac2bf6f4613d61161eb3110049616c44ce3215f8aa7e6bdc3d91fde83c506620f3c75c9cee3cf6df1957e4e67f77835e25cb85c71acdb8fccfebb3630b22c7b73b665feb6382c4547bf86f0e6d59003c6130dc7d78ae8841bd0e379c2b8e9c022f62437465b0673b2eb916e08b699f047900a7c31fded26f4194bc17921f364298e619272a5461f0c09c1c320ee8'
-    
-    AMO_content_type = 'application/json'
-
-    return 0
-
 #Получаем информацию о субдомене, с которым работаем - пока просто для проверки работоспособности кода
 def amo_check_domain():
     url = 'https://' + AMO_SUBDOMAIN + '.amocrm.ru/api/v2/account'
@@ -101,6 +87,7 @@ def amo_check_domain():
 
 
 #Получаем список сделок с элементами списков. limit = 0 .. 500, но лучше 50
+#Отсортирован по убыванию даты последней модификации
 #Page - номер страницы (размер страницы = limit)
 #Код ответа 204 означает, что контента больше нет
 def amo_get_deals_ext(limit, page):
@@ -123,8 +110,8 @@ def amo_get_deals_ext(limit, page):
     params = {
         "limit": limit,
         "page": page,
-        "with": "catalog_elements",
-        "order[updated_at]": "asc"
+        "with": "catalog_elements,contacts,loss_reason",
+        "order[updated_at]": "desc"
     }
 
     try:
@@ -134,8 +121,10 @@ def amo_get_deals_ext(limit, page):
     except ConnectionError:
         return 'Ошибка ConnectionError ' + url
 
-#Выкачиваем все сделки со списками из AMO отсортированные по дате последней модификации по возрастанию и сохраняем их в JSON-файл
+#Выкачиваем все сделки со списками из AMO отсортированные по дате последней модификации по убыванию и сохраняем их в JSON-файл
+#Эту функцию используем тогда, когда у нас на сервере нет никакого списка сделок
 def amo_get_all_deals_ext_to_json():
+    print('качаем все сделки!')
     page = 1
     limit = AMO_PAGE_SIZE
     all_leads = []
@@ -144,7 +133,6 @@ def amo_get_all_deals_ext_to_json():
         rs = amo_get_deals_ext(limit, page)
         if rs.status_code == 200:
             json_string = json.loads(rs.text)
-           # print(json_string['_embedded']['leads'])
             all_leads += (json.loads(rs.text))['_embedded']['leads']
         elif rs.status_code == 204:
             print('загрузка успешно завершена')
@@ -157,7 +145,7 @@ def amo_get_all_deals_ext_to_json():
         page += 1
         sleep(AMO_PAUSE_BETWIN_REQUESTS)
         print(f'Page: {page}')
-    with open(filename_amocrm_all_leads_json, 'w', encoding="utf8") as output_file:
+    with open(filename_amocrm_all_leads_ext_json, 'w', encoding="utf8") as output_file:
         json.dump(all_leads, output_file, ensure_ascii=False)
 
     return 0
@@ -225,7 +213,7 @@ def amo_get_some_last_modified_deals_ext(count):
 
 #Актуализируем наш json-файл
 def amo_sync():
-    with open(filename_amocrm_all_leads_json, encoding="utf8") as json_file:
+    with open(filename_amocrm_all_leads_ext_json, encoding="utf8") as json_file:
         data = json.load(json_file)
     print('Самая поздняя сделка сейчас:', data[-1]['updated_at'])
     rs = amo_get_last_modified_deals_ext(AMO_PAGE_SIZE, 1)
