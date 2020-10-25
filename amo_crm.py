@@ -13,7 +13,7 @@ AMO_access_token = os.getenv("AMO_ACCESS_TOKEN")
 AMO_user_agent = 'amoCRM-oAuth-client/1.0'
 AMO_content_type = 'application/json'
 AMO_SUBDOMAIN = 'syn'
-AMO_PAUSE_BETWIN_REQUESTS = 15
+AMO_PAUSE_BETWIN_REQUESTS = 4
 AMO_PAGE_SIZE = 250
 
 
