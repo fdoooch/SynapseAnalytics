@@ -351,3 +351,6 @@ MigrationBackup/
 
 #enviroment
 .env
+
+#Папки с данными
+amo_leads_raw_json/

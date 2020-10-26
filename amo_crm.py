@@ -4,17 +4,21 @@ import datetime as dt
 import requests
 import json
 from time import sleep
+from loguru import logger
 
 
 filename_result = 'amocrm_stat_tsv'
 filename_amocrm = 'amocrm_raw_cntx_tsv.tsv'
-filename_amocrm_all_leads_ext_json = 'amocrm_all_leads_уч_json.json'
+filename_amocrm_all_leads_ext_json = 'amocrm_all_leads_ext_json.json'
 AMO_access_token = os.getenv("AMO_ACCESS_TOKEN")
+AMO_page_shift = int(os.getenv("AMO_PAGE_SHIFT"))
 AMO_user_agent = 'amoCRM-oAuth-client/1.0'
 AMO_content_type = 'application/json'
 AMO_SUBDOMAIN = 'syn'
+AMO_LEADS_RAW_JSON_FOLDER_PATH = "amo_leads_raw_json"
 AMO_PAUSE_BETWIN_REQUESTS = 4
 AMO_PAGE_SIZE = 250
+AMO_PAGES_COUNT_PER_LOAD = 100 #Количество страниц размером AMO_PAGE_SIZE, которое будем подгружать за один запуск скрипта (для случаем, когда нам нужно выгрузить из AMO много сделок)
 
 
 AMO_RAW_FIELDS = {'items': 648028,
@@ -119,14 +123,19 @@ def amo_get_deals_ext(limit, page):
         return rs
 
     except ConnectionError:
-        return 'Ошибка ConnectionError ' + url
+        logger.error('Ошибка ConnectionError ' + url)
+
 
 #Выкачиваем все сделки со списками из AMO отсортированные по дате последней модификации по убыванию и сохраняем их в JSON-файл
 #Эту функцию используем тогда, когда у нас на сервере нет никакого списка сделок
+@logger.catch
 def amo_get_all_deals_ext_to_json():
-    print('качаем все сделки!')
+    logger.info('Скачиваем все сделки в расширенном формате. PAGE_SHIFT = ' + str(AMO_page_shift))
     page = 1
     limit = AMO_PAGE_SIZE
+    os.environ['AMO_PAGE_SHIFT'] = str(AMO_page_shift + 1)
+    if not os.path.isdir(AMO_LEADS_RAW_JSON_FOLDER_PATH):
+        os.mkdir(AMO_LEADS_RAW_JSON_FOLDER_PATH)
     all_leads = []
     has_more = True
     while has_more:
@@ -134,18 +143,24 @@ def amo_get_all_deals_ext_to_json():
         if rs.status_code == 200:
             json_string = json.loads(rs.text)
             all_leads += (json.loads(rs.text))['_embedded']['leads']
+            #Если количество полученных записей достигла предела - сохраняем их в файл и обнуляем массив
+            if page % AMO_PAGES_COUNT_PER_LOAD == 0:
+                with open(AMO_LEADS_RAW_JSON_FOLDER_PATH + '/' + filename_amocrm_all_leads_ext_json + str(page), 'w', encoding="utf8") as output_file:
+                    json.dump(all_leads, output_file, ensure_ascii=False)
+                all_leads = []
+                logger.info(f'{str(page)} выгружено в файл')
         elif rs.status_code == 204:
-            print('загрузка успешно завершена')
+            logger.info('загрузка успешно завершена')
             has_more = False
             break
         else:
-            print(f'Ошибка {rs.status_code}')
+            logger.error(f'Ошибка {rs.status_code}')
             has_more = False
             break
         page += 1
         sleep(AMO_PAUSE_BETWIN_REQUESTS)
-        print(f'Page: {page}')
-    with open(filename_amocrm_all_leads_ext_json, 'w', encoding="utf8") as output_file:
+        logger.info(f'Page: {page}')
+    with open(AMO_LEADS_RAW_JSON_FOLDER_PATH + '/' + filename_amocrm_all_leads_ext_json + str(page), 'w', encoding="utf8") as output_file:
         json.dump(all_leads, output_file, ensure_ascii=False)
 
     return 0
