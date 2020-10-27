@@ -18,7 +18,7 @@ AMO_SUBDOMAIN = 'syn'
 AMO_LEADS_RAW_JSON_FOLDER_PATH = "amo_leads_raw_json"
 AMO_PAUSE_BETWIN_REQUESTS = 4
 AMO_PAGE_SIZE = 250
-AMO_PAGES_COUNT_PER_LOAD = 100 #Количество страниц размером AMO_PAGE_SIZE, которое будем подгружать за один запуск скрипта (для случаем, когда нам нужно выгрузить из AMO много сделок)
+AMO_PAGES_COUNT_PER_LOAD = 50 #Количество страниц размером AMO_PAGE_SIZE, которое будем подгружать за один запуск скрипта (для случаем, когда нам нужно выгрузить из AMO много сделок)
 
 
 AMO_RAW_FIELDS = {'items': 648028,
