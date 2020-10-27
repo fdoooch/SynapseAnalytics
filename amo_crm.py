@@ -3,6 +3,7 @@ import pandas as pd
 import datetime as dt
 import requests
 import json
+import dotenv
 from time import sleep
 from loguru import logger
 
@@ -20,6 +21,8 @@ AMO_PAUSE_BETWIN_REQUESTS = 4
 AMO_PAGE_SIZE = 250
 AMO_PAGES_COUNT_PER_LOAD = 50 #Количество страниц размером AMO_PAGE_SIZE, которое будем подгружать за один запуск скрипта (для случаем, когда нам нужно выгрузить из AMO много сделок)
 
+#Для начала скачиваем все сделки со ссылками на контакты из Amo и сохраняем их в набор JSON-файлов в папку amo_leads_raw_json
+#Делаем это с помощью функции amo_get_all_deals_ext_to_json()
 
 AMO_RAW_FIELDS = {'items': 648028,
                   'product_tilda': 648152,
@@ -60,6 +63,15 @@ AMO_RAW_FIELDS = {'items': 648028,
                   'utm_drupal': 632884,
                   'old_items': 562024                   
                   }
+#получаем access-токен
+def amo_refresh_access_token():
+    url = 'https://politsin.com/app/fdoooch'
+    rs = requests.get(url)
+    logger.debug(json.loads(rs.text)['token'])
+    dotenv_file = dotenv.find_dotenv()
+    dotenv.set_key(dotenv_file, 'AMO_ACCESS_TOKEN', json.loads(rs.text)['token'])
+    os.environ['AMO_ACCESS_TOKEN'] = json.loads(rs.text)['token']
+    
 
 #Получаем информацию о субдомене, с которым работаем - пока просто для проверки работоспособности кода
 def amo_check_domain():
@@ -88,6 +100,41 @@ def amo_check_domain():
 
     except ConnectionError:
         print('Ошибка ConnectionError', url)
+
+#Получаем список сделок с элементами списков. limit = 0 .. 500, но лучше 50
+#Отсортирован по возрастанию даты создания
+#Page - номер страницы (размер страницы = limit)
+#Код ответа 204 означает, что контента больше нет
+def amo_get_deals_sorted_by_created_date_ext(limit, page):
+    url = 'https://' + AMO_SUBDOMAIN + '.amocrm.ru/api/v4/leads'
+    errors = {
+        400: 'Bad request',
+        401: 'Unauthorized',
+        403: 'Forbidden',
+        404: 'Not found',
+        500: 'Internal server error',
+        502: 'Bad gateway',
+        503: 'Service unavailable'
+    }
+    
+    headers = {
+        "User-Agent": AMO_user_agent,
+        "Authorization": 'Bearer ' + AMO_access_token
+    }
+
+    params = {
+        "limit": limit,
+        "page": page,
+        "with": "catalog_elements,contacts,loss_reason",
+        "order[created_at]": "inc"
+    }
+
+    try:
+        rs = requests.get(url, headers=headers, params=params)
+        return rs
+
+    except ConnectionError:
+        logger.error('Ошибка ConnectionError ' + url)
 
 
 #Получаем список сделок с элементами списков. limit = 0 .. 500, но лучше 50
@@ -139,7 +186,7 @@ def amo_get_all_deals_ext_to_json():
     all_leads = []
     has_more = True
     while has_more:
-        rs = amo_get_deals_ext(limit, page)
+        rs = amo_get_deals_sorted_by_created_date_ext(limit, page)
         if rs.status_code == 200:
             json_string = json.loads(rs.text)
             all_leads += (json.loads(rs.text))['_embedded']['leads']
