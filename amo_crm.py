@@ -6,11 +6,14 @@ import json
 import dotenv
 from time import sleep
 from loguru import logger
+import pprint
 
 
 filename_result = 'amocrm_stat_tsv'
 filename_amocrm = 'amocrm_raw_cntx_tsv.tsv'
 filename_amocrm_all_leads_ext_json = 'amocrm_all_leads_ext_json.json'
+AMO_REDIRECT_URI = 'https://hook.integromat.com/78sigwp948jnsjf2ndodfctwc3yuechm'
+
 AMO_access_token = os.getenv("AMO_ACCESS_TOKEN")
 AMO_page_shift = int(os.getenv("AMO_PAGE_SHIFT"))
 AMO_user_agent = 'amoCRM-oAuth-client/1.0'
@@ -62,15 +65,59 @@ AMO_RAW_FIELDS = {'items': 648028,
                   'page_drupal': 587868,
                   'utm_drupal': 632884,
                   'old_items': 562024                   
-                  }
-#получаем access-токен
+                 }
+
+#получаем токены Amo после установки интеграции
+def amo_get_tokens():
+    url = 'https://' + AMO_SUBDOMAIN + '.amocrm.ru/oauth2/access_token'
+    headers = {
+        "User-Agent": AMO_user_agent,
+        "Content-Type": "application/json"
+    }
+    data = {
+        "client_id": "1114de56-d014-4f0e-ae3a-a1437650a5e0",
+        "client_secret": "DrwoqgcW2DD3kzUEHf5AjsGNMTQABWkgkSkeg0XXud4TjHJ4SrViXo4Qt1b5T1HQ",
+        "grant_type": "authorization_code",
+        "code": "def50200dd7fa09163d05fd27126c96b604049f78d862d92314677c31f8d3b1d93794f1dc60307f8adac0aa977a115646e304284909710aeb8e1de75b2c9907b0d86ebe87b7eaee5584818fb5936f35090781485ac519832c64ffbe80a63706312e420fb0dffc1ab3d3437ef730f5426738343b2be2a68c2de55c9b97f98e9a9e9c4ac8c3bdc44832b905f4c88f7a12b9641da53abe6dcddd3455bacb7dc91fe106087fafa1c6a7c35c27d108afe55e76ec5f66b08fe1d836d0538b6b1615256595208e5da828c64fa1b525b76d1b2fd39afc941f49e294a751e1b619f6b53f3c2eec182d8e153635bd6cbd97ef4eaddcbec3e22adc975ac015660ce6c61d734374158b5373ea680cccb7ca46b252e70fba195b3e64ed114d1976ce861ab7ca75b506a72a137b456a1bdc481440dd2c8d9179c866d897e4960f92c75de50ec94fedf5128fe13a2af17765006738fe75c38def7f7f411e5c9e690a25d44d49b3af455ea669b6e1b12631f97a8366c8629ca3084dd3ed39a6c42b17cd4a7e1b3700636e837ceeba442392f7fcb950e44e045c0b8041407860075ba85d27c605227e07ef8888e6c8f3367af500041af5f092c0dfedf581b83faa1cf1c1744e30a437d498161373022ff6c65276fcd19df99b0683cbbaed8d835cec7d5bb86610b7cb077d884da8c",
+        "redirect_uri": AMO_REDIRECT_URI
+        }
+    try:
+        rs = requests.post(url, headers=headers, data=data)
+        logger.debug(json.loads(rs.text))
+       # pprint(json.loads(rs.text))
+
+    except ConnectionError:
+        logger.error('Ошибка ConnectionError ' + url)
+
+
+
+                  
+#обновляем access-токен
 def amo_refresh_access_token():
-    url = 'https://politsin.com/app/fdoooch'
-    rs = requests.get(url)
-    logger.debug(json.loads(rs.text)['token'])
-    dotenv_file = dotenv.find_dotenv()
-    dotenv.set_key(dotenv_file, 'AMO_ACCESS_TOKEN', json.loads(rs.text)['token'])
-    os.environ['AMO_ACCESS_TOKEN'] = json.loads(rs.text)['token']
+  #  url = 'https://politsin.com/app/fdoooch'
+  #  rs = requests.get(url)
+     logger.debug('Refresh token:' + os.getenv("AMO_REFRESH_TOKEN"))
+     url = 'https://' + AMO_SUBDOMAIN + '.amocrm.ru/oauth2/access_token'
+     headers = {
+        "User-Agent": AMO_user_agent,
+        "Content-Type": "application/json"
+     }
+     data = {"client_id": os.getenv("AMO_CLIENT_ID"),
+        "client_secret": os.getenv("AMO_CLIENT_SECRET"),
+        "grant_type": "refresh_token",
+        "refresh_token": os.getenv("AMO_REFRESH_TOKEN"),
+        "redirect_uri": AMO_REDIRECT_URI
+        }
+     try:
+         rs = requests.post(url, headers=headers, data=data)
+         logger.debug(json.loads(rs.text))
+       # pprint(json.loads(rs.text))
+
+     except ConnectionError:
+         logger.error('Ошибка ConnectionError ' + url)
+   # dotenv_file = dotenv.find_dotenv()
+   # dotenv.set_key(dotenv_file, 'AMO_ACCESS_TOKEN', json.loads(rs.text)['token'])
+   # os.environ['AMO_ACCESS_TOKEN'] = json.loads(rs.text)['token']
     
 
 #Получаем информацию о субдомене, с которым работаем - пока просто для проверки работоспособности кода
