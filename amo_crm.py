@@ -6,7 +6,6 @@ import json
 import dotenv
 from time import sleep
 from loguru import logger
-import pprint
 
 
 filename_result = 'amocrm_stat_tsv'
@@ -84,7 +83,6 @@ def amo_get_tokens():
     try:
         rs = requests.post(url, headers=headers, data=data)
         logger.debug(json.loads(rs.text))
-       # pprint(json.loads(rs.text))
 
     except ConnectionError:
         logger.error('Ошибка ConnectionError ' + url)
@@ -94,30 +92,29 @@ def amo_get_tokens():
                   
 #обновляем access-токен
 def amo_refresh_access_token():
-  #  url = 'https://politsin.com/app/fdoooch'
-  #  rs = requests.get(url)
-     logger.debug('Refresh token:' + os.getenv("AMO_REFRESH_TOKEN"))
-     url = 'https://' + AMO_SUBDOMAIN + '.amocrm.ru/oauth2/access_token'
-     headers = {
-        "User-Agent": AMO_user_agent,
-        "Content-Type": "application/json"
-     }
-     data = {"client_id": os.getenv("AMO_CLIENT_ID"),
-        "client_secret": os.getenv("AMO_CLIENT_SECRET"),
-        "grant_type": "refresh_token",
-        "refresh_token": os.getenv("AMO_REFRESH_TOKEN"),
-        "redirect_uri": AMO_REDIRECT_URI
-        }
-     try:
-         rs = requests.post(url, headers=headers, data=data)
-         logger.debug(json.loads(rs.text))
-       # pprint(json.loads(rs.text))
+    url = 'https://' + AMO_SUBDOMAIN + '.amocrm.ru/oauth2/access_token'
+    headers = {
+       "User-Agent": AMO_user_agent,
+       "Content-Type": "application/json"
+    }
+    data = {"client_id": os.getenv("AMO_CLIENT_ID"),
+       "client_secret": os.getenv("AMO_CLIENT_SECRET"),
+       "grant_type": "refresh_token",
+       "refresh_token": os.getenv("AMO_REFRESH_TOKEN"),
+       "redirect_uri": AMO_REDIRECT_URI
+       }
+    try:
+        rs = requests.post(url, headers=headers, json=data)
+        dotenv_file = dotenv.find_dotenv()
+        dotenv.set_key(dotenv_file, 'AMO_ACCESS_TOKEN', json.loads(rs.text)['access_token'])
+        dotenv.set_key(dotenv_file, 'AMO_REFRESH_TOKEN', json.loads(rs.text)['refresh_token'])
+        os.environ['AMO_ACCESS_TOKEN'] = json.loads(rs.text)['access_token']
+        os.environ['AMO_REFRESH_TOKEN'] = json.loads(rs.text)['refresh_token']
+        logger.info('AmoCRM tokens wad refreshed')
 
-     except ConnectionError:
-         logger.error('Ошибка ConnectionError ' + url)
-   # dotenv_file = dotenv.find_dotenv()
-   # dotenv.set_key(dotenv_file, 'AMO_ACCESS_TOKEN', json.loads(rs.text)['token'])
-   # os.environ['AMO_ACCESS_TOKEN'] = json.loads(rs.text)['token']
+    except ConnectionError:
+        logger.error('Ошибка ConnectionError ' + url)
+    
     
 
 #Получаем информацию о субдомене, с которым работаем - пока просто для проверки работоспособности кода
@@ -166,7 +163,7 @@ def amo_get_deals_sorted_by_created_date_ext(limit, page):
     
     headers = {
         "User-Agent": AMO_user_agent,
-        "Authorization": 'Bearer ' + AMO_access_token
+        "Authorization": 'Bearer ' + os.getenv("AMO_ACCESS_TOKEN")
     }
 
     params = {

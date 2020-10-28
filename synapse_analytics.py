@@ -11,5 +11,6 @@ print('hello Synapse Analytics!')
 
 #amo.amo_refresh_access_token()
 #print('\ntoken:', os.getenv("AMO_ACCESS_TOKEN"))
-#amo.amo_get_all_deals_ext_to_json()
+
 amo.amo_refresh_access_token()
+amo.amo_get_all_deals_ext_to_json()
