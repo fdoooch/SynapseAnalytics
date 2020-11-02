@@ -3,9 +3,11 @@ import pandas as pd
 import datetime as dt
 import requests
 import json
+import operator
 import dotenv
 from time import sleep
 from loguru import logger
+#from pprint import pprint
 
 
 filename_result = 'amocrm_stat_tsv'
@@ -19,6 +21,7 @@ AMO_user_agent = 'amoCRM-oAuth-client/1.0'
 AMO_content_type = 'application/json'
 AMO_SUBDOMAIN = 'syn'
 AMO_LEADS_RAW_JSON_FOLDER_PATH = "amo_leads_raw_json"
+AMO_LEADS_WEEK_JSON_PATH = 'amo_leads_week_json'
 AMO_PAUSE_BETWIN_REQUESTS = 4
 AMO_PAGE_SIZE = 250
 AMO_PAGES_COUNT_PER_LOAD = 50 #Количество страниц размером AMO_PAGE_SIZE, которое будем подгружать за один запуск скрипта (для случаем, когда нам нужно выгрузить из AMO много сделок)
@@ -64,8 +67,20 @@ AMO_RAW_FIELDS = {'items': 648028,
                   'page_drupal': 587868,
                   'utm_drupal': 632884,
                   'old_items': 562024                   
+
                  }
 
+#получение токена на время разработки
+def amo_get_token_fdoooch():
+    url = 'https://politsin.com/app/fdoooch'
+    rs = requests.get(url)
+    os.environ['AMO_ACCESS_TOKEN'] = json.loads(rs.text)['token']
+    dotenv_file = dotenv.find_dotenv()
+    dotenv.set_key(dotenv_file, 'AMO_ACCESS_TOKEN', json.loads(rs.text)['token'])
+    dotenv.set_key(dotenv_file, 'AMO_REFRESH_TOKEN', json.loads(rs.text)['refreshToken'])
+
+
+#NOT WORKING
 #получаем токены Amo после установки интеграции
 def amo_get_tokens():
     url = 'https://' + AMO_SUBDOMAIN + '.amocrm.ru/oauth2/access_token'
@@ -75,7 +90,7 @@ def amo_get_tokens():
     }
     data = {
         "client_id": "1114de56-d014-4f0e-ae3a-a1437650a5e0",
-        "client_secret": "DrwoqgcW2DD3kzUEHf5AjsGNMTQABWkgkSkeg0XXud4TjHJ4SrViXo4Qt1b5T1HQ",
+        "client_secret": "DfQGnU6Jg7jY2IOUYNTZfmz30KoqmcjQrbXLik8x5IQ9QaqdULIA2ejppjFDkTbP",
         "grant_type": "authorization_code",
         "code": "def50200dd7fa09163d05fd27126c96b604049f78d862d92314677c31f8d3b1d93794f1dc60307f8adac0aa977a115646e304284909710aeb8e1de75b2c9907b0d86ebe87b7eaee5584818fb5936f35090781485ac519832c64ffbe80a63706312e420fb0dffc1ab3d3437ef730f5426738343b2be2a68c2de55c9b97f98e9a9e9c4ac8c3bdc44832b905f4c88f7a12b9641da53abe6dcddd3455bacb7dc91fe106087fafa1c6a7c35c27d108afe55e76ec5f66b08fe1d836d0538b6b1615256595208e5da828c64fa1b525b76d1b2fd39afc941f49e294a751e1b619f6b53f3c2eec182d8e153635bd6cbd97ef4eaddcbec3e22adc975ac015660ce6c61d734374158b5373ea680cccb7ca46b252e70fba195b3e64ed114d1976ce861ab7ca75b506a72a137b456a1bdc481440dd2c8d9179c866d897e4960f92c75de50ec94fedf5128fe13a2af17765006738fe75c38def7f7f411e5c9e690a25d44d49b3af455ea669b6e1b12631f97a8366c8629ca3084dd3ed39a6c42b17cd4a7e1b3700636e837ceeba442392f7fcb950e44e045c0b8041407860075ba85d27c605227e07ef8888e6c8f3367af500041af5f092c0dfedf581b83faa1cf1c1744e30a437d498161373022ff6c65276fcd19df99b0683cbbaed8d835cec7d5bb86610b7cb077d884da8c",
         "redirect_uri": AMO_REDIRECT_URI
@@ -89,7 +104,7 @@ def amo_get_tokens():
 
 
 
-                  
+  #NOT WORKING                
 #обновляем access-токен
 def amo_refresh_access_token():
     url = 'https://' + AMO_SUBDOMAIN + '.amocrm.ru/oauth2/access_token'
@@ -105,6 +120,7 @@ def amo_refresh_access_token():
        }
     try:
         rs = requests.post(url, headers=headers, json=data)
+        logger.debug(rs.status_code)
         dotenv_file = dotenv.find_dotenv()
         dotenv.set_key(dotenv_file, 'AMO_ACCESS_TOKEN', json.loads(rs.text)['access_token'])
         dotenv.set_key(dotenv_file, 'AMO_REFRESH_TOKEN', json.loads(rs.text)['refresh_token'])
@@ -236,7 +252,7 @@ def amo_get_all_deals_ext_to_json():
             all_leads += (json.loads(rs.text))['_embedded']['leads']
             #Если количество полученных записей достигла предела - сохраняем их в файл и обнуляем массив
             if page % AMO_PAGES_COUNT_PER_LOAD == 0:
-                with open(AMO_LEADS_RAW_JSON_FOLDER_PATH + '/' + filename_amocrm_all_leads_ext_json + str(page), 'w', encoding="utf8") as output_file:
+                with open(AMO_LEADS_RAW_JSON_FOLDER_PATH + '/' + filename_amocrm_all_leads_ext_json.split('.')[0] + str(page) + '.' + filename_amocrm_all_leads_ext_json.split('.')[1], 'w', encoding="utf8") as output_file:
                     json.dump(all_leads, output_file, ensure_ascii=False)
                 all_leads = []
                 logger.info(f'{str(page)} выгружено в файл')
@@ -385,8 +401,6 @@ def amocrm_utm_prepare(df):
     return df
 
 
-
-
 #Подготовка файла из AmoCRM
 def amocrm_prepare_stat(df):
     df['date'] = pd.to_datetime(df['Дата создания'], format='%d.%m.%Y %H:%M:%S')
@@ -406,3 +420,137 @@ def amocrm_dataframe_preparation():
     return df_amo
 
 
+###Упорядочивание архива json-файлов
+###Перепаковываем сделки в файлы, группирующие их по неделе создания
+###Название файлов: amo_leads_YYYY_WW.json
+###Недели нумеруются по ISO
+###первой неделей года считается неделя, содержащая первый четверг года, что эквивалентно следующим выражениям:
+### неделя, содержащая 4 января;
+### неделя, в которой 1 января это понедельник, вторник, среда или четверг;
+
+def amo_update_deal_in_json_deals(new_deal, week_deals):
+    #Если дата изменения соответствующей сделки в AMO JSON WEEK не меньше даты изменения new_deal - ничего не меняем
+    deal_index = [old_deal['id'] for old_deal in week_deals].index(new_deal['id'])
+    if week_deals[deal_index]['updated_at'] >= new_deal['updated_at']:
+        logger.info(f'Сохранена имеющаяся информация по сделке #{new_deal["id"]}')
+    
+    #Если дата изменения новой сделки больше, а старая сделка содержит информацию о дате перехода в статус "Не целевой" (trash)
+    # - заменяем старую сделку на новую, сохраная дату перехода в статус "Не целевой"
+    elif 'trashed_at' in week_deals[deal_index]:
+        new_deal['trashed_at'] = week_deals[deal_index]['trashed_at']
+        week_deals.pop(deal_index)
+        week_deals.append(new_deal)
+        logger.info(f'Сделка #{new_deal["id"]} обновлена')
+    
+    #Иначе - просто заменяем старую сделку на новую
+    else:
+        week_deals.pop(deal_index)
+        week_deals.append(new_deal)
+        logger.info(f'Сделка #{new_deal["id"]} обновлена')
+
+    return week_deals
+        
+
+#Добавляем пакет сделок в нашу базу JSON WEEK (Список сделок в JSON, разбитый на файлы по неделям создания сделки)
+def amo_add_json_pack_to_json_week_deals(json_pack):
+    #Если базы JSON WEEK нет - создаём
+    if not os.path.exists(AMO_LEADS_WEEK_JSON_PATH):
+        logger.info('База AMO JSON WEEK не найдена')
+        os.mkdir(AMO_LEADS_WEEK_JSON_PATH)
+        logger.info('Создана новая база AMO JSON WEEK в каталоге ' + AMO_LEADS_WEEK_JSON_PATH)
+
+    count_added_deals = 0
+    count_updated_deals = 0
+
+    #Пока в пачке есть сделки добавляем их в базу
+    while len(json_pack) > 0:
+        new_deal = json_pack[0]
+        year = dt.datetime.fromtimestamp(new_deal['created_at']).isocalendar()[0]
+        week = dt.datetime.fromtimestamp(new_deal['created_at']).isocalendar()[1]
+        
+        #Если json с этой недели уже есть, дополняем его
+        if os.path.isfile(AMO_LEADS_WEEK_JSON_PATH + '/' + 'amo_json_' + str(year) +'_'+ str(week) + '.json'):
+            with open(AMO_LEADS_WEEK_JSON_PATH + '/' + 'amo_json_' + str(year) +'_'+ str(week) + '.json', 'r', encoding="utf8") as week_json_file:
+                logger.info("Дополняем файл " + AMO_LEADS_WEEK_JSON_PATH + '/' + 'amo_json_' + str(year) +'_'+ str(week) + '.json',)
+                week_deals = json.load(week_json_file)
+                
+                #Пока у новых сделок сохраняется номер недели
+                while dt.datetime.fromtimestamp(json_pack[0]['created_at']).isocalendar()[0] == year and dt.datetime.fromtimestamp(json_pack[0]['created_at']).isocalendar()[1] == week:
+                    #Если сделка с таким id уже содержится в базе JSON WEEK - обновляем её
+                    if any(deal['id'] == json_pack[0]['id'] for deal in week_deals):
+                        week_deals = amo_update_deal_in_json_deals(json_pack[0], week_deals)
+                        logger.info(f'Сделка #{new_deal["id"]} обновлена')
+                        count_updated_deals += 1
+                    #если id новой сделки уникален - добавляем сделку
+                    else:
+                        week_deals.append(json_pack[0])
+                        logger.info(f'Сделка #{json_pack[0]["id"]} добавлена в AMO JSON WEEK')
+                        count_added_deals += 1
+                    #Удаляем добавленную сделку из пачки
+                    json_pack.pop(0)
+                    #если сделок в пачке больше нет, сохраняем сделки в AMO JSON WEEK и завершаем функцию
+                    if len(json_pack) == 0:
+                        output_filename = 'amo_json_' + str(year) +'_'+ str(week).zfill(2) + '.json'
+                        with open(AMO_LEADS_WEEK_JSON_PATH + '/' + output_filename, 'w', encoding="utf8") as output_file:
+                            json.dump(week_deals, output_file, ensure_ascii=False, indent=2)
+                        logger.info('Обновлён файл:' + output_filename)
+                        logger.info('Добавление пачки сделок завершено')
+                        logger.info(f'{count_added_deals} было добавлено')
+                        logger.info(f'{count_updated_deals} было обновлено')
+                        return
+
+                #Если неделя в новой сделке отличаеся от той, с которой работали, то сохраняем сделки в AMO JSON WEEK и начинаем работу с новой неделей
+                output_filename = 'amo_json_' + str(year) +'_'+ str(week).zfill(2) + '.json'
+                with open(AMO_LEADS_WEEK_JSON_PATH + '/' + output_filename, 'w', encoding="utf8") as output_file:
+                    json.dump(week_deals, output_file, ensure_ascii=False, indent=2)
+                logger.info('Обновлён файл:' + output_filename)
+                continue
+
+        #Если в AMO JSON WEEK нет файла соответствующей недели, создаём его и наполняем
+        else:
+            logger.info(f'Добавляем в AMO JSON WEEK новую неделю: {week}, год: {year}')
+            week_deals = []
+            
+            #Пока у новых сделок сохраняется номер недели
+            while dt.datetime.fromtimestamp(json_pack[0]['created_at']).isocalendar()[0] == year and dt.datetime.fromtimestamp(json_pack[0]['created_at']).isocalendar()[1] == week:
+                week_deals.append(json_pack[0])
+                logger.info(f'Сделка #{json_pack[0]["id"]} добавлена в AMO JSON WEEK')
+                count_added_deals += 1
+                json_pack.pop(0)
+                #если сделок в пачке больше нет, сохраняем сделки в AMO JSON WEEK и завершаем функцию
+                if len(json_pack) == 0:
+                    output_filename = 'amo_json_' + str(year) +'_'+ str(week).zfill(2) + '.json'
+                    with open(AMO_LEADS_WEEK_JSON_PATH + '/' + output_filename, 'w', encoding="utf8") as output_file:
+                        json.dump(week_deals, output_file, ensure_ascii=False, indent=2)
+                    logger.info('Создан файл:' + output_filename)
+                    logger.info('Добавление пачки сделок завершено')
+                    logger.info(f'{count_added_deals} было добавлено')
+                    logger.info(f'{count_updated_deals} было обновлено')
+                    return
+
+
+            #Если неделя в новой сделке отличаеся от той, с которой работали, то сохраняем сделки в AMO JSON WEEK и начинаем работу с новой неделей
+            output_filename = 'amo_json_' + str(year) +'_'+ str(week).zfill(2) + '.json'
+            with open(AMO_LEADS_WEEK_JSON_PATH + '/' + output_filename, 'w', encoding="utf8") as output_file:
+                json.dump(week_deals, output_file, ensure_ascii=False, indent=2)
+            logger.info('Обновлён файл:' + output_filename)
+            continue              
+    
+    #Если в пачке кончились сделки - завершаем функцию
+    return
+
+
+
+def amo_put_deals_from_raw_json_to_week_json():
+    files_list = os.listdir(AMO_LEADS_RAW_JSON_FOLDER_PATH)
+    for filename in files_list:    
+        with open(AMO_LEADS_RAW_JSON_FOLDER_PATH + '/' + filename, 'r', encoding="utf8") as json_file:
+            deals = json.load(json_file)
+            deals.sort(key=operator.itemgetter('created_at'))
+        logger.info(f'{filename} загружен в память - {len(deals)} сделок')
+        #Добавляем новые сделки в AMO JSON WEEK
+        amo_add_json_pack_to_json_week_deals(deals)
+        logger.info('Обновление AMO JSON WEEK завершено')
+
+       # week_deals = [d for d in deals if(dt.datetime.fromtimestamp(d['created_at']).isocalendar()[0] == year)]
+      #  week_deals = list(filter(lambda d: d['created_at'] == 1489650351, data))
