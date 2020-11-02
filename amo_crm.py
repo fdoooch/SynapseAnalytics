@@ -67,8 +67,16 @@ AMO_RAW_FIELDS = {'items': 648028,
                   'page_drupal': 587868,
                   'utm_drupal': 632884,
                   'old_items': 562024                   
-
                  }
+
+AMO_PIPELINES_ID = {"CNTX": 7038,
+                    "WEB": 28752
+                    }
+
+#pipeline_id: trash_status_id
+AMO_TRASH_STATUSES_ID = {7038: 28985871, #CNTX
+                   28752: 29160522 #WEB
+    }
 
 #получение токена на время разработки
 def amo_get_token_fdoooch():
@@ -428,28 +436,35 @@ def amocrm_dataframe_preparation():
 ### неделя, содержащая 4 января;
 ### неделя, в которой 1 января это понедельник, вторник, среда или четверг;
 
-def amo_update_deal_in_json_deals(new_deal, week_deals):
+#Обновляем сделку, в случае, если она уже присутствует в базе
+def amo_update_deal_in_json_deals(new_deal, deals):
     #Если дата изменения соответствующей сделки в AMO JSON WEEK не меньше даты изменения new_deal - ничего не меняем
-    deal_index = [old_deal['id'] for old_deal in week_deals].index(new_deal['id'])
-    if week_deals[deal_index]['updated_at'] >= new_deal['updated_at']:
+    deal_index = [old_deal['id'] for old_deal in deals].index(new_deal['id'])
+    if deals[deal_index]['updated_at'] >= new_deal['updated_at']:
         logger.info(f'Сохранена имеющаяся информация по сделке #{new_deal["id"]}')
     
     #Если дата изменения новой сделки больше, а старая сделка содержит информацию о дате перехода в статус "Не целевой" (trash)
     # - заменяем старую сделку на новую, сохраная дату перехода в статус "Не целевой"
-    elif 'trashed_at' in week_deals[deal_index]:
-        new_deal['trashed_at'] = week_deals[deal_index]['trashed_at']
-        week_deals.pop(deal_index)
-        week_deals.append(new_deal)
+    elif 'trashed_at' in deals[deal_index]:
+        new_deal['trashed_at'] = deals[deal_index]['trashed_at']
+        deals.pop(deal_index)
+        deals = amo_add_deal_to_json_deals(new_deal, deals)
         logger.info(f'Сделка #{new_deal["id"]} обновлена')
     
     #Иначе - просто заменяем старую сделку на новую
     else:
-        week_deals.pop(deal_index)
-        week_deals.append(new_deal)
+        deals.pop(deal_index)
+        deals = amo_add_deal_to_json_deals(new_deal, deals)
         logger.info(f'Сделка #{new_deal["id"]} обновлена')
 
-    return week_deals
-        
+    return deals
+
+#добавляем сделку в базу AMO JSON WEEK
+def amo_add_deal_to_json_deals(new_deal, deals):
+    #Если сделка в статусе "Треш - нецелевые", то добавляем дату последней модификации в поле ['trashed_at']
+    if new_deal['status_id'] in AMO_TRASH_STATUSES_ID.itervalues() and not 'trashed_at' in new_deal:
+        new_deal['trashed_at'] = new_deal['updated_at']
+    return deals.append(new_deal)
 
 #Добавляем пакет сделок в нашу базу JSON WEEK (Список сделок в JSON, разбитый на файлы по неделям создания сделки)
 def amo_add_json_pack_to_json_week_deals(json_pack):
@@ -483,7 +498,7 @@ def amo_add_json_pack_to_json_week_deals(json_pack):
                         count_updated_deals += 1
                     #если id новой сделки уникален - добавляем сделку
                     else:
-                        week_deals.append(json_pack[0])
+                        week_deals = amo_add_deal_to_json_deals(json_pack[0], week_deals)
                         logger.info(f'Сделка #{json_pack[0]["id"]} добавлена в AMO JSON WEEK')
                         count_added_deals += 1
                     #Удаляем добавленную сделку из пачки
@@ -513,7 +528,7 @@ def amo_add_json_pack_to_json_week_deals(json_pack):
             
             #Пока у новых сделок сохраняется номер недели
             while dt.datetime.fromtimestamp(json_pack[0]['created_at']).isocalendar()[0] == year and dt.datetime.fromtimestamp(json_pack[0]['created_at']).isocalendar()[1] == week:
-                week_deals.append(json_pack[0])
+                week_deals = amo_add_deal_to_json_deals(json_pack[0], week_deals)
                 logger.info(f'Сделка #{json_pack[0]["id"]} добавлена в AMO JSON WEEK')
                 count_added_deals += 1
                 json_pack.pop(0)
@@ -540,7 +555,7 @@ def amo_add_json_pack_to_json_week_deals(json_pack):
     return
 
 
-
+#Разбираем данные по сделкам, скаченные из Амо в json и раскладываем их в файлы по неделям
 def amo_put_deals_from_raw_json_to_week_json():
     files_list = os.listdir(AMO_LEADS_RAW_JSON_FOLDER_PATH)
     for filename in files_list:    
@@ -552,5 +567,9 @@ def amo_put_deals_from_raw_json_to_week_json():
         amo_add_json_pack_to_json_week_deals(deals)
         logger.info('Обновление AMO JSON WEEK завершено')
 
-       # week_deals = [d for d in deals if(dt.datetime.fromtimestamp(d['created_at']).isocalendar()[0] == year)]
-      #  week_deals = list(filter(lambda d: d['created_at'] == 1489650351, data))
+
+#### Следующий шаг
+#### Загрузить данные за неделю в датафрейм
+#### Сохранить датафрейм в Google Data Sheet
+#### Подгрузить новые сделки из Amo и добавить их в недельные сеты
+#### Добавление сделки в базу AMO JSON WEEK реализовать через функцию и Добавить поле ['trashed_at'] для сохранения даты перевода в треш
