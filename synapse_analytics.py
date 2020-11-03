@@ -4,7 +4,7 @@ import config
 import amo_crm as amo
 import google_sheets as gsheets
 from loguru import logger
-from pprint import pprint
+#from pprint import pprint
 
 #logger.add("debug.log", format="{time} {level} {module} : {function} - {message}", level="DEBUG", rotation="10:00", compression="zip")
 logger.add("info.log", format="{time} {level} {module} : {function} - {message}", level="INFO", rotation="10:00", compression="zip")
