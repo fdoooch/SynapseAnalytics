@@ -29,7 +29,7 @@ AMO_PAGES_COUNT_PER_LOAD = 50 #Количество страниц размер�
 #Для начала скачиваем все сделки со ссылками на контакты из Amo и сохраняем их в набор JSON-файлов в папку amo_leads_raw_json
 #Делаем это с помощью функции amo_get_all_deals_ext_to_json()
 
-AMO_RAW_FIELDS = {'items': 648028,
+AMO_RAW_FIELDS = {'items': 648028, 
                   'product_tilda': 648152,
                   'utm_source_tilda': 648158,
                   'utm_medium_tilda': 648160,
@@ -428,6 +428,7 @@ def amocrm_dataframe_preparation():
     return df_amo
 
 
+###============================================================================================================
 ###Упорядочивание архива json-файлов
 ###Перепаковываем сделки в файлы, группирующие их по неделе создания
 ###Название файлов: amo_leads_YYYY_WW.json
@@ -462,11 +463,12 @@ def amo_update_deal_in_json_deals(new_deal, deals):
 #добавляем сделку в базу AMO JSON WEEK
 def amo_add_deal_to_json_deals(new_deal, deals):
     #Если сделка в статусе "Треш - нецелевые", то добавляем дату последней модификации в поле ['trashed_at']
-    if new_deal['status_id'] in AMO_TRASH_STATUSES_ID.itervalues() and not 'trashed_at' in new_deal:
+    if new_deal['status_id'] in AMO_TRASH_STATUSES_ID.values() and not 'trashed_at' in new_deal:
         new_deal['trashed_at'] = new_deal['updated_at']
-    return deals.append(new_deal)
+    deals.append(new_deal)
+    return deals
 
-#Добавляем пакет сделок в нашу базу JSON WEEK (Список сделок в JSON, разбитый на файлы по неделям создания сделки)
+#Добавляем пакет сделок в нашу базу AMO JSON WEEK (Список сделок в JSON, разбитый на файлы по неделям создания сделки)
 def amo_add_json_pack_to_json_week_deals(json_pack):
     #Если базы JSON WEEK нет - создаём
     if not os.path.exists(AMO_LEADS_WEEK_JSON_PATH):
@@ -484,9 +486,9 @@ def amo_add_json_pack_to_json_week_deals(json_pack):
         week = dt.datetime.fromtimestamp(new_deal['created_at']).isocalendar()[1]
         
         #Если json с этой недели уже есть, дополняем его
-        if os.path.isfile(AMO_LEADS_WEEK_JSON_PATH + '/' + 'amo_json_' + str(year) +'_'+ str(week) + '.json'):
-            with open(AMO_LEADS_WEEK_JSON_PATH + '/' + 'amo_json_' + str(year) +'_'+ str(week) + '.json', 'r', encoding="utf8") as week_json_file:
-                logger.info("Дополняем файл " + AMO_LEADS_WEEK_JSON_PATH + '/' + 'amo_json_' + str(year) +'_'+ str(week) + '.json',)
+        if os.path.isfile(AMO_LEADS_WEEK_JSON_PATH + '/' + 'amo_json_' + str(year) +'_'+ str(week).zfill(2) + '.json'):
+            with open(AMO_LEADS_WEEK_JSON_PATH + '/' + 'amo_json_' + str(year) +'_'+ str(week).zfill(2) + '.json', 'r', encoding="utf8") as week_json_file:
+                logger.info("Дополняем файл " + AMO_LEADS_WEEK_JSON_PATH + '/' + 'amo_json_' + str(year) +'_'+ str(week).zfill(2) + '.json',)
                 week_deals = json.load(week_json_file)
                 
                 #Пока у новых сделок сохраняется номер недели
@@ -554,8 +556,7 @@ def amo_add_json_pack_to_json_week_deals(json_pack):
     #Если в пачке кончились сделки - завершаем функцию
     return
 
-
-#Разбираем данные по сделкам, скаченные из Амо в json и раскладываем их в файлы по неделям
+#Разбираем данные по сделкам, скаченные из Амо в json и раскладываем их в файлы по неделям - основная функция
 def amo_put_deals_from_raw_json_to_week_json():
     files_list = os.listdir(AMO_LEADS_RAW_JSON_FOLDER_PATH)
     for filename in files_list:    
@@ -567,9 +568,135 @@ def amo_put_deals_from_raw_json_to_week_json():
         amo_add_json_pack_to_json_week_deals(deals)
         logger.info('Обновление AMO JSON WEEK завершено')
 
+###=============================
+###========= Конец блока упорядочивания архива json-файлов
+###=======================================================
+
+###=============================================================
+###Загрузка AMO JSON WEEK в датафреймы для дальнейшей работы
+
+#получаем значение пользовательского поля из json сделки
+#пользовательские поля лежат в разделе ['custom_fields_values']
+def amo_get_custom_field_value_from_json_by_field_id(deal_json, field_id):
+    lst = list(filter(lambda item:item['field_id']==field_id, deal_json['custom_fields_values']))
+    try:
+        result = dict(lst[0])['values'][0]['value']
+    except KeyError:
+        logger.debug('Параметр отсутствует в json')
+        result = ""
+    except IndexError:
+        logger.debug(f'Поле {field_id} отсутствует в сделке #{deal_json["id"]}')
+        result = ""
+    return result
+
+#Загружаем файл json из AMO JSON WEEK в датафрейм
+def amo_get_dataframe_from_json_week(week_json_filename):
+    #Загружаем json
+    with open(AMO_LEADS_WEEK_JSON_PATH + '/' + week_json_filename, 'r', encoding="utf8") as json_file:
+            json_deals = json.load(json_file)
+    logger.info(f'{week_json_filename} загружен в память - {len(json_deals)} сделок')
+    
+    #создаём и заполняем датафрейм
+    df_deals = pd.DataFrame()
+    df_row_number = 0
+    for deal in json_deals:
+        logger.debug(f'Добавляю сделку #{deal["id"]} из файла {week_json_filename}')
+        df_deals = df_deals.append({
+            'id': str(deal['id']), #id сделки
+            'created_at': str(deal['created_at']), #дата создания сделки
+            'updated_at': str(deal['updated_at']), #дата последнего обновления сделки
+            'amo_pipeline_id': str(deal['pipeline_id']), #id воронки в AmoCRM
+            'amo_status_id': str(deal['status_id']) #id этапа в воронке AmoCRM
+            }, ignore_index=True)
+        
+        #Добавляем значения пользовательских полей
+        if deal['custom_fields_values'] != None:
+            #город клиента
+            df_deals.loc[df_row_number]['city'] = amo_get_custom_field_value_from_json_by_field_id(deal, 512318)
+        
+            #utm параметры из Друпала
+            df_deals.loc[df_row_number]['drupal_utm'] = amo_get_custom_field_value_from_json_by_field_id(deal, 632884)
+            #utm_source из Тильды
+            df_deals.loc[df_row_number]['tilda_utm_source'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648158)
+            #utm_medium из Тильды
+            df_deals.loc[df_row_number]['tilda_utm_medium'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648160)
+            #utm_campaign из Тильды
+            df_deals.loc[df_row_number]['tilda_utm_campaign'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648310)
+            #utm_content из Тильды
+            df_deals.loc[df_row_number]['tilda_utm_content'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648312)
+            #utm_term из Тильды
+            df_deals.loc[df_row_number]['tilda_utm_term'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648314)
+            #utm_source из CallTouch
+            df_deals.loc[df_row_number]['ct_utm_source'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648256)
+            #utm_medium из CallTouch
+            df_deals.loc[df_row_number]['ct_utm_medium'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648258)
+            #utm_campaign из CallTouch
+            df_deals.loc[df_row_number]['ct_utm_campaign'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648260)
+            #utm_content из CallTouch
+            df_deals.loc[df_row_number]['ct_utm_content'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648262)
+            #utm_term из CallTouch
+            df_deals.loc[df_row_number]['ct_utm_term'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648264)
+
+            #значения устаревшего поля Услуга
+            df_deals.loc[df_row_number]['amo_products_2019'] = amo_get_custom_field_value_from_json_by_field_id(deal, 562024)
+            #значения поля Услуга
+            df_deals.loc[df_row_number]['amo_products_2020'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648028)
+            #значение поля PRODUCT из тильды
+            df_deals.loc[df_row_number]['tilda_products_2020'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648152)
+
+            #piwik_id из Drupal
+            df_deals.loc[df_row_number]['drupal_piwik_id'] = amo_get_custom_field_value_from_json_by_field_id(deal, 589816)
+            #piwik_id из Tilda
+            df_deals.loc[df_row_number]['tilda_piwik_id'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648530)
+            #calltouch_session_id из Tilda
+            df_deals.loc[df_row_number]['tilda_calltouch_session_id'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648532)
+            #calltouch_session_id из CallTouch
+            df_deals.loc[df_row_number]['ct_calltouch_session_id'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648288)
+            #calltouch_client_id из CallTouch
+            df_deals.loc[df_row_number]['ct_calltouch_client_id'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648290)
+            #google_id из CallTouch
+            df_deals.loc[df_row_number]['ct_google_id'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648292)
+            #google_id из Drupal
+            df_deals.loc[df_row_number]['drupal_google_id'] = amo_get_custom_field_value_from_json_by_field_id(deal, 589818)
+            #yandex_id из CallTouch
+            df_deals.loc[df_row_number]['ct_yandex_id'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648294)
+
+            #cookies из Tilda
+            df_deals.loc[df_row_number]['tilda_cookies'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648166)
+
+        #дата перевода в trashed
+        if 'trashed_at' in deal:
+            df_deals.loc[df_row_number]['trashed_at'] = deal['trashed_at']
+        df_row_number += 1
+
+    logger.info(f'Датафрейм создан - {len(json_deals)} сделок')
+    logger.debug(df_deals.shape)
+
+    return df_deals
+
+#Создаём датафрейм по номеру недели и году
+def amo_get_dataframe_from_json_week_by_week_number(year, week):
+    week_json_filename = 'amo_json_' + str(year) + '_' + str(week).zfill(2) + '.json'
+    logger.debug(f'Собираем датафрейм из {week_json_filename}')
+    if os.path.isfile(AMO_LEADS_WEEK_JSON_PATH + '/' + week_json_filename):
+        result = amo_get_dataframe_from_json_week(week_json_filename)
+    else:
+        result = pd.DataFrame()
+    
+    return result
+
+#Создаём годовой датафрейм
+def amo_get_dataframe_from_json_week_by_year_number(year):
+    files = list(x for x in os.listdir(AMO_LEADS_WEEK_JSON_PATH) if ('amo_json_' + str(year) + '_') in x)
+    #files = list(filter(lambda x: x.contains('amo_json_' + str(year) + '_'), os.listdir(AMO_LEADS_WEEK_JSON_PATH)))
+    result_df = pd.DataFrame()
+    for file in files:
+        logger.debug(f'загружаем файл {file}')
+        result_df = result_df.append(amo_get_dataframe_from_json_week(file), ignore_index=True)
+    return result_df
 
 #### Следующий шаг
 #### Загрузить данные за неделю в датафрейм
 #### Сохранить датафрейм в Google Data Sheet
 #### Подгрузить новые сделки из Amo и добавить их в недельные сеты
-#### Добавление сделки в базу AMO JSON WEEK реализовать через функцию и Добавить поле ['trashed_at'] для сохранения даты перевода в треш
+
