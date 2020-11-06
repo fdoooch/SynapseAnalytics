@@ -1,0 +1,257 @@
+[
+      {
+        "name": "id",
+        "type": "STRING",
+        "mode": "REQUIRED"
+      },
+      {
+        "name": "created_at",
+        "type": "INTEGER",
+        "mode": "REQUIRED"
+      },
+      {
+        "name": "updated_at",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "trashed_at",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "amo_pipeline_id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "amo_status_id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "amo_city",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "tilda_city",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_city",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "drupal_utm",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "tilda_utm_source",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "tilda_utm_medium",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "tilda_utm_campaign",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "tilda_utm_content",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "tilda_utm_term",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_utm_source",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_utm_medium",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_utm_campaign",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_utm_content",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_utm_term",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "amo_channel",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "amo_items_2019",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "amo_items_2020",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "tilda_product",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "drupal_piwik_id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "tilda_piwik_id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "drupal_google_id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_google_id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_yandex_id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_calltouch_session_id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "tilda_calltouch_session_id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_calltouch_client_id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "tilda_cookies",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "drupal_page",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "tilda_page",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_page",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "tilda_form_id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "tilda_form_name",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "tilda_referer",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_referer",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_create_from",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_type_communication",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_client_phone_number",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_communication_date",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_communication_time",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_call_long",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_call_waiting",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_device",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_os",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_browser",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_call_id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      }
+]

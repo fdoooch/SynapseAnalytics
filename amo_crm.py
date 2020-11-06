@@ -27,47 +27,61 @@ AMO_PAGE_SIZE = 250
 AMO_PAGES_COUNT_PER_LOAD = 50 #Количество страниц размером AMO_PAGE_SIZE, которое будем подгружать за один запуск скрипта (для случаем, когда нам нужно выгрузить из AMO много сделок)
 
 #Для начала скачиваем все сделки со ссылками на контакты из Amo и сохраняем их в набор JSON-файлов в папку amo_leads_raw_json
-#Делаем это с помощью функции amo_get_all_deals_ext_to_json()
+#Делаем это с помощью функции amo_get_all_deals_ext_to_json
 
-AMO_RAW_FIELDS = {'items': 648028, 
-                  'product_tilda': 648152,
-                  'utm_source_tilda': 648158,
-                  'utm_medium_tilda': 648160,
-                  'utm_campaign_tilda': 648310,
-                  'utm_term_tilda': 648314,
-                  'form_id_tilda': 648164,
-                  'form_name_tilda': 648162,
-                  'cookies_tilda': 648166,
-                  'referer_tilda': 648168,
-                  'page_tilda':648556,
-                  'city_tilda':648980,
-                  'chanel_amo': 600935,
-                  'city_amo': 512318,
-                  'create_from_ct': 648218,
-                  'type_communication_ct': 648220,
-                  'client_phone_number_ct': 648224,
-                  'communication_date_ct': 648232,
-                  'communication_time_ct': 648234,
-                  'call_long_ct': 648236,
-                  'call_waiting_ct': 648238,
-                  'utm_source_ct': 648256,
-                  'utm_medium_ct': 648258,
-                  'utm_campaign_ct': 648260,
-                  'utm_content_ct': 648262,
-                  'utm_term_ct': 648264,
-                  'referer_ct': 648266,
-                  'page_ct': 648268,
-                  'city_ct': 648274,
-                  'device_ct': 648276,
-                  'os_ct': 648278,
-                  'browser_ct': 648280,
-                  'call_id_ct': 648282,
-                  'piwik_id_drupal': 589816,
-                  'google_id_drupal': 589818,
-                  'page_drupal': 587868,
-                  'utm_drupal': 632884,
-                  'old_items': 562024                   
+#Базовые поля сделок в Амо
+AMO_DEALS_BASE_FIELDS = {'id', 'created_at', 'updated_at', 'pipeline_id', 'status_id'}
+
+#Пользовательские поля в Амо с кодами полей
+AMO_DEALS_CUSTOM_FIELDS = {'amo_city': 512318, #город клиента, проставляемый менеджерами в AmoCRM
+                  'tilda_city':648980, #город, на который был ориентирован лендинг на Тильде
+                  'ct_city': 648274, #город, определившийся CallTouch
+                  'drupal_utm': 632884, #Строка с utm-метками, пробрасываемая Друпалом в Амо
+                  'tilda_utm_source': 648158, #utm_source, пробрасываемая Тильдой в Амо
+                  'tilda_utm_medium': 648160,
+                  'tilda_utm_campaign': 648310,
+                  'tilda_utm_content': 648312,
+                  'tilda_utm_term': 648314,
+                  'ct_utm_source': 648256, #utm_source, проставляемый CallTouch
+                  'ct_utm_medium': 648258,
+                  'ct_utm_campaign': 648260,
+                  'ct_utm_content': 648262,
+                  'ct_utm_term': 648264,
+                  'amo_channel': 600935,
+                  'amo_items_2019': 562024, #Старое значение поля Услуга в AmoCRM
+                  'amo_items_2020': 648028, #Новое значение поля Услуга в AmoCRM
+                  'tilda_product': 648152, #Метка продукта в Тильде
+                  'drupal_piwik_id': 589816,#piwik_id пробрасываемый Друпалом
+                  'tilda_piwik_id': 648530,
+                  'drupal_google_id': 589818,
+                  'ct_google_id': 648292,
+                  'ct_yandex_id':648294,
+                  'ct_calltouch_session_id': 648288,
+                  'tilda_calltouch_session_id': 648532,
+                  'ct_calltouch_client_id': 648290,
+                  'tilda_cookies': 648166,
+                  'drupal_page': 587868, 
+                  'tilda_page':648556,
+                  'ct_page': 648268,
+                  'tilda_form_id': 648164,
+                  'tilda_form_name': 648162,
+                  'tilda_referer': 648168,
+                  'ct_referer': 648266,
+                  'ct_create_from': 648218,
+                  'ct_type_communication': 648220,
+                  'ct_client_phone_number': 648224,
+                  'ct_communication_date': 648232,
+                  'ct_communication_time': 648234,
+                  'ct_call_long': 648236,
+                  'ct_call_waiting': 648238,
+                  'ct_device': 648276,
+                  'ct_os': 648278,
+                  'ct_browser': 648280,
+                  'ct_call_id': 648282           
                  }
+#Поля, добавляемые скриптом, при выгрузке сделок из Amo и значения по-умолчанию, если такого поля в JSON нет
+AMO_DEALS_SPECIAL_FIELDS ={
+    'trashed_at':None}
 
 AMO_PIPELINES_ID = {"CNTX": 7038,
                     "WEB": 28752
@@ -577,10 +591,16 @@ def amo_put_deals_from_raw_json_to_week_json():
 
 #получаем значение пользовательского поля из json сделки
 #пользовательские поля лежат в разделе ['custom_fields_values']
+#поле товары (648028) возвращаем в виде json
 def amo_get_custom_field_value_from_json_by_field_id(deal_json, field_id):
+        
     lst = list(filter(lambda item:item['field_id']==field_id, deal_json['custom_fields_values']))
     try:
-        result = dict(lst[0])['values'][0]['value']
+        #Если это список товаров, то нам нужно вернуть список (чтобы потом загрузить его в biqquery как RECORD)
+        if field_id == 648028:
+            result = json.dumps(dict(lst[0])['values'], ensure_ascii=False)
+        else:
+            result = dict(lst[0])['values'][0]['value']
     except KeyError:
         logger.debug('Параметр отсутствует в json')
         result = ""
@@ -597,76 +617,27 @@ def amo_get_dataframe_from_json_week(week_json_filename):
     logger.info(f'{week_json_filename} загружен в память - {len(json_deals)} сделок')
     
     #создаём и заполняем датафрейм
-    df_deals = pd.DataFrame()
+    df_deals = pd.DataFrame(columns=list(AMO_DEALS_CUSTOM_FIELDS.keys()) + list(AMO_DEALS_SPECIAL_FIELDS.keys()), dtype='string')
+
     df_row_number = 0
     for deal in json_deals:
         logger.debug(f'Добавляю сделку #{deal["id"]} из файла {week_json_filename}')
-        df_deals = df_deals.append({
-            'id': str(deal['id']), #id сделки
-            'created_at': str(deal['created_at']), #дата создания сделки
-            'updated_at': str(deal['updated_at']), #дата последнего обновления сделки
+   #     df_deals = df_deals.append({
+        df_deals = pd.concat([df_deals, pd.DataFrame(
+            {'id': str(deal['id']), #id сделки
+            'created_at': (deal['created_at']), #дата создания сделки переводим из 
+            'updated_at': (deal['updated_at']), #дата последнего обновления сделки
             'amo_pipeline_id': str(deal['pipeline_id']), #id воронки в AmoCRM
             'amo_status_id': str(deal['status_id']) #id этапа в воронке AmoCRM
-            }, ignore_index=True)
-        
-        #Добавляем значения пользовательских полей
-        if deal['custom_fields_values'] != None:
-            #город клиента
-            df_deals.loc[df_row_number]['city'] = amo_get_custom_field_value_from_json_by_field_id(deal, 512318)
-        
-            #utm параметры из Друпала
-            df_deals.loc[df_row_number]['drupal_utm'] = amo_get_custom_field_value_from_json_by_field_id(deal, 632884)
-            #utm_source из Тильды
-            df_deals.loc[df_row_number]['tilda_utm_source'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648158)
-            #utm_medium из Тильды
-            df_deals.loc[df_row_number]['tilda_utm_medium'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648160)
-            #utm_campaign из Тильды
-            df_deals.loc[df_row_number]['tilda_utm_campaign'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648310)
-            #utm_content из Тильды
-            df_deals.loc[df_row_number]['tilda_utm_content'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648312)
-            #utm_term из Тильды
-            df_deals.loc[df_row_number]['tilda_utm_term'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648314)
-            #utm_source из CallTouch
-            df_deals.loc[df_row_number]['ct_utm_source'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648256)
-            #utm_medium из CallTouch
-            df_deals.loc[df_row_number]['ct_utm_medium'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648258)
-            #utm_campaign из CallTouch
-            df_deals.loc[df_row_number]['ct_utm_campaign'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648260)
-            #utm_content из CallTouch
-            df_deals.loc[df_row_number]['ct_utm_content'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648262)
-            #utm_term из CallTouch
-            df_deals.loc[df_row_number]['ct_utm_term'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648264)
+            }, index=[0])], ignore_index=True)
 
-            #значения устаревшего поля Услуга
-            df_deals.loc[df_row_number]['amo_products_2019'] = amo_get_custom_field_value_from_json_by_field_id(deal, 562024)
-            #значения поля Услуга
-            df_deals.loc[df_row_number]['amo_products_2020'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648028)
-            #значение поля PRODUCT из тильды
-            df_deals.loc[df_row_number]['tilda_products_2020'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648152)
-
-            #piwik_id из Drupal
-            df_deals.loc[df_row_number]['drupal_piwik_id'] = amo_get_custom_field_value_from_json_by_field_id(deal, 589816)
-            #piwik_id из Tilda
-            df_deals.loc[df_row_number]['tilda_piwik_id'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648530)
-            #calltouch_session_id из Tilda
-            df_deals.loc[df_row_number]['tilda_calltouch_session_id'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648532)
-            #calltouch_session_id из CallTouch
-            df_deals.loc[df_row_number]['ct_calltouch_session_id'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648288)
-            #calltouch_client_id из CallTouch
-            df_deals.loc[df_row_number]['ct_calltouch_client_id'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648290)
-            #google_id из CallTouch
-            df_deals.loc[df_row_number]['ct_google_id'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648292)
-            #google_id из Drupal
-            df_deals.loc[df_row_number]['drupal_google_id'] = amo_get_custom_field_value_from_json_by_field_id(deal, 589818)
-            #yandex_id из CallTouch
-            df_deals.loc[df_row_number]['ct_yandex_id'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648294)
-
-            #cookies из Tilda
-            df_deals.loc[df_row_number]['tilda_cookies'] = amo_get_custom_field_value_from_json_by_field_id(deal, 648166)
-
+        #Добавляем значения пользовательских полей, если они есть
+        if deal['custom_fields_values'] is not None:
+            for key in AMO_DEALS_CUSTOM_FIELDS:
+                df_deals.loc[df_row_number, key] = str(amo_get_custom_field_value_from_json_by_field_id(deal, AMO_DEALS_CUSTOM_FIELDS[key]))
         #дата перевода в trashed
         if 'trashed_at' in deal:
-            df_deals.loc[df_row_number]['trashed_at'] = deal['trashed_at']
+            df_deals.loc[df_row_number]['trashed_at'] = (deal['trashed_at'])
         df_row_number += 1
 
     logger.info(f'Датафрейм создан - {len(json_deals)} сделок')
@@ -682,7 +653,6 @@ def amo_get_dataframe_from_json_week_by_week_number(year, week):
         result = amo_get_dataframe_from_json_week(week_json_filename)
     else:
         result = pd.DataFrame()
-    
     return result
 
 #Создаём годовой датафрейм

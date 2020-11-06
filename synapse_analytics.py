@@ -18,9 +18,15 @@ print('hello Synapse Analytics!')
 #amo.amo_get_token_fdoooch()
 
 #amo.amo_put_deals_from_raw_json_to_week_json()
-gsheets.google_one()
+#gsheets.google_one()
 
-#df = amo.amo_get_dataframe_from_json_week('amo_json_2020_40.json')
+df = amo.amo_get_dataframe_from_json_week('amo_json_2020_40.json')
 #amo.amo_get_all_deals_ext_to_json()
 #df = amo.amo_get_dataframe_from_json_week_by_year_number(2017)
-#print(df.shape)
+print(df.shape)
+
+
+### Следующий шаг: Забирать дату последней обновлённой сделки и выгружать из Амо все сделки, обновлённые после этой даты.
+### выгруженное обновление мержить с AMO DEALS WEEK JSON и загружать через датафрейм в BQ
+### Собрать датафрейм по воронке CNTX
+### Выгрузить данные для построения дашборда по CNTX и ECOM
