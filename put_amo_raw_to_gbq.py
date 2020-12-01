@@ -7,7 +7,6 @@ import amo_crm as amo
 import os
 import config
 import pandas as pd
-import numpy as np
 import json
 #from google.oauth2 import service_account
 

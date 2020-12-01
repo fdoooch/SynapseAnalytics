@@ -356,3 +356,4 @@ MigrationBackup/
 amo_leads_raw_json/
 amo_leads_week_json/
 api_keys/
+tests/

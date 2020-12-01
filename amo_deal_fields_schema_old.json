@@ -1,0 +1,383 @@
+{
+  "base_amo_deal_fields": {
+    "comment": "Базовые поля AmoCRM"
+    "fields": [
+      {
+        "name": "id",
+        "type": "STRING",
+        "mode": "REQUIRED"
+      },
+      {
+        "name": "created_at",
+        "type": "INTEGER",
+        "mode": "REQUIRED"
+      },
+      {
+        "name": "updated_at",
+        "type": "INTEGER",
+        "mode": "REQUIRED"
+      },
+      {
+        "name": "amo_pipeline_id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "amo_status_id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  "custom_amo_deals_fields": {
+    "comment": "пользовательские поля AmoCRM с id",
+    "fields": [
+      {
+        "name": "amo_city",
+        "field_id": 512318,
+        "comment": "город клиента, проставляемый менеджером в AmoCRM",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "tilda_city",
+        "field_id": 648980,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_city",
+        "field_id": 648274,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "drupal_utm",
+        "field_id": 632884,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "tilda_utm_source",
+        "field_id": 648158,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "tilda_utm_medium",
+        "field_id": 648160,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "tilda_utm_campaign",
+        "field_id": 648310,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "tilda_utm_content",
+        "field_id": 648312,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "tilda_utm_term",
+        "field_id": 648314,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_utm_source",
+        "field_id": 648256,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_utm_medium",
+        "field_id": 648258,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_utm_campaign",
+        "field_id": 648260,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_utm_content",
+        "field_id": 648262,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_utm_term",
+        "field_id": 648264,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "amo_channel",
+        "comment": "Канал, с которого пришёл клиент. проставляется либо автоматически, либо менеджером по продажам",
+        "field_id": 600935,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "amo_items_2019",
+        "field_id": 562024,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "amo_items_2020",
+        "comment": "новое значение поля услуги - сериализованный json",
+        "field_id": 648028,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "tilda_product",
+        "comment": "метка продукта в тильде - cntx, ecom, web и т.п.",
+        "field_id": 648152,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "drupal_piwik_id",
+        "field_id": 589816,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "tilda_piwik_id",
+        "field_id": 648530,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "drupal_google_id",
+        "field_id": 589818,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_google_id",
+        "field_id": 648292,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_yandex_id",
+        "field_id": 648294,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_calltouch_session_id",
+        "field_id": 648288,
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "tilda_calltouch_session_id",
+        "field_id": 648532,
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_calltouch_client_id",
+        "field_id": 648290,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "tilda_cookies",
+        "field_id": 648166,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "drupal_page",
+        "field_id": 587868,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "tilda_page",
+        "field_id": 648556,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_page",
+        "field_id": 648268,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "tilda_form_id",
+        "field_id": 648164,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "tilda_form_name",
+        "field_id": 648162,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "tilda_referer",
+        "field_id": 648168,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_referer",
+        "field_id": 648266,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_create_from",
+        "field_id": 648218,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_type_communication",
+        "field_id": 648220,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_client_phone_number",
+        "field_id": 648224,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_communication_date",
+        "field_id": 648232,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_communication_time",
+        "field_id": 648234,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_call_long",
+        "field_id": 648236,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_call_waiting",
+        "field_id": 648238,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_device",
+        "field_id": 648276,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_os",
+        "field_id": 648278,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_browser",
+        "field_id": 648280,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ct_call_id",
+        "field_id": 648282,
+        "type": "STRING",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  "_embedded_amo_fields": {
+    "comment": "Поля сделки Amo, находящиеся в CRM в разделе _embedded",
+    "fields": [
+      {
+        "name": "tags",
+        "type": "STRING",
+        "mode": "NULLABLE"
+        "comment": "теги сделок јмо - сериализованный JSON"
+      }
+    ]
+  }
+  "special_amo_deal_fields": {
+    "comment": "поля, вычисляемые на основании пользовательских и основных полей AmoCRM",
+    "fields": [
+      {
+        "name": "created_at_timestamp",
+        "type": "TIMESTAMP",
+        "mode": "REQUIRED",
+        "comment": "дата создания в формате bigquery timestamp"
+      },
+      {я
+        "name": "updated_at_timestamp",
+        "type": "TIMESTAMP",
+        "mode": "REQUIRED"
+      },
+      {
+        "name": "trashed_at",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "lead_utm_source",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "lead_utm_medium",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "lead_utm_campaign",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "lead_utm_content",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "lead_utm_term",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "lead_utm_device",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "lead_browser",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "lead_os",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      }
+    ]
+  }
+}
