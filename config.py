@@ -9,9 +9,9 @@ print('config подключен')
 env_path = Path('.') / '.env'
 load_dotenv(dotenv_path=env_path)
 
-GOOGLE_CLOUD_PROJECT_ID = 'synapse-analytics'
-API_KEYS_PATH = 'api_keys/'
-GOOGLE_CREDENTIALS_JSON_FILE_NAME = 'google_api_creds.json'
+#GOOGLE_CLOUD_PROJECT_ID = 'synapse-analytics'
+#API_KEYS_PATH = 'api_keys/'
+#GOOGLE_CREDENTIALS_JSON_FILE_NAME = 'google_api_creds.json'
 
 AMO_LEADS_RAW_JSON_PATH = 'amo_leads_raw_json/'
 AMO_LEADS_TEMP_JSON_PATH = 'amo_leads_temp_json/'
@@ -103,11 +103,11 @@ BQ_DEALS_SPECIAL_FIELDS = {'created_at_week',
                            'lead_utm_content',
                            'lead_utm_term'}
 
-BQ_DS_MAIN = 'ds_synapse_analytics'
-BQ_DS_TEMP = 'ds_temp'
-BQ_TB_AMO_DEALS_RAW = 'tb_amo_deals_raw'
+#BQ_DS_MAIN = 'ds_synapse_analytics'
+#BQ_DS_TEMP = 'ds_temp'
+#BQ_TB_AMO_DEALS_RAW = 'tb_amo_deals_raw'
 
-BQ_TB_AMO_DEALS_RAW_SHEMA = 'bq_tb_amo_deals_raw_shema.json'    
+#BQ_TB_AMO_DEALS_RAW_SHEMA = 'bq_tb_amo_deals_raw_shema.json'    
 
 
 #==============

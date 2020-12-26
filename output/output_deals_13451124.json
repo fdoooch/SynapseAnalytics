@@ -1,0 +1,296 @@
+[
+  {
+    "id": 13451124,
+    "name": "Дизайн студия. Типография.",
+    "price": 30000,
+    "responsible_user_id": 5608884,
+    "group_id": 27837,
+    "status_id": 142,
+    "pipeline_id": 7038,
+    "loss_reason_id": null,
+    "created_by": 549666,
+    "updated_by": 0,
+    "created_at": 1477983672,
+    "updated_at": 1607087474,
+    "closed_at": 1479202302,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 499034,
+        "field_name": "Квалификация",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Норм",
+            "enum_id": 1176178
+          }
+        ]
+      },
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Контекст",
+            "enum_id": 1326190
+          }
+        ]
+      },
+      {
+        "field_id": 535552,
+        "field_name": "Сайт еще",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "http://www.polaxe.ru/"
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Санкт-Петербург"
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/13451124"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [
+        {
+          "id": 28057024,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/companies/28057024"
+            }
+          }
+        }
+      ],
+      "contacts": [
+        {
+          "id": 28057026,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/28057026"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 13451124,
+    "name": "Дизайн студия. Типография.",
+    "price": 30000,
+    "responsible_user_id": 5608884,
+    "group_id": 27837,
+    "status_id": 142,
+    "pipeline_id": 7038,
+    "loss_reason_id": null,
+    "created_by": 549666,
+    "updated_by": 0,
+    "created_at": 1477983672,
+    "updated_at": 1607087474,
+    "closed_at": 1479202302,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 499034,
+        "field_name": "Квалификация",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Норм",
+            "enum_id": 1176178
+          }
+        ]
+      },
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Контекст",
+            "enum_id": 1326190
+          }
+        ]
+      },
+      {
+        "field_id": 535552,
+        "field_name": "Сайт еще",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "http://www.polaxe.ru/"
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Санкт-Петербург"
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/13451124"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [
+        {
+          "id": 28057024,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/companies/28057024"
+            }
+          }
+        }
+      ],
+      "contacts": [
+        {
+          "id": 28057026,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/28057026"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 13451124,
+    "name": "Дизайн студия. Типография.",
+    "price": 30000,
+    "responsible_user_id": 5608884,
+    "group_id": 27837,
+    "status_id": 142,
+    "pipeline_id": 7038,
+    "loss_reason_id": null,
+    "created_by": 549666,
+    "updated_by": 0,
+    "created_at": 1477983672,
+    "updated_at": 1607087474,
+    "closed_at": 1479202302,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 499034,
+        "field_name": "Квалификация",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Норм",
+            "enum_id": 1176178
+          }
+        ]
+      },
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Контекст",
+            "enum_id": 1326190
+          }
+        ]
+      },
+      {
+        "field_id": 535552,
+        "field_name": "Сайт еще",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "http://www.polaxe.ru/"
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Санкт-Петербург"
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/13451124"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [
+        {
+          "id": 28057024,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/companies/28057024"
+            }
+          }
+        }
+      ],
+      "contacts": [
+        {
+          "id": 28057026,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/28057026"
+            }
+          }
+        }
+      ]
+    }
+  }
+]

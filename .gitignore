@@ -355,5 +355,7 @@ MigrationBackup/
 #Папки с данными
 amo_leads_raw_json/
 amo_leads_week_json/
+amo_leads_temp_json/
+amo_leads_week_json - Copy 2020-12-17/
 api_keys/
 tests/

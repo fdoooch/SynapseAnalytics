@@ -1,0 +1,542 @@
+[
+  {
+    "id": 27106824,
+    "name": "Sky building от Агимы",
+    "price": 90000,
+    "responsible_user_id": 6350412,
+    "group_id": 0,
+    "status_id": 29160642,
+    "pipeline_id": 28752,
+    "loss_reason_id": null,
+    "created_by": 6350412,
+    "updated_by": 6350412,
+    "created_at": 1606804771,
+    "updated_at": 1607369184,
+    "closed_at": null,
+    "closest_task_at": 1607461140,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "Сайт",
+            "enum_id": 1462116
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Партнеры",
+            "enum_id": 1416244
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Сочи"
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/27106824"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44755820,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44755820"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 18771966,
+    "name": "Магазин страз, танцевальная одежда",
+    "price": 29000,
+    "responsible_user_id": 1376809,
+    "group_id": 0,
+    "status_id": 142,
+    "pipeline_id": 7038,
+    "loss_reason_id": null,
+    "created_by": 1376809,
+    "updated_by": 0,
+    "created_at": 1528811645,
+    "updated_at": 1607368525,
+    "closed_at": 1540297455,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Контекст",
+            "enum_id": 1326190
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "С рекламы",
+            "enum_id": 1394829
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Йошкар-Ола"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "http://oriental-shop.ru"
+          }
+        ]
+      },
+      {
+        "field_id": 525504,
+        "field_name": "Описание",
+        "field_code": null,
+        "field_type": "textarea",
+        "values": [
+          {
+            "value": "+0"
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/18771966"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [
+        {
+          "id": 36136216,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/companies/36136216"
+            }
+          }
+        }
+      ],
+      "contacts": [
+        {
+          "id": 35363228,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/35363228"
+            }
+          }
+        },
+        {
+          "id": 35363472,
+          "is_main": false,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/35363472"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 18819424,
+    "name": "+1 Магазин страз",
+    "price": 8000,
+    "responsible_user_id": 5974230,
+    "group_id": 26679,
+    "status_id": 17974606,
+    "pipeline_id": 938197,
+    "loss_reason_id": null,
+    "created_by": 551952,
+    "updated_by": 0,
+    "created_at": 1529409492,
+    "updated_at": 1607368525,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "йошкар-ола"
+          }
+        ]
+      },
+      {
+        "field_id": 613512,
+        "field_name": "Запуск",
+        "field_code": null,
+        "field_type": "date",
+        "values": [
+          {
+            "value": 1529960400
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://oriental-shop.ru/"
+          }
+        ]
+      },
+      {
+        "field_id": 629302,
+        "field_name": "проект в Natrium",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://natrium.insaitov.ru/node/86999"
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "Яндекс",
+            "enum_id": 1462098
+          },
+          {
+            "value": "Google",
+            "enum_id": 1462100
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/18819424"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [
+        {
+          "id": 36136216,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/companies/36136216"
+            }
+          }
+        }
+      ],
+      "contacts": [
+        {
+          "id": 35363472,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/35363472"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 19440128,
+    "name": "сео",
+    "price": 1,
+    "responsible_user_id": 1037199,
+    "group_id": 27837,
+    "status_id": 143,
+    "pipeline_id": 28752,
+    "loss_reason_id": null,
+    "created_by": 1037199,
+    "updated_by": 0,
+    "created_at": 1534833401,
+    "updated_at": 1607368525,
+    "closed_at": 1536662482,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "SEO",
+            "enum_id": 1389823
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Рекомендация",
+            "enum_id": 1394825
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Йошкар-Ола"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "http://oriental-shop.ru"
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/19440128"
+      }
+    },
+    "_embedded": {
+      "tags": [
+        {
+          "id": 332784,
+          "name": "входящий"
+        },
+        {
+          "id": 436489,
+          "name": "новый"
+        },
+        {
+          "id": 471452,
+          "name": "контекст"
+        }
+      ],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [
+        {
+          "id": 36136216,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/companies/36136216"
+            }
+          }
+        }
+      ],
+      "contacts": [
+        {
+          "id": 35363472,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/35363472"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 25511510,
+    "name": "Магазин страз аналитика",
+    "price": 15000,
+    "responsible_user_id": 6350412,
+    "group_id": 0,
+    "status_id": 142,
+    "pipeline_id": 28752,
+    "loss_reason_id": null,
+    "created_by": 549672,
+    "updated_by": 0,
+    "created_at": 1571754394,
+    "updated_at": 1607368525,
+    "closed_at": 1573541229,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Аналитика сайта",
+            "enum_id": 1427764
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Рекомендация",
+            "enum_id": 1394825
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Йошкар-ола"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://oriental-shop.ru/"
+          }
+        ]
+      },
+      {
+        "field_id": 525504,
+        "field_name": "Описание",
+        "field_code": null,
+        "field_type": "textarea",
+        "values": [
+          {
+            "value": "от Светы Козак"
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "Аналитика сайта",
+            "enum_id": 1462140
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/25511510"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [
+        {
+          "id": 36136216,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/companies/36136216"
+            }
+          }
+        }
+      ],
+      "contacts": [
+        {
+          "id": 35363472,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/35363472"
+            }
+          }
+        }
+      ]
+    }
+  }
+]

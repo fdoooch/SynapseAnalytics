@@ -3,28 +3,45 @@
     "comment": "Базовые поля AmoCRM",
     "fields": [
       {
-        "name": "id",
+        "name": "amo_deal_id",
+        "amo_name": "id",
         "type": "STRING",
         "mode": "REQUIRED"
       },
       {
         "name": "created_at",
+        "amo_name": "created_at",
         "type": "INTEGER",
         "mode": "REQUIRED"
       },
       {
         "name": "updated_at",
+        "amo_name": "updated_at",
         "type": "INTEGER",
         "mode": "REQUIRED"
       },
       {
         "name": "amo_pipeline_id",
-        "type": "STRING",
+        "amo_name": "pipeline_id",
+        "type": "INTEGER",
         "mode": "NULLABLE"
       },
       {
         "name": "amo_status_id",
-        "type": "STRING",
+        "amo_name": "status_id",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "amo_loss_reason_id",
+        "amo_name": "loss_reason_id",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "amo_is_deleted",
+        "amo_name": "is_deleted",
+        "type": "BOOLEAN",
         "mode": "NULLABLE"
       }
     ]
@@ -305,6 +322,13 @@
         "field_id": 648282,
         "type": "STRING",
         "mode": "NULLABLE"
+      },
+      {
+        "name": "amo_close_reason",
+        "comment": "id причины закрытия сделки",
+        "field_id": 593152,
+        "type": "INTEGER",
+        "mode": "NULLABLE"
       }
     ]
   },
@@ -312,10 +336,18 @@
     "comment": "Поля сделки Amo, находящиеся в CRM в разделе _embedded",
     "fields": [
       {
-        "name": "tags",
+        "name": "amo_tags",
+        "amo_name": "tags",
         "type": "STRING",
         "mode": "NULLABLE",
-        "comment": "теги сделок јмо - сериализованный JSON"
+        "comment": "теги сделок Aмо - сериализованный JSON"
+      },
+      {
+        "name": "amo_loss_reason",
+        "amo_name": "loss_reason",
+        "type": "STRING",
+        "mode": "NULLABLE",
+        "comment": "причина отвала (из AmoCRM)"
       }
     ]
   },
@@ -334,8 +366,8 @@
         "mode": "REQUIRED"
       },
       {
-        "name": "trashed_at",
-        "type": "INTEGER",
+        "name": "trashed_at_timestamp",
+        "type": "TIMESTAMP",
         "mode": "NULLABLE"
       },
       {

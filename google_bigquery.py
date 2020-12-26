@@ -11,15 +11,7 @@ from loguru import logger
 import time
 
 
-# Указываем идентификатор проекта в Google Cloud
-PROJECT_ID = config.GOOGLE_CLOUD_PROJECT_ID
-#Прописываем адрес к файлу с данными по сервисному аккаунту и получаем credentials для доступа к данным
-creds = service_account.Credentials.from_service_account_file(config.API_KEYS_PATH + config.GOOGLE_CREDENTIALS_JSON_FILE_NAME)
-#Загружаем в переменную окружения путь к файлу авторизации гугла. Для работы по API
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = config.API_KEYS_PATH + config.GOOGLE_CREDENTIALS_JSON_FILE_NAME
 
-#создаём клиента для работы с базой
-client = bigquery.Client(project=PROJECT_ID, credentials=creds)
 
 ###================================================================
 ### Загрузка таблиц в BigQuery

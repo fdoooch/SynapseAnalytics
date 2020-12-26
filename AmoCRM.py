@@ -8,6 +8,7 @@ import config #на время разработки. Там загружаетс
 import requests
 import operator
 from time import sleep
+import shutil
 
 from loguru import logger
 
@@ -17,11 +18,12 @@ class AmoCRM:
     Загрузка, обработка и выгрузка информации о сделках
     """
     CONFIG = {
-        'LEADS_RAW_JSON_PATH': 'amo_leads_raw_json/',
-        'LEADS_TEMP_JSON_PATH': 'amo_leads_temp_json/',
-        'LEADS_WEEK_JSON_PATH': 'amo_leads_week_json/',
+        'AMO_DEAL_FIELDS_SCHEMA': 'amo_deal_fields_schema.json',#файл со схемой полей сделок Amo
+        'DEALS_RAW_JSON_PATH': 'amo_leads_raw_json/',
+        'DEALS_TEMP_JSON_PATH': 'amo_leads_temp_json/',
+        'DEALS_WEEK_JSON_PATH': 'amo_leads_week_json/',
         'JSON_DEALS_RAW_FILENAME': 'json_deals_raw',
-        'JSON_DEALS_WEEK_FILENAME': 'json_deals_week',
+        'DEALS_WEEK_JSON_FILENAME': 'json_deals_week',
         'ALL_LEADS_EXT_JSON_FILENAME': 'amocrm_all_leads_ext_json',
         'PAGE_SIZE': 250,#Количество сделок, запрашиваемых из Amo за один запрос
         'PAGES_COUNT_PER_LOAD': 50, #Количество страниц размером AMO_PAGE_SIZE, которое будем подгружать за один запуск скрипта (для случаем, когда нам нужно выгрузить из AMO много сделок)
@@ -147,8 +149,10 @@ class AmoCRM:
         "User-Agent": "Synapse_user_agent",
         "Content-Type": "application/json"} 
         rs = requests.post(url, params=params, headers=headers)
-        print(rs.text)
+        #print(rs.text)
         os.environ['AMO_ACCESS_TOKEN'] = json.loads(rs.text)['access_token']
+        self.CONFIG['AMO_ACCESS_TOKEN'] = os.environ['AMO_ACCESS_TOKEN']
+        self.CONFIG['AMO_API_REQUESTS_HEADERS']['Authorization'] = 'Bearer ' + os.getenv('AMO_ACCESS_TOKEN')
         dotenv_file = dotenv.find_dotenv()
         dotenv.set_key(dotenv_file, 'AMO_ACCESS_TOKEN', json.loads(rs.text)['access_token'])
         dotenv.set_key(dotenv_file, 'AMO_REFRESH_TOKEN', json.loads(rs.text)['refresh_token'])
@@ -156,30 +160,16 @@ class AmoCRM:
     #--------------------
     #Конец блока авторизации в Amo CRM
     #=======================
-
-
-    #Получаю пустую таблицу сделок AMO
-    def get_amo_deals_rows_schema(self):
-    #требуется для того, чтобы все наши таблицы имели одинаковый набор столбцов
-    #после заполнения таблицы требуется удалить из неё нулевую строку (она заполнена пустыми значениями)
-        row = {}
-        for field in self.CONFIG['AMO_DEALS_BASE_FIELDS']:
-            row.update({field: []})
-        for field in self.CONFIG['AMO_DEALS_CUSTOM_FIELDS']:
-            row.update({field: []})
-        for field in self.CONFIG['DEALS_SPECIAL_FIELDS']:
-            row.update({field: []})
-        schema = []
-        schema.append(row)
-        return schema
     
     #Парсинг json_deals в набор строк
     #каждая строка - информация об одной сделке
-    def _extract_amo_json_deals_to_rows(self, json_deals):
+    def _extract_amo_json_deals_to_rows(self, json_deals, pipelines_list):
         rows = []
         #Проходим по сделкам и наполняем amo_deals rows
         for deal in json_deals:
-            rows.append(self._get_row_from_amo_json_deal(deal))
+            if deal['pipeline_id'] in pipelines_list:
+                rows.append(self._get_row_from_amo_json_deal(deal))
+ #               rows += self._get_row_from_amo_json_deal(deal)
         return rows
     
     #Наполняю таблицу сделками из JSON-файла AMO JSON DEALS
@@ -206,10 +196,16 @@ class AmoCRM:
         for field in json_cfv:
             if field['field_id'] == 648028:
                 #Если это поле со списком товаров (648028), то сериализуем его
-                cfv_dict[field['field_id']] = json.dumps(field['values'], ensure_ascii=False)
-                #cfv_dict[field['field_id']] = json.dumps(field['values'][0]['value'], ensure_ascii=False)
+                field_value = json.dumps(field['values'], ensure_ascii=False)
+
+            elif field['field_id'] == 593152:
+                #Если это поле с причиной закрытия сделки, то указываем id-причины
+                field_value = field['values'][0]['enum_id']
+
             else:
-                cfv_dict[field['field_id']] = field['values'][0]['value']
+                field_value = field['values'][0]['value']
+            cfv_dict[field['field_id']] = field_value
+        
         return cfv_dict
 
     #Получаю словарь utm-меток из словаря custom
@@ -280,30 +276,73 @@ class AmoCRM:
     #hardcode!!!
     def _get_row_from_amo_json_deal(self, json_deal):
         row = {}
+        #Читаем json-файл общей схемы сделок
+        with open(self.CONFIG['AMO_DEAL_FIELDS_SCHEMA'], 'r', encoding="utf8") as json_file:
+            amo_deal_fields = json.load(json_file)
         #Добавляем базовые поля
-        for field in self.CONFIG['AMO_DEALS_BASE_FIELDS']:
-            row.update({field: json_deal[field]})
+        for field in amo_deal_fields['base_amo_deal_fields']['fields']:
+            if field['type'] == "STRING":
+                row.update({field['name']: str(json_deal[field['amo_name']])})
+            elif field['type'] == "INTEGER":
+                if json_deal[field['amo_name']] == None:
+                    row.update({field['name']: None})
+                else:
+                    row.update({field['name']: int(json_deal[field['amo_name']])})
+            elif field['type'] == "TIMESTAMP":
+                if json_deal[field['amo_name']] == None:
+                    row.update({field['name']: None})
+                else:
+                    row.update({field['name']: pd.to_datetime(json_deal[field['amo_name']], unit='s')})
+            elif field['type'] == "BOOLEAN":
+                if json_deal[field['amo_name']] == None:
+                    row.update({field['name']: None})
+                else:
+                    row.update({field['name']: bool(json_deal[field['amo_name']])})
+            else:
+                row.update({field['name']: json_deal[field['amo_name']]})
+
         #Если есть пользовательские поля, добавляем их
         custom_fields_values = json_deal.get('custom_fields_values')
         if custom_fields_values:
             #составляем словарь field_id: value
             custom_fields_dict = self._get_custom_values_dict_from_custom_field_values_json(custom_fields_values)
-            for key, value in self.CONFIG['AMO_DEALS_CUSTOM_FIELDS'].items():
-                if value in custom_fields_dict:
-                    row[key] = custom_fields_dict[value]#[0].get('value')
+            for field in amo_deal_fields['custom_amo_deal_fields']['fields']:
+                field_id = field['field_id']
+                if field_id in custom_fields_dict:
+                    if field['type'] == "STRING":
+                        row[field['name']] = str(custom_fields_dict[field_id])
+                    elif field['type'] == "INTEGER":
+                        if custom_fields_dict[field_id] == None:
+                            row[field['name']] = None
+                        else:
+                            row[field['name']] = int(custom_fields_dict[field_id])
+                    elif field['type'] == "TIMESTAMP":
+                        if custom_fields_dict[field_id] == None:
+                             row[field['name']] = None
+                        else:
+                            row[field['name']] = pd.to_datetime(custom_fields_dict[field_id], unit='s')
+                    else:
+                        row[field['name']] = custom_fields_dict[field_id]
             #Вытаскиваем значения UTM-меток в единые поля lead_utm_...
             lead_utms = self._get_lead_utm_from_custom_values_dict(custom_fields_dict)
             row.update(lead_utms)
 
+        #Добавляем поля из раздела _embedded (списки)
+        for field in amo_deal_fields['_embedded_amo_deal_fields']['fields']:
+            #сериализуем значение поля
+            field_value = json.dumps(json_deal['_embedded'][field['amo_name']], ensure_ascii=False)
+            row.update({field['name']: field_value})
+
         #Добавляем дополнительные поля
         row['created_at_timestamp'] = pd.to_datetime(row['created_at'], unit='s')
         row['updated_at_timestamp'] = pd.to_datetime(row['updated_at'], unit='s')
-        row['trashed_at'] = json_deal.get('trashed_at', None)
+        if json_deal.get('trashed_at', None):
+            row['trashed_at_timestamp'] = pd.to_datetime(json_deal.get('trashed_at', None), unit='s')
         return row
 
     #Получаю датафрейм сделок из JSON
-    def _extract_amo_json_deals_to_dataframe(self, json_deals):
-        rows = self._extract_amo_json_deals_to_rows(json_deals)
+    def _extract_amo_json_deals_to_dataframe(self, json_deals, pipelines_list):
+        rows = self._extract_amo_json_deals_to_rows(json_deals, pipelines_list)
         df = pd.DataFrame(rows)
         return df
 
@@ -397,7 +436,14 @@ class AmoCRM:
         }
 
         try:
+            try_num = 1
             rs = requests.get(url, headers=self.CONFIG['AMO_API_REQUESTS_HEADERS'], params=params)
+            while rs.status_code == 401:
+                logger.error(f'Не удалось авторизоваться в API AmoCRM. Попытка {try_num}')
+                self._refresh_access_token()
+                sleep(2 ** try_num)
+                rs = requests.get(url, headers=self.CONFIG['AMO_API_REQUESTS_HEADERS'], params=params)
+                try_num += 1
             return rs
         except ConnectionError:
             logger.error('Ошибка ConnectionError ' + url)
@@ -406,15 +452,27 @@ class AmoCRM:
     def _get_updated_deals_since_timestamp_to_json_temp_folder(self, last_update):
         page = 1
         limit = self.CONFIG['PAGE_SIZE']
-        if not os.path.isdir(config.AMO_LEADS_TEMP_JSON_PATH):
-            os.mkdir(config.AMO_LEADS_TEMP_JSON_PATH)
-        #Здесь нужно вставить функцию очистки временной директории от файлов
-        #
-        #
+        temp_path = self.CONFIG['DEALS_TEMP_JSON_PATH']
+        #удаляем файлы из временной папки, если она существует
+        if os.path.isdir(self.CONFIG['DEALS_TEMP_JSON_PATH']):
+            for filename in os.listdir(temp_path):
+                file_path = os.path.join(temp_path, filename)
+                try:
+                    if os.path.isfile(file_path) or os.path.islink(file_path):
+                        os.unlink(file_path)
+                    elif os.path.isdir(file_path):
+                        shutil.rmtree(file_path)
+                except Exception as e:
+                    logger.error('Failed to delete %s. Reason: %s' % (file_path, e))
+        else:
+        #Если папки нет
+            #создаём пустую папку для временных файлов
+            os.mkdir(self.CONFIG['DEALS_TEMP_JSON_PATH'])
+
         new_deals = []
         has_more = True
         while has_more:
-            rs = self.amo_get_deals_sorted_by_updated_date_desc(limit, page)
+            rs = self._get_deals_ext_sorted_by_updated_date_desc(limit, page)
             if rs.status_code == 200:
                 new_deals += (json.loads(rs.text))['_embedded']['leads']
                 #если последняя из загруженных сделок обновлена раньше заданной даты - завершаем скачивание
@@ -423,23 +481,23 @@ class AmoCRM:
 
                 #Если количество полученных записей достигла предела - сохраняем их в файл и обнуляем массив
                 if page % self.CONFIG['PAGES_COUNT_PER_LOAD'] == 0:
-                    with open(self.CONFIG['LEADS_TEMP_JSON_PATH'] + 'temp_updated_leads_' + str(page) + '.json', 'w', encoding="utf8") as output_file:
-                        json.dump(new_leads, output_file, ensure_ascii=False)
+                    with open(self.CONFIG['DEALS_TEMP_JSON_PATH'] + 'temp_updated_leads_' + str(page) + '.json', 'w', encoding="utf8") as output_file:
+                        json.dump(new_deals, output_file, ensure_ascii=False, indent=2)
                     new_deals = []
                     logger.info(f'{str(page)} выгружено в файл')
             elif rs.status_code == 204:
-                logger.info('загрузка преждевременно завершена')
+                logger.info('загрузка завершена')
                 has_more = False
                 break
             else:
-                logger.error(f'Ошибка {rs.status_code}')
+                logger.log('connection_errors', f'Ошибка {rs.status_code}')
                 has_more = False
                 break
             page += 1
             sleep(self.CONFIG['PAUSE_BETWIN_REQUESTS'])
             logger.debug(f'Page: {page}')
-        with open(self.CONFIG['LEADS_TEMP_JSON_PATH'] + 'temp_updated_leads_' + str(page), 'w', encoding="utf8") as output_file:
-            json.dump(all_leads, output_file, ensure_ascii=False)
+        with open(self.CONFIG['DEALS_TEMP_JSON_PATH'] + 'temp_updated_leads_' + str(page) + '.json', 'w', encoding="utf8") as output_file:
+            json.dump(new_deals, output_file, ensure_ascii=False, indent=2)
 
         return 0
     
@@ -459,8 +517,13 @@ class AmoCRM:
         #Пока в пачке есть сделки добавляем их в базу
         while len(json_pack) > 0:
             new_deal = json_pack[0]
+
             year = dt.datetime.fromtimestamp(new_deal['created_at']).isocalendar()[0]
             week = dt.datetime.fromtimestamp(new_deal['created_at']).isocalendar()[1]
+          #  year = dt.datetime.fromtimestamp(json_pack[0]['created_at']).isocalendar()[0]
+
+            week = dt.datetime.fromtimestamp(json_pack[0]['created_at']).isocalendar()[1]
+
         
             #Если json с этой недели уже есть, дополняем его
             if os.path.isfile(week_json_path + week_json_filename + '_' + str(year) +'_'+ str(week).zfill(2) + '.json'):
@@ -482,8 +545,11 @@ class AmoCRM:
                             week_deals = self._add_deal_to_json_deals(json_pack[0], week_deals)
      #                       logger.info(f'Сделка #{json_pack[0]["id"]} добавлена в AMO JSON WEEK')
                             count_added_deals += 1
+                        #добавляем результат merge в итоговый json
+                        result_json.append(week_deals[-1])
                         #Удаляем добавленную сделку из пачки
                         json_pack.pop(0)
+#                        print(len(result_json))
                         #если сделок в пачке больше нет, сохраняем сделки в AMO JSON WEEK и завершаем функцию
                         if len(json_pack) == 0:
                             output_filename = week_json_filename + '_' + str(year) +'_'+ str(week).zfill(2) + '.json'
@@ -493,7 +559,9 @@ class AmoCRM:
                             logger.info('Добавление пачки сделок завершено')
                             logger.info(f'{count_added_deals} было добавлено')
                             logger.info(f'{count_updated_deals} было обновлено')
-                            result_json.append(week_deals)
+#                            result_json.append(week_deals)
+#                            result_json += week_deals
+#                            print(len(result_json))
                             return result_json
 
                     #Если неделя в новой сделке отличаеся от той, с которой работали, то сохраняем сделки в AMO JSON WEEK и начинаем работу с новой неделей
@@ -501,7 +569,9 @@ class AmoCRM:
                     with open(week_json_path + output_filename, 'w', encoding="utf8") as output_file:
                         json.dump(week_deals, output_file, ensure_ascii=False, indent=2)
                     logger.info('Обновлён файл:' + output_filename)
-                    result_json.append(week_deals)
+#                    result_json.append(week_deals)
+#                   result_json += week_deals
+#                    print(len(result_json))
                     continue
 
             #Если в AMO JSON WEEK нет файла соответствующей недели, создаём его и наполняем
@@ -513,6 +583,7 @@ class AmoCRM:
                 while dt.datetime.fromtimestamp(json_pack[0]['created_at']).isocalendar()[0] == year and dt.datetime.fromtimestamp(json_pack[0]['created_at']).isocalendar()[1] == week:
                     week_deals = self._add_deal_to_json_deals(json_pack[0], week_deals)
                     count_added_deals += 1
+                    result_json.append(week_deals[-1])
                     json_pack.pop(0)
                     #если сделок в пачке больше нет, сохраняем сделки в AMO JSON WEEK и завершаем функцию
                     if len(json_pack) == 0:
@@ -523,7 +594,9 @@ class AmoCRM:
                         logger.info('Добавление пачки сделок завершено')
                         logger.info(f'{count_added_deals} было добавлено')
                         logger.info(f'{count_updated_deals} было обновлено')
-                        result_json.append(week_deals)
+#                        result_json.append(week_deals)
+#                       result_json += week_deals
+                        print(len(result_json))
                         return result_json
                         
 
@@ -532,16 +605,19 @@ class AmoCRM:
                 with open(week_json_path + output_filename, 'w', encoding="utf8") as output_file:
                     json.dump(week_deals, output_file, ensure_ascii=False, indent=2)
                 logger.info('Обновлён файл:' + output_filename)
-                result_json.append(week_deals)
+#                result_json.append(week_deals)
+ #               result_json += week_deals
+#                print(len(result_json))
                 continue              
     
         #Если в пачке кончились сделки - завершаем функцию
         return result_json
 
     def _update_deal_in_json_deals(self, new_deal, deals):
+        #Находим индекс сделки в пачке WEEK_JSON
+        deal_index = [old_deal['id'] for old_deal in deals].index(new_deal['id'])
         #Если дата изменения соответствующей сделки в AMO JSON WEEK не меньше даты изменения new_deal - ничего не меняем
         #Переставляем сделку в конец JSON
-        deal_index = [old_deal['id'] for old_deal in deals].index(new_deal['id'])
         if deals[deal_index]['updated_at'] >= new_deal['updated_at']:
             new_deal = deals[deal_index]
             deals.pop(deal_index)
@@ -566,8 +642,13 @@ class AmoCRM:
         #Если сделка в статусе "Треш - нецелевые", то добавляем дату последней модификации в поле ['trashed_at']
         if new_deal['status_id'] in self.CONFIG['AMO_TRASH_STATUSES_ID'] and not 'trashed_at' in new_deal:
             new_deal['trashed_at'] = new_deal['updated_at']
-        #deals.append(new_deal)
+        #добавляем обновлённую сделку в конец списка сделок
         deals.append(new_deal)
+        #deals += new_deal
+      #  print(len(deals))
+      #  output_filename = 'output_deals_' + str(new_deal['id'])
+      #  with open('output/' + output_filename + '.json', 'w', encoding="utf8") as output_file:
+      #      json.dump(deals, output_file, ensure_ascii=False, indent=2)
         return deals
 
     #Разбираем данные по сделкам, скаченные из Амо в json и раскладываем их в файлы по неделям
@@ -575,7 +656,7 @@ class AmoCRM:
     def _put_deals_from_raw_json_to_week_json(self, raw_json_path, week_json_path, week_json_filename):
     ###Упорядочивание архива json-файлов
     ###Перепаковываем сделки в файлы, группирующие их по неделе создания
-    ###Название файлов: filename_YYYY_WW.json
+    ###Название файлов: week_json_filename_YYYY_WW.json
     ###Недели нумеруются по ISO
     ###первой неделей года считается неделя, содержащая первый четверг года, что эквивалентно следующим выражениям:
     ### неделя, содержащая 4 января;
@@ -586,9 +667,9 @@ class AmoCRM:
                 deals = json.load(json_file)
                 deals.sort(key=operator.itemgetter('created_at'))
             #Добавляем новые сделки в AMO JSON WEEK
-            deals = self._merge_json_pack_to_json_week_deals(deals, week_json_path, week_json_filename)
+            updated_deals = self._merge_json_pack_to_json_week_deals(deals, week_json_path, week_json_filename)
             logger.info('загрузка в AMO JSON WEEK завершена')
-        return deals
+        return updated_deals
 
     #Разбираем данные по сделкам, скаченные из Амо во временную папку json
     def _put_deals_from_temp_json_to_week_json(self, week_json_path):
@@ -598,10 +679,10 @@ class AmoCRM:
     # есть опасность, что итоговый список может получиться огромным, но 
     # пусть пока будет так. До рефакторинга.
     #  - основная функция при обновлении базы сделок из AmoCRM
-        files_list = os.listdir(self.CONFIG['LEADS_TEMP_JSON_PATH'])
+        files_list = os.listdir(self.CONFIG['DEALS_TEMP_JSON_PATH'])
         result_json = {} #сюда собираем json с обновлёнными и добавленными сделками 
         for filename in files_list:    
-            with open(self.CONFIG['LEADS_TEMP_JSON_PATH'] + filename, 'r', encoding="utf8") as json_file:
+            with open(self.CONFIG['DEALS_TEMP_JSON_PATH'] + filename, 'r', encoding="utf8") as json_file:
                 deals = json.load(json_file)
             deals.sort(key=operator.itemgetter('created_at'))
             #Добавляем новые сделки в AMO JSON WEEK 
@@ -613,28 +694,63 @@ class AmoCRM:
     #---- Внешние методы -----------
     # Скачать все сделки из AmoCRM
     def get_all_deals_from_crm(self):
-        #self._get_all_deals_ext_to_json(self.CONFIG['LEADS_RAW_JSON_PATH'], self.CONFIG['JSON_DEALS_RAW_FILENAME'])
-        self._put_deals_from_raw_json_to_week_json(self.CONFIG['LEADS_RAW_JSON_PATH'], self.CONFIG['LEADS_WEEK_JSON_PATH'], self.CONFIG['JSON_DEALS_WEEK_FILENAME'])
-    
+        self._get_all_deals_ext_to_json(self.CONFIG['DEALS_RAW_JSON_PATH'], self.CONFIG['JSON_DEALS_RAW_FILENAME'])
+        self._put_deals_from_raw_json_to_week_json(self.CONFIG['DEALS_RAW_JSON_PATH'], self.CONFIG['DEALS_WEEK_JSON_PATH'], self.CONFIG['DEALS_WEEK_JSON_FILENAME'])
+
+    #скачать сделки, обновлённые и созданные после определённого DateTime
+    #и загрузить их в базу
+    def get_updated_deals_dataframe_from_crm(self, last_updated_at, head, pipelines_list):
+    #head - список столбцов датафрейма
+        #скачиваем обновления во временную папку
+        self._get_updated_deals_since_timestamp_to_json_temp_folder(last_updated_at)
+        #раскладываем скаченные сделки по неделям и получаем результат обновления
+        updated_deals = self._put_deals_from_raw_json_to_week_json(self.CONFIG['DEALS_TEMP_JSON_PATH'], self.CONFIG['DEALS_WEEK_JSON_PATH'], self.CONFIG['DEALS_WEEK_JSON_FILENAME'])
+        df = pd.DataFrame(columns = head)
+        df = df.append(self._extract_amo_json_deals_to_dataframe(updated_deals, pipelines_list))
+        #удаляем дубликаты записей
+        result_df = df.drop_duplicates(keep='last')
+        if len(result_df) < len(df):
+            logger.log('df_errors.log', 'В датафрейме были обнаружены дубликаты. удалены.')
+        return df
+        
     # Получить датафрейм сделок созданных в определённую ISO-неделю
-    def get_deals_dataframe_by_week(self, year, week_num):
-        filename = self.CONFIG['JSON_DEALS_WEEK_FILENAME'] + '_' + str(year) + '_' + str(week_num).zfill(2) + '.json'
-        with open(self.CONFIG['LEADS_WEEK_JSON_PATH'] + filename, 'r', encoding="utf8") as json_file:
+    def get_deals_dataframe_by_week(self, year, week_num, head, pipelines_list):
+        filename = self.CONFIG['DEALS_WEEK_JSON_FILENAME'] + '_' + str(year) + '_' + str(week_num).zfill(2) + '.json'
+        with open(self.CONFIG['DEALS_TEMP_JSON_PATH'] + filename, 'r', encoding="utf8") as json_file:
             json_deals = json.load(json_file)
-        df = self._extract_amo_json_deals_to_dataframe(json_deals)
+        df = pd.DataFrame(columns = head)
+        df = df.append(self._extract_amo_json_deals_to_dataframe(json_deals, pipelines_list))
         return df
 
     # Получить датафрейм сделок созданных в определённый год
-    def get_deals_dataframe_by_year(self, year):
-        files_list = os.listdir(self.CONFIG['LEADS_WEEK_JSON_PATH'])
+    def get_deals_dataframe_by_year(self, year, head, pipelines_list):
+        
+        files_list = os.listdir(self.CONFIG['DEALS_TEMP_JSON_PATH'])
         year_files_list = [file for file in files_list if ('_' + str(year) + '_') in file]
         rows = []
         for filename in year_files_list:
-            with open(self.CONFIG['LEADS_WEEK_JSON_PATH'] + filename, 'r', encoding="utf8") as json_file:
-                json_data = json.load(json_file)
-            rows += self._extract_amo_json_deals_to_rows(json_data)
-        df = pd.DataFrame(rows)
+            with open(self.CONFIG['DEALS_TEMP_JSON_PATH'] + filename, 'r', encoding="utf8") as json_file:
+                json_deals = json.load(json_file)
+            rows += self._extract_amo_json_deals_to_rows(json_deals, pipelines_list)
+        df = pd.DataFrame(columns=head)
+        df = df.append(pd.DataFrame(rows))
+        #удаляем дубликаты записей
+        result_df = df.drop_duplicates(keep='last')
+        if len(result_df) < len(df):
+            logger.log('df_errors.log', 'В датафрейме были обнаружены дубликаты. удалены.')
         return df
+
+    #Получить датафрейм из файла json
+    def get_deals_dataframe_from_file(self, path, filename, head, pipelines_list):
+        with open(path + filename, 'r', encoding="utf8") as json_file:
+            json_deals = json.load(json_file)
+        df = pd.DataFrame(columns = head)
+        df = df.append(self._extract_amo_json_deals_to_dataframe(json_deals, pipelines_list))
+        return df
+
+
+    def get_deals_week_json_path(self):
+        return self.CONFIG['DEALS_WEEK_JSON_PATH']
     
     ###=========================
 
@@ -646,34 +762,21 @@ class AmoCRM:
 if __name__ == "__main__":
         
     week_parser = AmoCRM()
-    #week_parser._refresh_access_token()
-    week_parser.get_all_deals_from_crm()
-    sleep(100)
+    temp_json_path = week_parser.CONFIG['DEALS_TEMP_JSON_PATH']
+    week_json_path = week_parser.CONFIG['DEALS_WEEK_JSON_PATH']
+    week_json_filename =  week_parser.CONFIG['DEALS_WEEK_JSON_FILENAME']
+    filename = 'temp_updated_leads_5.json'
+    output_filename = 'output_json.json'
+    with open(temp_json_path + filename, 'r', encoding="utf8") as json_file:
+        deals = json.load(json_file)
 
 
+#    print(f'В TEMP JSON {len(deals)} сделок')
+    #раскладываем сделки из временной директории по файлам JSON WEEK
+    #упорядочеваем сделки в JSON_PACK - это сокращает количество итераций при проверке наличия сделки в базе
+#    deals.sort(key=operator.itemgetter('created_at'))
 
-
-    rows = week_parser.extract_amo_json_file_to_rows(json_path, json_filename)
-    df = pd.DataFrame(rows)
-    logger.info(f'Загружен файл {json_filename}')
-    logger.debug(f'Размер датафрейма: {df.shape} \n')
-
-#    json_filename = os.path.join('/tests/', 'amo_json_2020_40.json')
-    json_filename = 'amo_json_2020_31.json'
-#    rows = week_parser.extract_amo_json_to_rows(dirname, json_filename)
-    rows = week_parser.extract_amo_json_file_to_rows(json_path, json_filename)
-    df = pd.DataFrame(rows)
-    logger.debug(f'Загружен файл {json_filename}')
-    logger.debug(f'Размер датафрейма: {df.shape} \n')
-
-    rows = week_parser.extract_amo_json_from_directory_to_rows(json_path)
-    df = pd.DataFrame(rows)
-    logger.debug(f'Создан общий датафрейм: {df.shape} \n')
-    print(list(df))
- #   print(df[['lead_utm_source', 'drupal_utm']])
- #   source_data = week_parser.extract(json_file_name)
- #   result_rows = week_parser.transform(source_data)
- #   week_parser.load(result_rows, tsv_file_name)
-
-
- 
+    updated_deals =  week_parser._merge_json_pack_to_json_week_deals(deals, week_json_path, week_json_filename)
+    with open('output/' + output_filename, 'w', encoding="utf8") as output_file:
+        json.dump(updated_deals, output_file, ensure_ascii=False, indent=2)
+#    print(f'В UPDATED JSON {len(updated_deals)} сделок')

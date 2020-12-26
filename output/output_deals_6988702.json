@@ -1,0 +1,1282 @@
+[
+  {
+    "id": 6987194,
+    "name": "!!!ООО  \"АРТСРУБ АРХАНГЕЛЬСК\" \nИНН 2901266105",
+    "price": 0,
+    "responsible_user_id": 3813342,
+    "group_id": 0,
+    "status_id": 29919834,
+    "pipeline_id": 2059851,
+    "loss_reason_id": null,
+    "created_by": 216124,
+    "updated_by": 581856,
+    "created_at": 1444313717,
+    "updated_at": 1607007322,
+    "closed_at": null,
+    "closest_task_at": 1607374740,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Архангельск"
+          }
+        ]
+      },
+      {
+        "field_id": 512314,
+        "field_name": "key",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "crm-nid-88298"
+          }
+        ]
+      },
+      {
+        "field_id": 512312,
+        "field_name": "nid",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "88298"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://artsrub.ru/"
+          }
+        ]
+      },
+      {
+        "field_id": 645508,
+        "field_name": "Дата первого звонка",
+        "field_code": null,
+        "field_type": "date",
+        "values": [
+          {
+            "value": 1583960400
+          }
+        ]
+      },
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Контекст",
+            "enum_id": 1326190
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Холодный обзвон",
+            "enum_id": 1402971
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "Переезд сайт",
+            "enum_id": 1462128
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/6987194"
+      }
+    },
+    "_embedded": {
+      "tags": [
+        {
+          "id": 158054,
+          "name": "лес"
+        },
+        {
+          "id": 528866,
+          "name": "март"
+        },
+        {
+          "id": 565256,
+          "name": "деревянщики_ГИС"
+        },
+        {
+          "id": 569728,
+          "name": "сайт+реклама"
+        }
+      ],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [
+        {
+          "id": 18426662,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/companies/18426662"
+            }
+          }
+        }
+      ],
+      "contacts": [
+        {
+          "id": 43664440,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/43664440"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 6987536,
+    "name": "ООО \"БЛОКХАУС СЕРВИС\"\nИНН 1020015818",
+    "price": 23000,
+    "responsible_user_id": 3813342,
+    "group_id": 0,
+    "status_id": 32281737,
+    "pipeline_id": 2059851,
+    "loss_reason_id": null,
+    "created_by": 216124,
+    "updated_by": 3813342,
+    "created_at": 1444314051,
+    "updated_at": 1606916484,
+    "closed_at": null,
+    "closest_task_at": 1607461140,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Респ.Карелия, Прионежский р-н, д.Вилга"
+          }
+        ]
+      },
+      {
+        "field_id": 512314,
+        "field_name": "key",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "crm-nid-87769"
+          }
+        ]
+      },
+      {
+        "field_id": 512312,
+        "field_name": "nid",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "87769"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "http://blockhaus-karelia.com/"
+          }
+        ]
+      },
+      {
+        "field_id": 645508,
+        "field_name": "Дата первого звонка",
+        "field_code": null,
+        "field_type": "date",
+        "values": [
+          {
+            "value": 1583442000
+          }
+        ]
+      },
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Контекст",
+            "enum_id": 1326190
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "7600/7600+",
+            "enum_id": 1462110
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Холодный обзвон",
+            "enum_id": 1402971
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/6987536"
+      }
+    },
+    "_embedded": {
+      "tags": [
+        {
+          "id": 134070,
+          "name": "vk"
+        },
+        {
+          "id": 158054,
+          "name": "лес"
+        },
+        {
+          "id": 528866,
+          "name": "март"
+        },
+        {
+          "id": 556800,
+          "name": "естьсайт"
+        },
+        {
+          "id": 565256,
+          "name": "деревянщики_ГИС"
+        }
+      ],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [
+        {
+          "id": 18427068,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/companies/18427068"
+            }
+          }
+        }
+      ],
+      "contacts": [
+        {
+          "id": 43640490,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/43640490"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 6990522,
+    "name": "ООО \"РУСДОМ\" \nИНН 2901240403\nобщестроительные работы",
+    "price": 7600,
+    "responsible_user_id": 3813342,
+    "group_id": 0,
+    "status_id": 32586528,
+    "pipeline_id": 2059851,
+    "loss_reason_id": null,
+    "created_by": 216124,
+    "updated_by": 3813342,
+    "created_at": 1444317075,
+    "updated_at": 1607007432,
+    "closed_at": null,
+    "closest_task_at": 1607374740,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Архангельск"
+          }
+        ]
+      },
+      {
+        "field_id": 512314,
+        "field_name": "key",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "crm-nid-88740"
+          }
+        ]
+      },
+      {
+        "field_id": 512312,
+        "field_name": "nid",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "88740"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "http://www.rusdom29.ru/"
+          }
+        ]
+      },
+      {
+        "field_id": 645508,
+        "field_name": "Дата первого звонка",
+        "field_code": null,
+        "field_type": "date",
+        "values": [
+          {
+            "value": 1583874000
+          }
+        ]
+      },
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "7600/7600+",
+            "enum_id": 1400333
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Холодный обзвон",
+            "enum_id": 1402971
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "7600/7600+",
+            "enum_id": 1462110
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/6990522"
+      }
+    },
+    "_embedded": {
+      "tags": [
+        {
+          "id": 158054,
+          "name": "лес"
+        },
+        {
+          "id": 556800,
+          "name": "естьсайт"
+        },
+        {
+          "id": 565256,
+          "name": "деревянщики_ГИС"
+        }
+      ],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [
+        {
+          "id": 18436154,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/companies/18436154"
+            }
+          }
+        }
+      ],
+      "contacts": [
+        {
+          "id": 43657964,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/43657964"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 6991836,
+    "name": "!!!!ООО \"ЦЕНТР ЗАГОРОДНОГО СТРОИТЕЛЬСТВА\" \nИНН 2901247367",
+    "price": 0,
+    "responsible_user_id": 3813342,
+    "group_id": 0,
+    "status_id": 29919834,
+    "pipeline_id": 2059851,
+    "loss_reason_id": null,
+    "created_by": 216124,
+    "updated_by": 581856,
+    "created_at": 1444318472,
+    "updated_at": 1606823219,
+    "closed_at": null,
+    "closest_task_at": 1608843540,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Архангельск"
+          }
+        ]
+      },
+      {
+        "field_id": 512314,
+        "field_name": "key",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "crm-nid-88715"
+          }
+        ]
+      },
+      {
+        "field_id": 512312,
+        "field_name": "nid",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "88715"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "http://stroimdachu.pro/"
+          }
+        ]
+      },
+      {
+        "field_id": 645508,
+        "field_name": "Дата первого звонка",
+        "field_code": null,
+        "field_type": "date",
+        "values": [
+          {
+            "value": 1587416400
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "7600/7600+",
+            "enum_id": 1462110
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Холодный обзвон",
+            "enum_id": 1402971
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/6991836"
+      }
+    },
+    "_embedded": {
+      "tags": [
+        {
+          "id": 158054,
+          "name": "лес"
+        },
+        {
+          "id": 556800,
+          "name": "естьсайт"
+        },
+        {
+          "id": 565256,
+          "name": "деревянщики_ГИС"
+        }
+      ],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [
+        {
+          "id": 18437552,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/companies/18437552"
+            }
+          }
+        }
+      ],
+      "contacts": [
+        {
+          "id": 43688580,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/43688580"
+            }
+          }
+        },
+        {
+          "id": 36509462,
+          "is_main": false,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/36509462"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 6992062,
+    "name": "!!!ООО \"ЭКОСТРОЙ\" \nИНН 2901134010",
+    "price": 0,
+    "responsible_user_id": 3813342,
+    "group_id": 0,
+    "status_id": 32586531,
+    "pipeline_id": 2059851,
+    "loss_reason_id": null,
+    "created_by": 216124,
+    "updated_by": 3813342,
+    "created_at": 1444318720,
+    "updated_at": 1607007249,
+    "closed_at": null,
+    "closest_task_at": 1607374740,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Архангельск"
+          }
+        ]
+      },
+      {
+        "field_id": 512314,
+        "field_name": "key",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "crm-nid-87726"
+          }
+        ]
+      },
+      {
+        "field_id": 512312,
+        "field_name": "nid",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "87726"
+          }
+        ]
+      },
+      {
+        "field_id": 525504,
+        "field_name": "Описание",
+        "field_code": null,
+        "field_type": "textarea",
+        "values": [
+          {
+            "value": "сайт на битриксе"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "http://www.ecostroy29.ru/"
+          }
+        ]
+      },
+      {
+        "field_id": 645508,
+        "field_name": "Дата первого звонка",
+        "field_code": null,
+        "field_type": "date",
+        "values": [
+          {
+            "value": 1584478800
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "Переезд сайт",
+            "enum_id": 1462128
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Холодный обзвон",
+            "enum_id": 1402971
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/6992062"
+      }
+    },
+    "_embedded": {
+      "tags": [
+        {
+          "id": 158054,
+          "name": "лес"
+        },
+        {
+          "id": 556800,
+          "name": "естьсайт"
+        },
+        {
+          "id": 565256,
+          "name": "деревянщики_ГИС"
+        }
+      ],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [
+        {
+          "id": 18437774,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/companies/18437774"
+            }
+          }
+        }
+      ],
+      "contacts": [
+        {
+          "id": 43688594,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/43688594"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 6988702,
+    "name": "ООО КОМПАНИЯ \"КАРЕЛЬСКИЙ ДОМ\" \nИНН 1001154365",
+    "price": 0,
+    "responsible_user_id": 3813342,
+    "group_id": 0,
+    "status_id": 29921706,
+    "pipeline_id": 2059851,
+    "loss_reason_id": null,
+    "created_by": 216124,
+    "updated_by": 3813342,
+    "created_at": 1444315216,
+    "updated_at": 1607082486,
+    "closed_at": null,
+    "closest_task_at": 1607374740,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Петрозаводск"
+          }
+        ]
+      },
+      {
+        "field_id": 512314,
+        "field_name": "key",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "crm-nid-88325"
+          }
+        ]
+      },
+      {
+        "field_id": 512312,
+        "field_name": "nid",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "88325"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "http://karelianhouse.ru/"
+          }
+        ]
+      },
+      {
+        "field_id": 645508,
+        "field_name": "Дата первого звонка",
+        "field_code": null,
+        "field_type": "date",
+        "values": [
+          {
+            "value": 1584651600
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Холодный обзвон",
+            "enum_id": 1402971
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "7600/7600+",
+            "enum_id": 1462110
+          }
+        ]
+      },
+      {
+        "field_id": 535552,
+        "field_name": "Сайт еще",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "http://best.karelianhouse.ru/"
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/6988702"
+      }
+    },
+    "_embedded": {
+      "tags": [
+        {
+          "id": 158054,
+          "name": "лес"
+        },
+        {
+          "id": 565256,
+          "name": "деревянщики_ГИС"
+        },
+        {
+          "id": 569728,
+          "name": "сайт+реклама"
+        }
+      ],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [
+        {
+          "id": 18434166,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/companies/18434166"
+            }
+          }
+        }
+      ],
+      "contacts": [
+        {
+          "id": 43700766,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/43700766"
+            }
+          }
+        },
+        {
+          "id": 44766934,
+          "is_main": false,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44766934"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 6988702,
+    "name": "ООО КОМПАНИЯ \"КАРЕЛЬСКИЙ ДОМ\" \nИНН 1001154365",
+    "price": 0,
+    "responsible_user_id": 3813342,
+    "group_id": 0,
+    "status_id": 29921706,
+    "pipeline_id": 2059851,
+    "loss_reason_id": null,
+    "created_by": 216124,
+    "updated_by": 3813342,
+    "created_at": 1444315216,
+    "updated_at": 1607082486,
+    "closed_at": null,
+    "closest_task_at": 1607374740,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Петрозаводск"
+          }
+        ]
+      },
+      {
+        "field_id": 512314,
+        "field_name": "key",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "crm-nid-88325"
+          }
+        ]
+      },
+      {
+        "field_id": 512312,
+        "field_name": "nid",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "88325"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "http://karelianhouse.ru/"
+          }
+        ]
+      },
+      {
+        "field_id": 645508,
+        "field_name": "Дата первого звонка",
+        "field_code": null,
+        "field_type": "date",
+        "values": [
+          {
+            "value": 1584651600
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Холодный обзвон",
+            "enum_id": 1402971
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "7600/7600+",
+            "enum_id": 1462110
+          }
+        ]
+      },
+      {
+        "field_id": 535552,
+        "field_name": "Сайт еще",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "http://best.karelianhouse.ru/"
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/6988702"
+      }
+    },
+    "_embedded": {
+      "tags": [
+        {
+          "id": 158054,
+          "name": "лес"
+        },
+        {
+          "id": 565256,
+          "name": "деревянщики_ГИС"
+        },
+        {
+          "id": 569728,
+          "name": "сайт+реклама"
+        }
+      ],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [
+        {
+          "id": 18434166,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/companies/18434166"
+            }
+          }
+        }
+      ],
+      "contacts": [
+        {
+          "id": 43700766,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/43700766"
+            }
+          }
+        },
+        {
+          "id": 44766934,
+          "is_main": false,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44766934"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 6988702,
+    "name": "ООО КОМПАНИЯ \"КАРЕЛЬСКИЙ ДОМ\" \nИНН 1001154365",
+    "price": 0,
+    "responsible_user_id": 3813342,
+    "group_id": 0,
+    "status_id": 29921706,
+    "pipeline_id": 2059851,
+    "loss_reason_id": null,
+    "created_by": 216124,
+    "updated_by": 3813342,
+    "created_at": 1444315216,
+    "updated_at": 1607082486,
+    "closed_at": null,
+    "closest_task_at": 1607374740,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Петрозаводск"
+          }
+        ]
+      },
+      {
+        "field_id": 512314,
+        "field_name": "key",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "crm-nid-88325"
+          }
+        ]
+      },
+      {
+        "field_id": 512312,
+        "field_name": "nid",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "88325"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "http://karelianhouse.ru/"
+          }
+        ]
+      },
+      {
+        "field_id": 645508,
+        "field_name": "Дата первого звонка",
+        "field_code": null,
+        "field_type": "date",
+        "values": [
+          {
+            "value": 1584651600
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Холодный обзвон",
+            "enum_id": 1402971
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "7600/7600+",
+            "enum_id": 1462110
+          }
+        ]
+      },
+      {
+        "field_id": 535552,
+        "field_name": "Сайт еще",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "http://best.karelianhouse.ru/"
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/6988702"
+      }
+    },
+    "_embedded": {
+      "tags": [
+        {
+          "id": 158054,
+          "name": "лес"
+        },
+        {
+          "id": 565256,
+          "name": "деревянщики_ГИС"
+        },
+        {
+          "id": 569728,
+          "name": "сайт+реклама"
+        }
+      ],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [
+        {
+          "id": 18434166,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/companies/18434166"
+            }
+          }
+        }
+      ],
+      "contacts": [
+        {
+          "id": 43700766,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/43700766"
+            }
+          }
+        },
+        {
+          "id": 44766934,
+          "is_main": false,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44766934"
+            }
+          }
+        }
+      ]
+    }
+  }
+]

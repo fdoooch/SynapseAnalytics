@@ -1,0 +1,7806 @@
+[
+  {
+    "id": 26652508,
+    "name": "Интернет магазин Традиции севера",
+    "price": 116000,
+    "responsible_user_id": 3277920,
+    "group_id": 162924,
+    "status_id": 24863298,
+    "pipeline_id": 721876,
+    "loss_reason_id": null,
+    "created_by": 3277920,
+    "updated_by": 0,
+    "created_at": 1595829275,
+    "updated_at": 1606027505,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 629302,
+        "field_name": "проект в Natrium",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://natrium.insaitov.ru/node/174037"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "http://традиции-севера.рф"
+          }
+        ]
+      },
+      {
+        "field_id": 636476,
+        "field_name": "Дата запуска",
+        "field_code": null,
+        "field_type": "date",
+        "values": [
+          {
+            "value": 1600808400
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26652508"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44009722,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44009722"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26652588,
+    "name": "ВКК ИП",
+    "price": 10000,
+    "responsible_user_id": 5608884,
+    "group_id": 27837,
+    "status_id": 143,
+    "pipeline_id": 86220,
+    "loss_reason_id": null,
+    "created_by": 5608884,
+    "updated_by": 1572358,
+    "created_at": 1595830997,
+    "updated_at": 1599845503,
+    "closed_at": 1599845503,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": null,
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26652588"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [
+        {
+          "id": 36736430,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/companies/36736430"
+            }
+          }
+        }
+      ],
+      "contacts": [
+        {
+          "id": 36736434,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/36736434"
+            }
+          }
+        },
+        {
+          "id": 37214886,
+          "is_main": false,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/37214886"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26652594,
+    "name": "ВКК гипотеза",
+    "price": 10000,
+    "responsible_user_id": 5608884,
+    "group_id": 27837,
+    "status_id": 143,
+    "pipeline_id": 86220,
+    "loss_reason_id": null,
+    "created_by": 5608884,
+    "updated_by": 1572358,
+    "created_at": 1595831041,
+    "updated_at": 1599845509,
+    "closed_at": 1599845508,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": null,
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26652594"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [
+        {
+          "id": 36736430,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/companies/36736430"
+            }
+          }
+        }
+      ],
+      "contacts": [
+        {
+          "id": 36736434,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/36736434"
+            }
+          }
+        },
+        {
+          "id": 37214886,
+          "is_main": false,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/37214886"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26654238,
+    "name": "Киоски",
+    "price": 0,
+    "responsible_user_id": 520377,
+    "group_id": 29307,
+    "status_id": 28985871,
+    "pipeline_id": 7038,
+    "loss_reason_id": null,
+    "created_by": 1364221,
+    "updated_by": 1683700,
+    "created_at": 1595847604,
+    "updated_at": 1595852146,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 525504,
+        "field_name": "Описание",
+        "field_code": null,
+        "field_type": "textarea",
+        "values": [
+          {
+            "value": "Алена\n+7 (908) 660 61 59\nЗдравствуйте, нам нужно изготовитьстойку, в которой пользователь сможет отсканировать QR-код и распечататьэлектронный  билет. Тираж пока назвать не можем. Давайте пока посмотрим цену на 1 и на 10 шт. \n\n \n\nС уважением,\nАлёна КалачёваДиректор по маркетингу и  PRСобытийно-туристический холдинг \"Фаворит\"\n\nмоб.: +7 908 66 06 159E-mail: pr.favorit.93@gmail.com"
+          }
+        ]
+      },
+      {
+        "field_id": 589816,
+        "field_name": "ID piwik",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "eaef4f2fa8b8fb9d"
+          }
+        ]
+      },
+      {
+        "field_id": 589818,
+        "field_name": "ID google",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Санкт-Петербург"
+          }
+        ]
+      },
+      {
+        "field_id": 587868,
+        "field_name": "Форма с сайта",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "санкт-петербург.synapse-studio.ru/k/interaktivnyy-terminal"
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "SEO",
+            "enum_id": 1444896
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Санкт-Петербург"
+          }
+        ]
+      },
+      {
+        "field_id": 593152,
+        "field_name": "Причина закрытия",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "не наш клиент",
+            "enum_id": 1409320
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26654238"
+      }
+    },
+    "_embedded": {
+      "tags": [
+        {
+          "id": 335770,
+          "name": "c сайтa"
+        }
+      ],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": []
+    }
+  },
+  {
+    "id": 26654512,
+    "name": "Сайт-визитка Центр Дорожно-Строительного Контроля",
+    "price": 17600,
+    "responsible_user_id": 6039816,
+    "group_id": 162924,
+    "status_id": 17937931,
+    "pipeline_id": 721876,
+    "loss_reason_id": null,
+    "created_by": 6039816,
+    "updated_by": 0,
+    "created_at": 1595850294,
+    "updated_at": 1604565186,
+    "closed_at": null,
+    "closest_task_at": 1604609940,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Самара"
+          }
+        ]
+      },
+      {
+        "field_id": 629302,
+        "field_name": "проект в Natrium",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://natrium.insaitov.ru/node/173309"
+          }
+        ]
+      },
+      {
+        "field_id": 525504,
+        "field_name": "Описание",
+        "field_code": null,
+        "field_type": "textarea",
+        "values": [
+          {
+            "value": "https://hosting.biz-panel.com/node/2720"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "http://cdsk63.ru"
+          }
+        ]
+      },
+      {
+        "field_id": 636476,
+        "field_name": "Дата запуска",
+        "field_code": null,
+        "field_type": "date",
+        "values": [
+          {
+            "value": 1596747600
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26654512"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44175362,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44175362"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26654690,
+    "name": "Насосное оборудование и Форель",
+    "price": 0,
+    "responsible_user_id": 1376809,
+    "group_id": 0,
+    "status_id": 28985823,
+    "pipeline_id": 7038,
+    "loss_reason_id": null,
+    "created_by": 1376809,
+    "updated_by": 1376809,
+    "created_at": 1595852322,
+    "updated_at": 1606107494,
+    "closed_at": null,
+    "closest_task_at": 1607201940,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Контекст",
+            "enum_id": 1326190
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Рекомендация",
+            "enum_id": 1394825
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Санкт-Петербург"
+          }
+        ]
+      },
+      {
+        "field_id": 525504,
+        "field_name": "Описание",
+        "field_code": null,
+        "field_type": "textarea",
+        "values": [
+          {
+            "value": "уже работал с нами"
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "Яндекс",
+            "enum_id": 1462098
+          },
+          {
+            "value": "Google",
+            "enum_id": 1462100
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26654690"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 36353962,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/36353962"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26654728,
+    "name": "Сайт-визитка Стоматология (Евермедик)",
+    "price": 7600,
+    "responsible_user_id": 522864,
+    "group_id": 162924,
+    "status_id": 17937931,
+    "pipeline_id": 721876,
+    "loss_reason_id": null,
+    "created_by": 3277920,
+    "updated_by": 0,
+    "created_at": 1595853113,
+    "updated_at": 1605435727,
+    "closed_at": null,
+    "closest_task_at": 1605041940,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 629302,
+        "field_name": "проект в Natrium",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://natrium.insaitov.ru/node/173411"
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Москва"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "http://stm.evermedic.ru"
+          }
+        ]
+      },
+      {
+        "field_id": 636476,
+        "field_name": "Дата запуска",
+        "field_code": null,
+        "field_type": "date",
+        "values": [
+          {
+            "value": 1597611600
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26654728"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 43399716,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/43399716"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26654732,
+    "name": "Сайт-визитка Справки (Евермедик)",
+    "price": 7600,
+    "responsible_user_id": 522864,
+    "group_id": 162924,
+    "status_id": 17937931,
+    "pipeline_id": 721876,
+    "loss_reason_id": null,
+    "created_by": 3277920,
+    "updated_by": 0,
+    "created_at": 1595853145,
+    "updated_at": 1605433264,
+    "closed_at": null,
+    "closest_task_at": 1605041940,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 629302,
+        "field_name": "проект в Natrium",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://natrium.insaitov.ru/node/173423"
+          }
+        ]
+      },
+      {
+        "field_id": 636476,
+        "field_name": "Дата запуска",
+        "field_code": null,
+        "field_type": "date",
+        "values": [
+          {
+            "value": 1597611600
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Москва"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "http://spr.evermedic.ru"
+          }
+        ]
+      },
+      {
+        "field_id": 638244,
+        "field_name": "Проект 2",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://hosting.biz-panel.com/node/2731"
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26654732"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [
+        {
+          "id": 44654200,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/companies/44654200"
+            }
+          }
+        }
+      ],
+      "contacts": [
+        {
+          "id": 43399716,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/43399716"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26654734,
+    "name": "Сайт-визитка Профосмотры (Евермедик)",
+    "price": 7600,
+    "responsible_user_id": 522864,
+    "group_id": 162924,
+    "status_id": 17937931,
+    "pipeline_id": 721876,
+    "loss_reason_id": null,
+    "created_by": 3277920,
+    "updated_by": 0,
+    "created_at": 1595853168,
+    "updated_at": 1605522126,
+    "closed_at": null,
+    "closest_task_at": 1605041940,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 629302,
+        "field_name": "проект в Natrium",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://natrium.insaitov.ru/node/173421"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://prof.evermedic.ru/"
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Москва"
+          }
+        ]
+      },
+      {
+        "field_id": 636476,
+        "field_name": "Дата запуска",
+        "field_code": null,
+        "field_type": "date",
+        "values": [
+          {
+            "value": 1597611600
+          }
+        ]
+      },
+      {
+        "field_id": 638244,
+        "field_name": "Проект 2",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://hosting.biz-panel.com/node/2773"
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26654734"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 43399716,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/43399716"
+            }
+          }
+        },
+        {
+          "id": 44654198,
+          "is_main": false,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44654198"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26655048,
+    "name": "Звукоизоляция",
+    "price": 0,
+    "responsible_user_id": 1376809,
+    "group_id": 0,
+    "status_id": 32363709,
+    "pipeline_id": 7038,
+    "loss_reason_id": null,
+    "created_by": 1364221,
+    "updated_by": 1683700,
+    "created_at": 1595856603,
+    "updated_at": 1598877368,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 525504,
+        "field_name": "Описание",
+        "field_code": null,
+        "field_type": "textarea",
+        "values": [
+          {
+            "value": "+2"
+          }
+        ]
+      },
+      {
+        "field_id": 589816,
+        "field_name": "ID piwik",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "2ddab41b024a15ee"
+          }
+        ]
+      },
+      {
+        "field_id": 589818,
+        "field_name": "ID google",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Уфа"
+          }
+        ]
+      },
+      {
+        "field_id": 587868,
+        "field_name": "Форма с сайта",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "уфа.synapse-studio.ru/p/kontekstnaya-reklama"
+          }
+        ]
+      },
+      {
+        "field_id": 632884,
+        "field_name": "Utm-метка",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "source=yandex, medium=search, campaign=green, keyword=16678534-1542633701-7566023246--1--none--контекстная_реклама, content=cntx"
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Search Yandex",
+            "enum_id": 1431746
+          }
+        ]
+      },
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Контекст",
+            "enum_id": 1326190
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Уфа"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://shop-acoustic.ru/"
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "Яндекс",
+            "enum_id": 1462098
+          },
+          {
+            "value": "Google",
+            "enum_id": 1462100
+          }
+        ]
+      },
+      {
+        "field_id": 593152,
+        "field_name": "Причина закрытия",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "не наш клиент",
+            "enum_id": 1409320
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26655048"
+      }
+    },
+    "_embedded": {
+      "tags": [
+        {
+          "id": 335770,
+          "name": "c сайтa"
+        }
+      ],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44210500,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44210500"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26656274,
+    "name": "Узнайте, что нужно написать на сайте, чтобы он стал продавать",
+    "price": 0,
+    "responsible_user_id": 544512,
+    "group_id": 162924,
+    "status_id": 32274075,
+    "pipeline_id": 3161127,
+    "loss_reason_id": null,
+    "created_by": 1364221,
+    "updated_by": 1683700,
+    "created_at": 1595915103,
+    "updated_at": 1595916211,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 589816,
+        "field_name": "ID piwik",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "cac89a39c49553db"
+          }
+        ]
+      },
+      {
+        "field_id": 589818,
+        "field_name": "ID google",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Промо"
+          }
+        ]
+      },
+      {
+        "field_id": 587868,
+        "field_name": "Форма с сайта",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "промо.synapse-studio.ru/w/sozdanie-saita-vizitki"
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26656274"
+      }
+    },
+    "_embedded": {
+      "tags": [
+        {
+          "id": 335770,
+          "name": "c сайтa"
+        }
+      ],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44212082,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44212082"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26656324,
+    "name": "+4, ИМ Охота",
+    "price": 0,
+    "responsible_user_id": 3715131,
+    "group_id": 0,
+    "status_id": 28986483,
+    "pipeline_id": 7038,
+    "loss_reason_id": null,
+    "created_by": 3715131,
+    "updated_by": 1683700,
+    "created_at": 1595916109,
+    "updated_at": 1605592594,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Контекст",
+            "enum_id": 1326190
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "от контекста /веба /поддержки",
+            "enum_id": 1428394
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Красноярск"
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "Яндекс",
+            "enum_id": 1462098
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26656324"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44200376,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44200376"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26656880,
+    "name": "Узнайте, что нужно написать на сайте, чтобы он стал продавать",
+    "price": 0,
+    "responsible_user_id": 544512,
+    "group_id": 162924,
+    "status_id": 32274075,
+    "pipeline_id": 3161127,
+    "loss_reason_id": null,
+    "created_by": 1364221,
+    "updated_by": 1683700,
+    "created_at": 1595921404,
+    "updated_at": 1595921601,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 589816,
+        "field_name": "ID piwik",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "771b2a28a0f8b4ee"
+          }
+        ]
+      },
+      {
+        "field_id": 589818,
+        "field_name": "ID google",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Санкт-Петербург"
+          }
+        ]
+      },
+      {
+        "field_id": 587868,
+        "field_name": "Форма с сайта",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "санкт-петербург.synapse-studio.ru/w/sozdanie-saita-vizitki"
+          }
+        ]
+      },
+      {
+        "field_id": 632884,
+        "field_name": "Utm-метка",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "source=yandex, medium=context, campaign=7600, keyword=34434926-3296243553-5676739149--0--zen.yandex.ru--создание_лендинг_пейдж_цена, content=web"
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Context Yandex",
+            "enum_id": 1460128
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26656880"
+      }
+    },
+    "_embedded": {
+      "tags": [
+        {
+          "id": 335770,
+          "name": "c сайтa"
+        }
+      ],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44212724,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44212724"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26657132,
+    "name": "Электросталь ИП",
+    "price": 10000,
+    "responsible_user_id": 5608884,
+    "group_id": 27837,
+    "status_id": 16623835,
+    "pipeline_id": 86220,
+    "loss_reason_id": null,
+    "created_by": 5608884,
+    "updated_by": 5608884,
+    "created_at": 1595924007,
+    "updated_at": 1595924007,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": null,
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26657132"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [
+        {
+          "id": 25216686,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/companies/25216686"
+            }
+          }
+        }
+      ],
+      "contacts": [
+        {
+          "id": 30828845,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/30828845"
+            }
+          }
+        },
+        {
+          "id": 31017447,
+          "is_main": false,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/31017447"
+            }
+          }
+        },
+        {
+          "id": 41812090,
+          "is_main": false,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/41812090"
+            }
+          }
+        },
+        {
+          "id": 42428746,
+          "is_main": false,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/42428746"
+            }
+          }
+        },
+        {
+          "id": 44095462,
+          "is_main": false,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44095462"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26657142,
+    "name": "Игнорируют",
+    "price": 0,
+    "responsible_user_id": 520377,
+    "group_id": 29307,
+    "status_id": 28985871,
+    "pipeline_id": 7038,
+    "loss_reason_id": null,
+    "created_by": 1364221,
+    "updated_by": 1683700,
+    "created_at": 1595924103,
+    "updated_at": 1596457510,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 525504,
+        "field_name": "Описание",
+        "field_code": null,
+        "field_type": "textarea",
+        "values": [
+          {
+            "value": "+79199168956,click"
+          }
+        ]
+      },
+      {
+        "field_id": 589816,
+        "field_name": "ID piwik",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "9d4c050b5b8303df"
+          }
+        ]
+      },
+      {
+        "field_id": 589818,
+        "field_name": "ID google",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Ижевск"
+          }
+        ]
+      },
+      {
+        "field_id": 587868,
+        "field_name": "Форма с сайта",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "ижевск.synapse-studio.ru/m/raskrutka-gruppy-vkontakte"
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "SEO",
+            "enum_id": 1444896
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Ижевск"
+          }
+        ]
+      },
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Реклама в Fb или Instagram",
+            "enum_id": 1450810
+          }
+        ]
+      },
+      {
+        "field_id": 593152,
+        "field_name": "Причина закрытия",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "постоянный недозвон",
+            "enum_id": 1455810
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26657142"
+      }
+    },
+    "_embedded": {
+      "tags": [
+        {
+          "id": 335770,
+          "name": "c сайтa"
+        }
+      ],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44212944,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44212944"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26657268,
+    "name": "Сайт-визитка Корнев",
+    "price": 7600,
+    "responsible_user_id": 6039816,
+    "group_id": 162924,
+    "status_id": 17937931,
+    "pipeline_id": 721876,
+    "loss_reason_id": null,
+    "created_by": 3277920,
+    "updated_by": 0,
+    "created_at": 1595925520,
+    "updated_at": 1604064251,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Санкт-Петербург"
+          }
+        ]
+      },
+      {
+        "field_id": 629302,
+        "field_name": "проект в Natrium",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://natrium.insaitov.ru/node/174358"
+          }
+        ]
+      },
+      {
+        "field_id": 636476,
+        "field_name": "Дата запуска",
+        "field_code": null,
+        "field_type": "date",
+        "values": [
+          {
+            "value": 1596056400
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://omegasnab.com/"
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26657268"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44173912,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44173912"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26657554,
+    "name": "Узнайте, что нужно написать на сайте, чтобы он стал продавать",
+    "price": 0,
+    "responsible_user_id": 544512,
+    "group_id": 162924,
+    "status_id": 32274075,
+    "pipeline_id": 3161127,
+    "loss_reason_id": null,
+    "created_by": 1364221,
+    "updated_by": 1683700,
+    "created_at": 1595928605,
+    "updated_at": 1595935861,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 589816,
+        "field_name": "ID piwik",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "d0d8c7a423bede75"
+          }
+        ]
+      },
+      {
+        "field_id": 589818,
+        "field_name": "ID google",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Промо"
+          }
+        ]
+      },
+      {
+        "field_id": 587868,
+        "field_name": "Форма с сайта",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "промо.synapse-studio.ru/w/sozdanie-saita-vizitki"
+          }
+        ]
+      },
+      {
+        "field_id": 632884,
+        "field_name": "Utm-метка",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "source=yandex, medium=re, campaign=7600, keyword=29901074-2919086943-4747238616--0--vk.com--, content=web"
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Re Yandex",
+            "enum_id": 1460132
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26657554"
+      }
+    },
+    "_embedded": {
+      "tags": [
+        {
+          "id": 335770,
+          "name": "c сайтa"
+        }
+      ],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44213514,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44213514"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26657622,
+    "name": "Лендинг",
+    "price": 0,
+    "responsible_user_id": 3813342,
+    "group_id": 0,
+    "status_id": 143,
+    "pipeline_id": 28752,
+    "loss_reason_id": null,
+    "created_by": 3813342,
+    "updated_by": 3813342,
+    "created_at": 1595929339,
+    "updated_at": 1596446722,
+    "closed_at": 1596446722,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Лендинг",
+            "enum_id": 1400339
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "С рекламы",
+            "enum_id": 1394829
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "?"
+          }
+        ]
+      },
+      {
+        "field_id": 593152,
+        "field_name": "Причина закрытия",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "другой подрядчик",
+            "enum_id": 1386905
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26657622"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44213454,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44213454"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26657640,
+    "name": "Узнайте, что нужно написать на сайте, чтобы он стал продавать",
+    "price": 0,
+    "responsible_user_id": 544512,
+    "group_id": 162924,
+    "status_id": 32274075,
+    "pipeline_id": 3161127,
+    "loss_reason_id": null,
+    "created_by": 1364221,
+    "updated_by": 1683700,
+    "created_at": 1595929503,
+    "updated_at": 1595935874,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 589816,
+        "field_name": "ID piwik",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "1e246fd7eb6aae72"
+          }
+        ]
+      },
+      {
+        "field_id": 589818,
+        "field_name": "ID google",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Пермь"
+          }
+        ]
+      },
+      {
+        "field_id": 587868,
+        "field_name": "Форма с сайта",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "пермь.synapse-studio.ru/w/sozdanie-saita-vizitki"
+          }
+        ]
+      },
+      {
+        "field_id": 632884,
+        "field_name": "Utm-метка",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "source=yandex, medium=search, campaign=7600, keyword=46841884-3996160090-8165967987--3--none--сайт_под_ключ, content=web"
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Search Yandex",
+            "enum_id": 1431746
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26657640"
+      }
+    },
+    "_embedded": {
+      "tags": [
+        {
+          "id": 335770,
+          "name": "c сайтa"
+        }
+      ],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44213614,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44213614"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26658132,
+    "name": "Сайт-визитка Лекус",
+    "price": 7600,
+    "responsible_user_id": 6039816,
+    "group_id": 162924,
+    "status_id": 17937931,
+    "pipeline_id": 721876,
+    "loss_reason_id": null,
+    "created_by": 6039816,
+    "updated_by": 216124,
+    "created_at": 1595934671,
+    "updated_at": 1605627949,
+    "closed_at": null,
+    "closest_task_at": 1605697200,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 525504,
+        "field_name": "Описание",
+        "field_code": null,
+        "field_type": "textarea",
+        "values": [
+          {
+            "value": "https://hosting.biz-panel.com/node/2725"
+          }
+        ]
+      },
+      {
+        "field_id": 629302,
+        "field_name": "проект в Natrium",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://natrium.insaitov.ru/node/173992"
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Пушкино"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://lekusoil.ru/"
+          }
+        ]
+      },
+      {
+        "field_id": 636476,
+        "field_name": "Дата запуска",
+        "field_code": null,
+        "field_type": "date",
+        "values": [
+          {
+            "value": 1596142800
+          }
+        ]
+      },
+      {
+        "field_id": 535552,
+        "field_name": "Сайт еще",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "https://lekus.ru/"
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "7600/7600+",
+            "enum_id": 1462110
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26658132"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 43157656,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/43157656"
+            }
+          }
+        },
+        {
+          "id": 44515256,
+          "is_main": false,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44515256"
+            }
+          }
+        },
+        {
+          "id": 44552990,
+          "is_main": false,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44552990"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26658522,
+    "name": "Сайт-визитка Трейдсофт24",
+    "price": 7600,
+    "responsible_user_id": 6039816,
+    "group_id": 162924,
+    "status_id": 17937931,
+    "pipeline_id": 721876,
+    "loss_reason_id": null,
+    "created_by": 6039816,
+    "updated_by": 0,
+    "created_at": 1595938889,
+    "updated_at": 1604568365,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Вологда"
+          }
+        ]
+      },
+      {
+        "field_id": 629302,
+        "field_name": "проект в Natrium",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://natrium.insaitov.ru/node/174467"
+          }
+        ]
+      },
+      {
+        "field_id": 525504,
+        "field_name": "Описание",
+        "field_code": null,
+        "field_type": "textarea",
+        "values": [
+          {
+            "value": "https://hosting.biz-panel.com/node/2749"
+          }
+        ]
+      },
+      {
+        "field_id": 636476,
+        "field_name": "Дата запуска",
+        "field_code": null,
+        "field_type": "date",
+        "values": [
+          {
+            "value": 1596747600
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://tradesoft24-1c.ru/"
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26658522"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 43949562,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/43949562"
+            }
+          }
+        },
+        {
+          "id": 44361254,
+          "is_main": false,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44361254"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26658988,
+    "name": "ИМ",
+    "price": 0,
+    "responsible_user_id": 3813342,
+    "group_id": 0,
+    "status_id": 143,
+    "pipeline_id": 28752,
+    "loss_reason_id": null,
+    "created_by": 3813342,
+    "updated_by": 6218907,
+    "created_at": 1595944226,
+    "updated_at": 1597670638,
+    "closed_at": 1595944247,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "ИМ (типовые)",
+            "enum_id": 1449346
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "С рекламы",
+            "enum_id": 1394829
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Владикавказ"
+          }
+        ]
+      },
+      {
+        "field_id": 593152,
+        "field_name": "Причина закрытия",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "другой подрядчик",
+            "enum_id": 1386905
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "ИМ (типовые)",
+            "enum_id": 1462114
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26658988"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44212154,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44212154"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26659346,
+    "name": "КИА Курск",
+    "price": 0,
+    "responsible_user_id": 3813342,
+    "group_id": 0,
+    "status_id": 28985781,
+    "pipeline_id": 7038,
+    "loss_reason_id": null,
+    "created_by": 3813342,
+    "updated_by": 6255819,
+    "created_at": 1595948751,
+    "updated_at": 1600693429,
+    "closed_at": null,
+    "closest_task_at": 1607374740,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Контекст",
+            "enum_id": 1326190
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Рекомендация",
+            "enum_id": 1394825
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Курск"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://kia-autostyle.ru/"
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "Яндекс",
+            "enum_id": 1462098
+          },
+          {
+            "value": "Google",
+            "enum_id": 1462100
+          }
+        ]
+      },
+      {
+        "field_id": 648218,
+        "field_name": "Создана из",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Calltouch"
+          }
+        ]
+      },
+      {
+        "field_id": 648220,
+        "field_name": "Тип обращения",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Звонок",
+            "enum_id": 1462300
+          }
+        ]
+      },
+      {
+        "field_id": 648222,
+        "field_name": "Момент отправки",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Звонок завершен",
+            "enum_id": 1462306
+          }
+        ]
+      },
+      {
+        "field_id": 648224,
+        "field_name": "Номер клиента",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "79202666689"
+          }
+        ]
+      },
+      {
+        "field_id": 648226,
+        "field_name": "Номер переадресации",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "74991165287"
+          }
+        ]
+      },
+      {
+        "field_id": 648228,
+        "field_name": "Отслеживаемый номер",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "74991165287"
+          }
+        ]
+      },
+      {
+        "field_id": 648230,
+        "field_name": "Тип пула",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Статический",
+            "enum_id": 1462314
+          }
+        ]
+      },
+      {
+        "field_id": 648232,
+        "field_name": "Дата обращения",
+        "field_code": null,
+        "field_type": "date",
+        "values": [
+          {
+            "value": 1598389200
+          }
+        ]
+      },
+      {
+        "field_id": 648234,
+        "field_name": "Время обращения",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "14:59:43"
+          }
+        ]
+      },
+      {
+        "field_id": 648236,
+        "field_name": "Длительность",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "07:05"
+          }
+        ]
+      },
+      {
+        "field_id": 648238,
+        "field_name": "Ожидание",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "00:00"
+          }
+        ]
+      },
+      {
+        "field_id": 648240,
+        "field_name": "Статус звонка",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Удачный",
+            "enum_id": 1462316
+          }
+        ]
+      },
+      {
+        "field_id": 648242,
+        "field_name": "Скачать запись",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://api-node15.calltouch.ru/calls-service/RestAPI/download-call?jwtkey=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3N1ZXIiOiJDYWxsdG91Y2gtV0VCLUFQSSIsImlzc3VlZCI6MTU5ODQ0NDM0NiwiZXhwIjoxOTEzODA0MzQ2LCJzaXRlSWQiOjM5NDA3LCJjYWxsSWQiOjE3NDA1MH0.j0XS8dYNg7rq-Qo99TABC4WR3MUeu_Qtxl5IxMqSNDMdGJ7jwJ6C8NPFsKi1OsOvi1LV1TF3pzBi9_ZGnl4CEA"
+          }
+        ]
+      },
+      {
+        "field_id": 648244,
+        "field_name": "Тип звонка",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "Уникальный",
+            "enum_id": 1462320
+          },
+          {
+            "value": "Целевой",
+            "enum_id": 1462322
+          },
+          {
+            "value": "Уникально-целевой",
+            "enum_id": 1462324
+          },
+          {
+            "value": "Обратный",
+            "enum_id": 1462328
+          }
+        ]
+      },
+      {
+        "field_id": 648254,
+        "field_name": "Модель атрибуции",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Последний непрямой",
+            "enum_id": 1462338
+          }
+        ]
+      },
+      {
+        "field_id": 648256,
+        "field_name": "Источник / utm_source",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "google"
+          }
+        ]
+      },
+      {
+        "field_id": 648258,
+        "field_name": "Канал / utm_medium",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "organic"
+          }
+        ]
+      },
+      {
+        "field_id": 648260,
+        "field_name": "Кампания / utm_campaign",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "<не указано>"
+          }
+        ]
+      },
+      {
+        "field_id": 648262,
+        "field_name": "Объявление / utm_content",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "<не указано>"
+          }
+        ]
+      },
+      {
+        "field_id": 648264,
+        "field_name": "Ключевой запрос / utm_term",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "<не указано>"
+          }
+        ]
+      },
+      {
+        "field_id": 648266,
+        "field_name": "Отслеживаемый сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "http://www.synapse-studio.ru"
+          }
+        ]
+      },
+      {
+        "field_id": 648268,
+        "field_name": "Страница входа на сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://www.synapse-studio.ru/"
+          }
+        ]
+      },
+      {
+        "field_id": 648270,
+        "field_name": "Страница реферального перехода",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://www.google.com/"
+          }
+        ]
+      },
+      {
+        "field_id": 648274,
+        "field_name": "Город_calltouch",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "kursk"
+          }
+        ]
+      },
+      {
+        "field_id": 648276,
+        "field_name": "Устройство",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "ПК",
+            "enum_id": 1462342
+          }
+        ]
+      },
+      {
+        "field_id": 648278,
+        "field_name": "Операционная система",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Windows"
+          }
+        ]
+      },
+      {
+        "field_id": 648280,
+        "field_name": "Браузер",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Chrome"
+          }
+        ]
+      },
+      {
+        "field_id": 648282,
+        "field_name": "ID звонка в Calltouch",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "174050"
+          }
+        ]
+      },
+      {
+        "field_id": 648288,
+        "field_name": "ID сессии",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "9115288"
+          }
+        ]
+      },
+      {
+        "field_id": 648290,
+        "field_name": "ID клиента в Calltouch",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "810052"
+          }
+        ]
+      },
+      {
+        "field_id": 648292,
+        "field_name": "Google Client ID",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "1936477569.1597149756"
+          }
+        ]
+      },
+      {
+        "field_id": 648294,
+        "field_name": "Yandex Client ID",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "1576744629183733616"
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26659346"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [
+        {
+          "id": 43310018,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/companies/43310018"
+            }
+          }
+        }
+      ],
+      "contacts": [
+        {
+          "id": 43214016,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/43214016"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26659388,
+    "name": "Подготовка к ЕГЭ",
+    "price": 0,
+    "responsible_user_id": 3715131,
+    "group_id": 0,
+    "status_id": 28986483,
+    "pipeline_id": 7038,
+    "loss_reason_id": null,
+    "created_by": 1364221,
+    "updated_by": 6339639,
+    "created_at": 1595949303,
+    "updated_at": 1602504735,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 525504,
+        "field_name": "Описание",
+        "field_code": null,
+        "field_type": "textarea",
+        "values": [
+          {
+            "value": "+79038580094,hunter"
+          }
+        ]
+      },
+      {
+        "field_id": 589816,
+        "field_name": "ID piwik",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "6e4abe0bd8d3469b"
+          }
+        ]
+      },
+      {
+        "field_id": 589818,
+        "field_name": "ID google",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Воронеж"
+          }
+        ]
+      },
+      {
+        "field_id": 587868,
+        "field_name": "Форма с сайта",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "воронеж.synapse-studio.ru/m/raskrutka-akkaunta-instagram"
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "SEO",
+            "enum_id": 1444896
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Воронеж"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "http://www.rcdp.ru/"
+          }
+        ]
+      },
+      {
+        "field_id": 535552,
+        "field_name": "Сайт еще",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "https://www.instagram.com/rcdpvrn/?hl=ru"
+          }
+        ]
+      },
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Контекст",
+            "enum_id": 1326190
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26659388"
+      }
+    },
+    "_embedded": {
+      "tags": [
+        {
+          "id": 335770,
+          "name": "c сайтa"
+        }
+      ],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44215366,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44215366"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26661048,
+    "name": "Сайт-визитка выездной шиномонтаж",
+    "price": 0,
+    "responsible_user_id": 3813342,
+    "group_id": 0,
+    "status_id": 143,
+    "pipeline_id": 28752,
+    "loss_reason_id": null,
+    "created_by": 3813342,
+    "updated_by": 581856,
+    "created_at": 1596011307,
+    "updated_at": 1602225246,
+    "closed_at": 1596631433,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "7600/7600+",
+            "enum_id": 1400333
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "от контекста /веба /поддержки",
+            "enum_id": 1428394
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Санкт-Петербург"
+          }
+        ]
+      },
+      {
+        "field_id": 593152,
+        "field_name": "Причина закрытия",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "другой подрядчик",
+            "enum_id": 1386905
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "7600/7600+",
+            "enum_id": 1462110
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26661048"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44219834,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44219834"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26661080,
+    "name": "Выездной шиномонтаж",
+    "price": 0,
+    "responsible_user_id": 1376809,
+    "group_id": 0,
+    "status_id": 28986483,
+    "pipeline_id": 7038,
+    "loss_reason_id": null,
+    "created_by": 1376809,
+    "updated_by": 1376809,
+    "created_at": 1596011701,
+    "updated_at": 1606107520,
+    "closed_at": null,
+    "closest_task_at": 1607201940,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Контекст",
+            "enum_id": 1326190
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "от контекста /веба /поддержки",
+            "enum_id": 1428394
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Санкт-Петербург"
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26661080"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44219834,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44219834"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26661382,
+    "name": "Семантическое ядро Джокер",
+    "price": 5000,
+    "responsible_user_id": 2423742,
+    "group_id": 27837,
+    "status_id": 142,
+    "pipeline_id": 86220,
+    "loss_reason_id": null,
+    "created_by": 2423742,
+    "updated_by": 2423742,
+    "created_at": 1596014636,
+    "updated_at": 1597140985,
+    "closed_at": 1596529973,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": null,
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26661382"
+      }
+    },
+    "_embedded": {
+      "tags": [
+        {
+          "id": 480218,
+          "name": "август"
+        }
+      ],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44025952,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44025952"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26661820,
+    "name": "Сайт-визитка КранСтройМонтаж",
+    "price": 7600,
+    "responsible_user_id": 3277920,
+    "group_id": 162924,
+    "status_id": 17937931,
+    "pipeline_id": 721876,
+    "loss_reason_id": null,
+    "created_by": 3277920,
+    "updated_by": 0,
+    "created_at": 1596019392,
+    "updated_at": 1605076718,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Вологда"
+          }
+        ]
+      },
+      {
+        "field_id": 629302,
+        "field_name": "проект в Natrium",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://natrium.insaitov.ru/node/174563"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://ксм-теплообменники.рф/"
+          }
+        ]
+      },
+      {
+        "field_id": 636476,
+        "field_name": "Дата запуска",
+        "field_code": null,
+        "field_type": "date",
+        "values": [
+          {
+            "value": 1596142800
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26661820"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [
+        {
+          "id": 18434500,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/companies/18434500"
+            }
+          }
+        }
+      ],
+      "contacts": [
+        {
+          "id": 43597456,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/43597456"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26661824,
+    "name": "Узнайте, что нужно написать на сайте, чтобы он стал продавать",
+    "price": 0,
+    "responsible_user_id": 544512,
+    "group_id": 162924,
+    "status_id": 32274075,
+    "pipeline_id": 3161127,
+    "loss_reason_id": null,
+    "created_by": 1364221,
+    "updated_by": 1683700,
+    "created_at": 1596019503,
+    "updated_at": 1596027922,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 589816,
+        "field_name": "ID piwik",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "e5d4acb2f3108410"
+          }
+        ]
+      },
+      {
+        "field_id": 589818,
+        "field_name": "ID google",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Промо"
+          }
+        ]
+      },
+      {
+        "field_id": 587868,
+        "field_name": "Форма с сайта",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "промо.synapse-studio.ru/w/sozdanie-saita-vizitki"
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26661824"
+      }
+    },
+    "_embedded": {
+      "tags": [
+        {
+          "id": 335770,
+          "name": "c сайтa"
+        }
+      ],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44221130,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44221130"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26662436,
+    "name": "Альфасталь Редизайн главной (1 этап)",
+    "price": 14500,
+    "responsible_user_id": 2423742,
+    "group_id": 27837,
+    "status_id": 142,
+    "pipeline_id": 86220,
+    "loss_reason_id": null,
+    "created_by": 2423742,
+    "updated_by": 2423742,
+    "created_at": 1596026239,
+    "updated_at": 1599136800,
+    "closed_at": 1598867816,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "Доработки",
+            "enum_id": 1462132
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26662436"
+      }
+    },
+    "_embedded": {
+      "tags": [
+        {
+          "id": 480218,
+          "name": "август"
+        }
+      ],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [
+        {
+          "id": 23157768,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/companies/23157768"
+            }
+          }
+        }
+      ],
+      "contacts": [
+        {
+          "id": 30636625,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/30636625"
+            }
+          }
+        },
+        {
+          "id": 33499521,
+          "is_main": false,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/33499521"
+            }
+          }
+        },
+        {
+          "id": 33805480,
+          "is_main": false,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/33805480"
+            }
+          }
+        },
+        {
+          "id": 34960288,
+          "is_main": false,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/34960288"
+            }
+          }
+        },
+        {
+          "id": 35075876,
+          "is_main": false,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/35075876"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26662554,
+    "name": "Вакансии Магнит",
+    "price": 0,
+    "responsible_user_id": 1376809,
+    "group_id": 0,
+    "status_id": 28985781,
+    "pipeline_id": 7038,
+    "loss_reason_id": null,
+    "created_by": 1376809,
+    "updated_by": 216124,
+    "created_at": 1596027635,
+    "updated_at": 1606107520,
+    "closed_at": null,
+    "closest_task_at": 1607201940,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Контекст",
+            "enum_id": 1326190
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "С рекламы",
+            "enum_id": 1394829
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Смоленск"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://magnit-info.ru/work/vacancy/"
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26662554"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44214124,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44214124"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26662632,
+    "name": "!!!Домостроение Москва",
+    "price": 7600,
+    "responsible_user_id": 3813342,
+    "group_id": 0,
+    "status_id": 142,
+    "pipeline_id": 2059851,
+    "loss_reason_id": null,
+    "created_by": 3813342,
+    "updated_by": 216124,
+    "created_at": 1596028389,
+    "updated_at": 1599582929,
+    "closed_at": 1599553794,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Контекст",
+            "enum_id": 1326190
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "С рекламы",
+            "enum_id": 1394829
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Москва"
+          }
+        ]
+      },
+      {
+        "field_id": 645508,
+        "field_name": "Дата первого звонка",
+        "field_code": null,
+        "field_type": "date",
+        "values": [
+          {
+            "value": 1595970000
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://98365930.wixsite.com/maxcapitalstroy"
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "7600/7600+",
+            "enum_id": 1462110
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26662632"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44221846,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44221846"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26662842,
+    "name": "Автошкола Ансат",
+    "price": 0,
+    "responsible_user_id": 1376809,
+    "group_id": 0,
+    "status_id": 28985781,
+    "pipeline_id": 7038,
+    "loss_reason_id": null,
+    "created_by": 1364221,
+    "updated_by": 216124,
+    "created_at": 1596031204,
+    "updated_at": 1606107520,
+    "closed_at": null,
+    "closest_task_at": 1607201940,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 525504,
+        "field_name": "Описание",
+        "field_code": null,
+        "field_type": "textarea",
+        "values": [
+          {
+            "value": "+79872708670,hunter"
+          }
+        ]
+      },
+      {
+        "field_id": 589816,
+        "field_name": "ID piwik",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "a0bb7bae1c9b786e"
+          }
+        ]
+      },
+      {
+        "field_id": 589818,
+        "field_name": "ID google",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Альметьевск"
+          }
+        ]
+      },
+      {
+        "field_id": 587868,
+        "field_name": "Форма с сайта",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "альметьевск.synapse-studio.ru/p/yandex-reklama"
+          }
+        ]
+      },
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Контекст",
+            "enum_id": 1326190
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "SEO",
+            "enum_id": 1444896
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Альметьевск"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "http://ansatavto.ru/"
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26662842"
+      }
+    },
+    "_embedded": {
+      "tags": [
+        {
+          "id": 335770,
+          "name": "c сайтa"
+        }
+      ],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44222162,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44222162"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26664034,
+    "name": "Озеленение офисов",
+    "price": 0,
+    "responsible_user_id": 3715131,
+    "group_id": 0,
+    "status_id": 28986483,
+    "pipeline_id": 7038,
+    "loss_reason_id": null,
+    "created_by": 3715131,
+    "updated_by": 6339639,
+    "created_at": 1596087722,
+    "updated_at": 1602503791,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Контекст",
+            "enum_id": 1326190
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "чатра (узнать откуда)",
+            "enum_id": 1394831
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Екатеринбург"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "http://нет"
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "Яндекс",
+            "enum_id": 1462098
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26664034"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44223566,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44223566"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26664672,
+    "name": "Медицинский центр ТТ ЛАЙФ",
+    "price": 0,
+    "responsible_user_id": 1376809,
+    "group_id": 0,
+    "status_id": 28985781,
+    "pipeline_id": 7038,
+    "loss_reason_id": null,
+    "created_by": 1376809,
+    "updated_by": 216124,
+    "created_at": 1596095649,
+    "updated_at": 1606107520,
+    "closed_at": null,
+    "closest_task_at": 1607201940,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Контекст",
+            "enum_id": 1326190
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "С рекламы",
+            "enum_id": 1394829
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Санкт-Петербург"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://ttl24.ru/"
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26664672"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44223860,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44223860"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26664988,
+    "name": "Интернет-магазин Уникснаб",
+    "price": 25600,
+    "responsible_user_id": 3277920,
+    "group_id": 162924,
+    "status_id": 24863298,
+    "pipeline_id": 721876,
+    "loss_reason_id": null,
+    "created_by": 3277920,
+    "updated_by": 0,
+    "created_at": 1596098895,
+    "updated_at": 1605958564,
+    "closed_at": null,
+    "closest_task_at": 1605992340,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://греем-воду.рф/"
+          }
+        ]
+      },
+      {
+        "field_id": 629302,
+        "field_name": "проект в Natrium",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://natrium.insaitov.ru/node/161719"
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Хабаровск +7"
+          }
+        ]
+      },
+      {
+        "field_id": 636476,
+        "field_name": "Дата запуска",
+        "field_code": null,
+        "field_type": "date",
+        "values": [
+          {
+            "value": 1599426000
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26664988"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 43792734,
+          "is_main": false,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/43792734"
+            }
+          }
+        },
+        {
+          "id": 44225256,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44225256"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26665160,
+    "name": "Мед центр сайт",
+    "price": 25600,
+    "responsible_user_id": 3813342,
+    "group_id": 0,
+    "status_id": 143,
+    "pipeline_id": 28752,
+    "loss_reason_id": null,
+    "created_by": 3813342,
+    "updated_by": 3813342,
+    "created_at": 1596100959,
+    "updated_at": 1597761157,
+    "closed_at": 1597761157,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Каталог (товары, услуги) 25600",
+            "enum_id": 1449344
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "от контекста /веба /поддержки",
+            "enum_id": 1428394
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Санкт-Петербург"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://ttl24.ru/"
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "Каталог (товары, услуги) 25600",
+            "enum_id": 1462112
+          }
+        ]
+      },
+      {
+        "field_id": 593152,
+        "field_name": "Причина закрытия",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "другой подрядчик",
+            "enum_id": 1386905
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26665160"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44223860,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44223860"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26686106,
+    "name": "Сайт-визитка комплектующие для мебели",
+    "price": 7600,
+    "responsible_user_id": 3813342,
+    "group_id": 0,
+    "status_id": 142,
+    "pipeline_id": 28752,
+    "loss_reason_id": null,
+    "created_by": 3813342,
+    "updated_by": 3813342,
+    "created_at": 1596105772,
+    "updated_at": 1598597531,
+    "closed_at": 1598597529,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "7600/7600+",
+            "enum_id": 1400333
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Рекомендация",
+            "enum_id": 1394825
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Вологда"
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "7600/7600+",
+            "enum_id": 1462110
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26686106"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44224804,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44224804"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26686216,
+    "name": "Узнайте, что нужно написать на сайте, чтобы он стал продавать",
+    "price": 0,
+    "responsible_user_id": 544512,
+    "group_id": 162924,
+    "status_id": 32274075,
+    "pipeline_id": 3161127,
+    "loss_reason_id": null,
+    "created_by": 1364221,
+    "updated_by": 1683700,
+    "created_at": 1596106804,
+    "updated_at": 1596111592,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 589816,
+        "field_name": "ID piwik",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "bd33ab40f7309aaf"
+          }
+        ]
+      },
+      {
+        "field_id": 589818,
+        "field_name": "ID google",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Промо"
+          }
+        ]
+      },
+      {
+        "field_id": 587868,
+        "field_name": "Форма с сайта",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "промо.synapse-studio.ru/w/sozdanie-saita-vizitki"
+          }
+        ]
+      },
+      {
+        "field_id": 632884,
+        "field_name": "Utm-метка",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "source=yandex, medium=context, campaign=7600, keyword=34434930-3296243667-7060463415--0--vk.com--сайт_визитка, content=web"
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Context Yandex",
+            "enum_id": 1460128
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26686216"
+      }
+    },
+    "_embedded": {
+      "tags": [
+        {
+          "id": 335770,
+          "name": "c сайтa"
+        }
+      ],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44225316,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44225316"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26686390,
+    "name": "Фэстен SEO",
+    "price": 15000,
+    "responsible_user_id": 5608884,
+    "group_id": 27837,
+    "status_id": 16623904,
+    "pipeline_id": 86220,
+    "loss_reason_id": null,
+    "created_by": 5608884,
+    "updated_by": 5608884,
+    "created_at": 1596108676,
+    "updated_at": 1602079252,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": null,
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26686390"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [
+        {
+          "id": 18437490,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/companies/18437490"
+            }
+          }
+        }
+      ],
+      "contacts": [
+        {
+          "id": 25435550,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/25435550"
+            }
+          }
+        },
+        {
+          "id": 25490228,
+          "is_main": false,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/25490228"
+            }
+          }
+        },
+        {
+          "id": 35688726,
+          "is_main": false,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/35688726"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26686914,
+    "name": "+4, ИМ заявка, балуются дети",
+    "price": 0,
+    "responsible_user_id": 520377,
+    "group_id": 29307,
+    "status_id": 29160522,
+    "pipeline_id": 28752,
+    "loss_reason_id": null,
+    "created_by": 3813342,
+    "updated_by": 6218907,
+    "created_at": 1596114003,
+    "updated_at": 1597670632,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "ИМ (типовые)",
+            "enum_id": 1449346
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Search Google",
+            "enum_id": 1431748
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Красноярск"
+          }
+        ]
+      },
+      {
+        "field_id": 525504,
+        "field_name": "Описание",
+        "field_code": null,
+        "field_type": "textarea",
+        "values": [
+          {
+            "value": "Евгений\n+7 (923) 328 99 36"
+          }
+        ]
+      },
+      {
+        "field_id": 589816,
+        "field_name": "ID piwik",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "e238bea546f0e45e"
+          }
+        ]
+      },
+      {
+        "field_id": 589818,
+        "field_name": "ID google",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Красноярск"
+          }
+        ]
+      },
+      {
+        "field_id": 587868,
+        "field_name": "Форма с сайта",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "красноярск.synapse-studio.ru/w/sozdanie-internet-magazina"
+          }
+        ]
+      },
+      {
+        "field_id": 632884,
+        "field_name": "Utm-метка",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "source=google, medium=search, campaign=25600, keyword=7828652085-80476036494-393598362691------создать_интернет_магазин, content=web"
+          }
+        ]
+      },
+      {
+        "field_id": 593152,
+        "field_name": "Причина закрытия",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "постоянный недозвон",
+            "enum_id": 1455810
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "ИМ (типовые)",
+            "enum_id": 1462114
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26686914"
+      }
+    },
+    "_embedded": {
+      "tags": [
+        {
+          "id": 335770,
+          "name": "c сайтa"
+        }
+      ],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44226190,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44226190"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26686922,
+    "name": "+2, Дебит-Е, перенос сайта",
+    "price": 0,
+    "responsible_user_id": 3813342,
+    "group_id": 0,
+    "status_id": 29162241,
+    "pipeline_id": 28752,
+    "loss_reason_id": null,
+    "created_by": 3813342,
+    "updated_by": 3813342,
+    "created_at": 1596114619,
+    "updated_at": 1605613046,
+    "closed_at": null,
+    "closest_task_at": 1607720340,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "7600/7600+",
+            "enum_id": 1400333
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "С рекламы",
+            "enum_id": 1394829
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Екатеринбург"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "http://parafinanet.ru/"
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "7600/7600+",
+            "enum_id": 1462110
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26686922"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44221412,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44221412"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26687158,
+    "name": "Сайт-визитка Кривоножкин Д.Ю.",
+    "price": 7600,
+    "responsible_user_id": 6039816,
+    "group_id": 162924,
+    "status_id": 17937931,
+    "pipeline_id": 721876,
+    "loss_reason_id": null,
+    "created_by": 6039816,
+    "updated_by": 0,
+    "created_at": 1596117668,
+    "updated_at": 1605628293,
+    "closed_at": null,
+    "closest_task_at": 1604609940,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Москва"
+          }
+        ]
+      },
+      {
+        "field_id": 629302,
+        "field_name": "проект в Natrium",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://natrium.insaitov.ru/node/174960"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://krivonozkin.ru/"
+          }
+        ]
+      },
+      {
+        "field_id": 525504,
+        "field_name": "Описание",
+        "field_code": null,
+        "field_type": "textarea",
+        "values": [
+          {
+            "value": "https://hosting.biz-panel.com/node/2743"
+          }
+        ]
+      },
+      {
+        "field_id": 636476,
+        "field_name": "Дата запуска",
+        "field_code": null,
+        "field_type": "date",
+        "values": [
+          {
+            "value": 1596661200
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26687158"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44201226,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44201226"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26688554,
+    "name": "ребенок балуется",
+    "price": 0,
+    "responsible_user_id": 544512,
+    "group_id": 162924,
+    "status_id": 29160522,
+    "pipeline_id": 28752,
+    "loss_reason_id": null,
+    "created_by": 3813342,
+    "updated_by": 1683700,
+    "created_at": 1596121204,
+    "updated_at": 1596186954,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Search Google",
+            "enum_id": 1431748
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Красноярск"
+          }
+        ]
+      },
+      {
+        "field_id": 525504,
+        "field_name": "Описание",
+        "field_code": null,
+        "field_type": "textarea",
+        "values": [
+          {
+            "value": "Ксения\r\n+7 (908) 203 45 84"
+          }
+        ]
+      },
+      {
+        "field_id": 589816,
+        "field_name": "ID piwik",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "5deb1117f7c789e2"
+          }
+        ]
+      },
+      {
+        "field_id": 589818,
+        "field_name": "ID google",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Красноярск"
+          }
+        ]
+      },
+      {
+        "field_id": 587868,
+        "field_name": "Форма с сайта",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "красноярск.synapse-studio.ru/w/sozdanie-internet-magazina"
+          }
+        ]
+      },
+      {
+        "field_id": 632884,
+        "field_name": "Utm-метка",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "source=google, medium=search, campaign=25600, keyword=7828652085-80476036494-393598362691------_как__создать__интернет__магазин, content=web"
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26688554"
+      }
+    },
+    "_embedded": {
+      "tags": [
+        {
+          "id": 335770,
+          "name": "c сайтa"
+        }
+      ],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44227774,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44227774"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26688380,
+    "name": "Сайт 5 системс",
+    "price": 421000,
+    "responsible_user_id": 1086540,
+    "group_id": 162924,
+    "status_id": 9876945,
+    "pipeline_id": 46779,
+    "loss_reason_id": null,
+    "created_by": 1086540,
+    "updated_by": 1086540,
+    "created_at": 1596175836,
+    "updated_at": 1602084342,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 629302,
+        "field_name": "проект в Natrium",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://natrium.insaitov.ru/node/174163"
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26688380"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44200114,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44200114"
+            }
+          }
+        },
+        {
+          "id": 44028324,
+          "is_main": false,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44028324"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26689386,
+    "name": "Металлическая мебель Вика Двина (воркспейс)",
+    "price": 0,
+    "responsible_user_id": 1376809,
+    "group_id": 0,
+    "status_id": 28985781,
+    "pipeline_id": 7038,
+    "loss_reason_id": null,
+    "created_by": 1376809,
+    "updated_by": 1376809,
+    "created_at": 1596188835,
+    "updated_at": 1606107520,
+    "closed_at": null,
+    "closest_task_at": 1607201940,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Контекст",
+            "enum_id": 1326190
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Тендеры",
+            "enum_id": 1416246
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Чебоксары"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://www.cerera-mebel.ru/"
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26689386"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44228940,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44228940"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26689592,
+    "name": "Тулл­­­­­­­­­­­­­­егстр­­­­ой",
+    "price": 0,
+    "responsible_user_id": 3715131,
+    "group_id": 0,
+    "status_id": 28986483,
+    "pipeline_id": 7038,
+    "loss_reason_id": null,
+    "created_by": 3715131,
+    "updated_by": 6339639,
+    "created_at": 1596191418,
+    "updated_at": 1602504636,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Контекст",
+            "enum_id": 1326190
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "С рекламы",
+            "enum_id": 1394829
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Тула"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://tullegstroy.com/"
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26689592"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44228582,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44228582"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26689892,
+    "name": "Каб Као Москва (тайская кухня)",
+    "price": 0,
+    "responsible_user_id": 1376809,
+    "group_id": 0,
+    "status_id": 28985823,
+    "pipeline_id": 7038,
+    "loss_reason_id": null,
+    "created_by": 1364221,
+    "updated_by": 1376809,
+    "created_at": 1596195003,
+    "updated_at": 1606107520,
+    "closed_at": null,
+    "closest_task_at": 1607201940,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 525504,
+        "field_name": "Описание",
+        "field_code": null,
+        "field_type": "textarea",
+        "values": [
+          {
+            "value": "надежда\n+7 (926) 709 61 29"
+          }
+        ]
+      },
+      {
+        "field_id": 589816,
+        "field_name": "ID piwik",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "4dbd48aa063833ef"
+          }
+        ]
+      },
+      {
+        "field_id": 589818,
+        "field_name": "ID google",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Москва"
+          }
+        ]
+      },
+      {
+        "field_id": 587868,
+        "field_name": "Форма с сайта",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "москва.synapse-studio.ru/p/kontekstnaya-reklama"
+          }
+        ]
+      },
+      {
+        "field_id": 632884,
+        "field_name": "Utm-метка",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "source=google, medium=search, campaign=blue, keyword=773449648-41522483915-254211548546------_рекламные__агентства__москвы, content=cntx"
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Search Google",
+            "enum_id": 1431748
+          }
+        ]
+      },
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Контекст",
+            "enum_id": 1326190
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Москва"
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26689892"
+      }
+    },
+    "_embedded": {
+      "tags": [
+        {
+          "id": 335770,
+          "name": "c сайтa"
+        }
+      ],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44229436,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44229436"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26690098,
+    "name": "Сайт для строит лесов",
+    "price": 0,
+    "responsible_user_id": 3813342,
+    "group_id": 0,
+    "status_id": 143,
+    "pipeline_id": 28752,
+    "loss_reason_id": null,
+    "created_by": 3813342,
+    "updated_by": 3813342,
+    "created_at": 1596197370,
+    "updated_at": 1596531371,
+    "closed_at": 1596531371,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Сайт",
+            "enum_id": 1326192
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "С рекламы",
+            "enum_id": 1394829
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Санкт-Петербург"
+          }
+        ]
+      },
+      {
+        "field_id": 593152,
+        "field_name": "Причина закрытия",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "другой подрядчик",
+            "enum_id": 1386905
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26690098"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44229168,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44229168"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26690302,
+    "name": "Стеклянные перегородки",
+    "price": 16000,
+    "responsible_user_id": 3934992,
+    "group_id": 26679,
+    "status_id": 17975572,
+    "pipeline_id": 938197,
+    "loss_reason_id": null,
+    "created_by": 3934992,
+    "updated_by": 3934992,
+    "created_at": 1596201239,
+    "updated_at": 1603700759,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Москва"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://steklospace.ru/"
+          }
+        ]
+      },
+      {
+        "field_id": 629302,
+        "field_name": "проект в Natrium",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://natrium.insaitov.ru/node/174285"
+          }
+        ]
+      },
+      {
+        "field_id": 613512,
+        "field_name": "Запуск",
+        "field_code": null,
+        "field_type": "date",
+        "values": [
+          {
+            "value": 1597006800
+          }
+        ]
+      },
+      {
+        "field_id": 613514,
+        "field_name": "Отвал",
+        "field_code": null,
+        "field_type": "date",
+        "values": [
+          {
+            "value": 1602104400
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26690302"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44057884,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44057884"
+            }
+          }
+        },
+        {
+          "id": 44271202,
+          "is_main": false,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44271202"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26690746,
+    "name": "Гипотеза только на инглиш",
+    "price": 0,
+    "responsible_user_id": 544512,
+    "group_id": 162924,
+    "status_id": 29160522,
+    "pipeline_id": 28752,
+    "loss_reason_id": null,
+    "created_by": 1364221,
+    "updated_by": 581856,
+    "created_at": 1596207603,
+    "updated_at": 1602225220,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 525504,
+        "field_name": "Описание",
+        "field_code": null,
+        "field_type": "textarea",
+        "values": [
+          {
+            "value": "Abdullah\n+7 (926) 360 07 56"
+          }
+        ]
+      },
+      {
+        "field_id": 589816,
+        "field_name": "ID piwik",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "4915452e6a72684c"
+          }
+        ]
+      },
+      {
+        "field_id": 589818,
+        "field_name": "ID google",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Москва"
+          }
+        ]
+      },
+      {
+        "field_id": 587868,
+        "field_name": "Форма с сайта",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "москва.synapse-studio.ru/w/sozdanie-internet-magazina"
+          }
+        ]
+      },
+      {
+        "field_id": 632884,
+        "field_name": "Utm-метка",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "source=yandex, medium=context, campaign=25600, keyword=43566881-3834842017-8469355566--1--wi-fi.ru--разработка_интернет_магазина_цена, content=web"
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Context Yandex",
+            "enum_id": 1460128
+          }
+        ]
+      },
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "7600/7600+",
+            "enum_id": 1400333
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "?"
+          }
+        ]
+      },
+      {
+        "field_id": 593152,
+        "field_name": "Причина закрытия",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "не наш клиент",
+            "enum_id": 1409320
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "7600/7600+",
+            "enum_id": 1462110
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26690746"
+      }
+    },
+    "_embedded": {
+      "tags": [
+        {
+          "id": 335770,
+          "name": "c сайтa"
+        }
+      ],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44231640,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44231640"
+            }
+          }
+        },
+        {
+          "id": 44238100,
+          "is_main": false,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44238100"
+            }
+          }
+        },
+        {
+          "id": 44238102,
+          "is_main": false,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44238102"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26654344,
+    "name": "Продажа одного объекта от риелтора",
+    "price": 7600,
+    "responsible_user_id": 6350412,
+    "group_id": 0,
+    "status_id": 29160519,
+    "pipeline_id": 28752,
+    "loss_reason_id": null,
+    "created_by": 549672,
+    "updated_by": 549672,
+    "created_at": 1595848811,
+    "updated_at": 1606312998,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Переезд сайт",
+            "enum_id": 1389833
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "С рекламы",
+            "enum_id": 1394829
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Калуга"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "http://fkn-kaluga.ru/"
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "7600/7600+",
+            "enum_id": 1462110
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26654344"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44209752,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44209752"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26654590,
+    "name": "Насосы",
+    "price": 7600,
+    "responsible_user_id": 6350412,
+    "group_id": 0,
+    "status_id": 142,
+    "pipeline_id": 28752,
+    "loss_reason_id": null,
+    "created_by": 549672,
+    "updated_by": 1683700,
+    "created_at": 1595851080,
+    "updated_at": 1606312998,
+    "closed_at": 1599749229,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "7600/7600+",
+            "enum_id": 1400333
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Рекомендация",
+            "enum_id": 1394825
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Санкт-Петербург"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "http://?"
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "7600/7600+",
+            "enum_id": 1462110
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26654590"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [
+        {
+          "id": 44509680,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/companies/44509680"
+            }
+          }
+        }
+      ],
+      "contacts": [
+        {
+          "id": 36353962,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/36353962"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26656402,
+    "name": "ППУ завод",
+    "price": 7000,
+    "responsible_user_id": 6350412,
+    "group_id": 0,
+    "status_id": 143,
+    "pipeline_id": 28752,
+    "loss_reason_id": null,
+    "created_by": 1364221,
+    "updated_by": 1683700,
+    "created_at": 1595916903,
+    "updated_at": 1606312998,
+    "closed_at": 1596455864,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 525504,
+        "field_name": "Описание",
+        "field_code": null,
+        "field_type": "textarea",
+        "values": [
+          {
+            "value": "Юрий\n89826890195/zakaz@tdkzit.ru\nПроанализировать сайт http://tdkzit.ru/ ошибки, пожелания и т.д Запустить рекламу в ЯндексДирект & GoogleAdwords"
+          }
+        ]
+      },
+      {
+        "field_id": 589816,
+        "field_name": "ID piwik",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "6b6b755b3061d03e"
+          }
+        ]
+      },
+      {
+        "field_id": 589818,
+        "field_name": "ID google",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Екатеринбург"
+          }
+        ]
+      },
+      {
+        "field_id": 587868,
+        "field_name": "Форма с сайта",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "екатеринбург.synapse-studio.ru/p/reklama-direkt"
+          }
+        ]
+      },
+      {
+        "field_id": 632884,
+        "field_name": "Utm-метка",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "source=yandex, medium=search, campaign=green, keyword=16678454-3837175730-7563669273--3--none--реклама_директ_екатеринбург, content=cntx"
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Search Yandex",
+            "enum_id": 1431746
+          }
+        ]
+      },
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Аналитика сайта",
+            "enum_id": 1427764
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Екатеринбург"
+          }
+        ]
+      },
+      {
+        "field_id": 593152,
+        "field_name": "Причина закрытия",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "отложено на неизвестность",
+            "enum_id": 1389303
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26656402"
+      }
+    },
+    "_embedded": {
+      "tags": [
+        {
+          "id": 335770,
+          "name": "c сайтa"
+        }
+      ],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44212218,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44212218"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26658316,
+    "name": "Филком Хавейл",
+    "price": 4000,
+    "responsible_user_id": 1179726,
+    "group_id": 26679,
+    "status_id": 17956960,
+    "pipeline_id": 938197,
+    "loss_reason_id": null,
+    "created_by": 1179726,
+    "updated_by": 1179726,
+    "created_at": 1595936829,
+    "updated_at": 1606474807,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Контекст",
+            "enum_id": 1326190
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Стерлитамак +2"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "http://filcom.haval.ru"
+          }
+        ]
+      },
+      {
+        "field_id": 525504,
+        "field_name": "Описание",
+        "field_code": null,
+        "field_type": "textarea",
+        "values": [
+          {
+            "value": "7 (3473) 20-90-17"
+          }
+        ]
+      },
+      {
+        "field_id": 629302,
+        "field_name": "проект в Natrium",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://natrium.insaitov.ru/node/173323"
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26658316"
+      }
+    },
+    "_embedded": {
+      "tags": [
+        {
+          "id": 554608,
+          "name": "автосалоны"
+        }
+      ],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [
+        {
+          "id": 43476192,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/companies/43476192"
+            }
+          }
+        }
+      ],
+      "contacts": [
+        {
+          "id": 42983208,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/42983208"
+            }
+          }
+        },
+        {
+          "id": 44214748,
+          "is_main": false,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44214748"
+            }
+          }
+        },
+        {
+          "id": 44454196,
+          "is_main": false,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44454196"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26662008,
+    "name": "Зоогостиница",
+    "price": 41600,
+    "responsible_user_id": 6350412,
+    "group_id": 0,
+    "status_id": 32809194,
+    "pipeline_id": 28752,
+    "loss_reason_id": null,
+    "created_by": 549672,
+    "updated_by": 549672,
+    "created_at": 1596021885,
+    "updated_at": 1606312998,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "от контекста /веба /поддержки",
+            "enum_id": 1428394
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Набережные Челны"
+          }
+        ]
+      },
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "7600/7600+",
+            "enum_id": 1400333
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "7600/7600+",
+            "enum_id": 1462110
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "http://нет надо новый для нового проекта"
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26662008"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [
+        {
+          "id": 29424370,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/companies/29424370"
+            }
+          }
+        }
+      ],
+      "contacts": [
+        {
+          "id": 29424372,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/29424372"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26664728,
+    "name": "Звукоизоляция https://shop-acoustic.ru/",
+    "price": 17600,
+    "responsible_user_id": 6350412,
+    "group_id": 0,
+    "status_id": 29160519,
+    "pipeline_id": 28752,
+    "loss_reason_id": null,
+    "created_by": 549672,
+    "updated_by": 1683700,
+    "created_at": 1596096372,
+    "updated_at": 1606312998,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "от контекста /веба /поддержки",
+            "enum_id": 1428394
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Уфа"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://shop-acoustic.ru/"
+          }
+        ]
+      },
+      {
+        "field_id": 525504,
+        "field_name": "Описание",
+        "field_code": null,
+        "field_type": "textarea",
+        "values": [
+          {
+            "value": "еще не общалась не знаю какую услуг надо, скорее всего аудит - сацт никуда не годится другие ему сказали"
+          }
+        ]
+      },
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Сайт-каталог",
+            "enum_id": 1400335
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "Сайт-каталог",
+            "enum_id": 1462120
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26664728"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44210500,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44210500"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26690156,
+    "name": "ИМ 19 600, запчасти",
+    "price": 19600,
+    "responsible_user_id": 6350412,
+    "group_id": 0,
+    "status_id": 33018708,
+    "pipeline_id": 28752,
+    "loss_reason_id": null,
+    "created_by": 549672,
+    "updated_by": 549672,
+    "created_at": 1596198294,
+    "updated_at": 1606312998,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "ИМ (типовые)",
+            "enum_id": 1449346
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "от контекста /веба /поддержки",
+            "enum_id": 1428394
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Вологда"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://allmaz.ru/"
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "ИМ (типовые)",
+            "enum_id": 1462114
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26690156"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 32160583,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/32160583"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26690442,
+    "name": "SEO",
+    "price": 150000,
+    "responsible_user_id": 6350412,
+    "group_id": 0,
+    "status_id": 29160519,
+    "pipeline_id": 28752,
+    "loss_reason_id": null,
+    "created_by": 549672,
+    "updated_by": 549672,
+    "created_at": 1596203337,
+    "updated_at": 1606312998,
+    "closed_at": null,
+    "closest_task_at": 1611953940,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "SEO",
+            "enum_id": 1389823
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "от контекста /веба /поддержки",
+            "enum_id": 1428394
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Санкт-Петербург"
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "Сайт",
+            "enum_id": 1462116
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26690442"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [
+        {
+          "id": 42974598,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/companies/42974598"
+            }
+          }
+        }
+      ],
+      "contacts": [
+        {
+          "id": 42974590,
+          "is_main": false,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/42974590"
+            }
+          }
+        },
+        {
+          "id": 43235280,
+          "is_main": false,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/43235280"
+            }
+          }
+        },
+        {
+          "id": 43740600,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/43740600"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26690730,
+    "name": "стратегия 5 систем",
+    "price": 12000,
+    "responsible_user_id": 6350412,
+    "group_id": 0,
+    "status_id": 142,
+    "pipeline_id": 28752,
+    "loss_reason_id": null,
+    "created_by": 549672,
+    "updated_by": 1683700,
+    "created_at": 1596208200,
+    "updated_at": 1606312998,
+    "closed_at": 1596208200,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "SEO",
+            "enum_id": 1389823
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Рекомендация",
+            "enum_id": 1394825
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Вологда"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://5sauto.ru/"
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "SEO",
+            "enum_id": 1462134
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26690730"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44028324,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44028324"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26652584,
+    "name": "ВКК SEO",
+    "price": 15000,
+    "responsible_user_id": 5608884,
+    "group_id": 27837,
+    "status_id": 18516255,
+    "pipeline_id": 86220,
+    "loss_reason_id": null,
+    "created_by": 5608884,
+    "updated_by": 5608884,
+    "created_at": 1595830982,
+    "updated_at": 1606919638,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "SEO",
+            "enum_id": 1462134
+          }
+        ]
+      },
+      {
+        "field_id": 629302,
+        "field_name": "проект в Natrium",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://natrium.insaitov.ru/node/100022"
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26652584"
+      }
+    },
+    "_embedded": {
+      "tags": [
+        {
+          "id": 496690,
+          "name": "сентябрь"
+        },
+        {
+          "id": 572424,
+          "name": "Катянаставник"
+        }
+      ],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [
+        {
+          "id": 36736430,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/companies/36736430"
+            }
+          }
+        }
+      ],
+      "contacts": [
+        {
+          "id": 36736434,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/36736434"
+            }
+          }
+        },
+        {
+          "id": 37214886,
+          "is_main": false,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/37214886"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26652842,
+    "name": "ПО \"Кооператор\" (Мой Бизнес)",
+    "price": 5000,
+    "responsible_user_id": 5767218,
+    "group_id": 26679,
+    "status_id": 17960494,
+    "pipeline_id": 938197,
+    "loss_reason_id": null,
+    "created_by": 3517839,
+    "updated_by": 5767218,
+    "created_at": 1595833472,
+    "updated_at": 1607065594,
+    "closed_at": null,
+    "closest_task_at": 1605646740,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Реклама в Fb или Instagram",
+            "enum_id": 1450810
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Кириллов"
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "ВК",
+            "enum_id": 1462106
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Тендеры",
+            "enum_id": 1416246
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://vk.com/id482754399"
+          }
+        ]
+      },
+      {
+        "field_id": 629302,
+        "field_name": "проект в Natrium",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://natrium.insaitov.ru/node/174951"
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26652842"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44206524,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44206524"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26656350,
+    "name": "Производство расходомеров ЭМИС",
+    "price": 0,
+    "responsible_user_id": 6350412,
+    "group_id": 0,
+    "status_id": 28985871,
+    "pipeline_id": 7038,
+    "loss_reason_id": null,
+    "created_by": 1376809,
+    "updated_by": 1683700,
+    "created_at": 1595916414,
+    "updated_at": 1606987643,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Контекст",
+            "enum_id": 1326190
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "С рекламы",
+            "enum_id": 1394829
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Екатеринбург"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://emis-kip.ru/"
+          }
+        ]
+      },
+      {
+        "field_id": 525504,
+        "field_name": "Описание",
+        "field_code": null,
+        "field_type": "textarea",
+        "values": [
+          {
+            "value": "+2"
+          }
+        ]
+      },
+      {
+        "field_id": 593152,
+        "field_name": "Причина закрытия",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "другой город",
+            "enum_id": 1386901
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26656350"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44200884,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44200884"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26657088,
+    "name": "Копейский завод изоляции труб (ППУ)",
+    "price": 0,
+    "responsible_user_id": 1376809,
+    "group_id": 0,
+    "status_id": 28986483,
+    "pipeline_id": 7038,
+    "loss_reason_id": null,
+    "created_by": 1376809,
+    "updated_by": 1376809,
+    "created_at": 1595923591,
+    "updated_at": 1606906423,
+    "closed_at": null,
+    "closest_task_at": 1607029140,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Контекст",
+            "enum_id": 1326190
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "от контекста /веба /поддержки",
+            "enum_id": 1428394
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Екатеринбург"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "http://tdkzit.ru/"
+          }
+        ]
+      },
+      {
+        "field_id": 525504,
+        "field_name": "Описание",
+        "field_code": null,
+        "field_type": "textarea",
+        "values": [
+          {
+            "value": "+2"
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26657088"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44212218,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44212218"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26658152,
+    "name": "Чатра, нет тел",
+    "price": 0,
+    "responsible_user_id": 6350412,
+    "group_id": 0,
+    "status_id": 28985871,
+    "pipeline_id": 7038,
+    "loss_reason_id": null,
+    "created_by": 3715131,
+    "updated_by": 3715131,
+    "created_at": 1595934932,
+    "updated_at": 1606987643,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "чатра (узнать откуда)",
+            "enum_id": 1394831
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Кемерово"
+          }
+        ]
+      },
+      {
+        "field_id": 593152,
+        "field_name": "Причина закрытия",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "брак / нет номеров",
+            "enum_id": 1455814
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26658152"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44214194,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44214194"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26658762,
+    "name": "Сайт-каталог панели",
+    "price": 60000,
+    "responsible_user_id": 3813342,
+    "group_id": 0,
+    "status_id": 31831815,
+    "pipeline_id": 28752,
+    "loss_reason_id": null,
+    "created_by": 3813342,
+    "updated_by": 581856,
+    "created_at": 1595941709,
+    "updated_at": 1606815778,
+    "closed_at": null,
+    "closest_task_at": 1607374740,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Лендинг",
+            "enum_id": 1400339
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Рекомендация",
+            "enum_id": 1394825
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Санкт-Петербург"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "http://rhuga.ru/"
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "Лендинг",
+            "enum_id": 1462118
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26658762"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44210490,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44210490"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26661880,
+    "name": "Сайт-каталог Невские окна",
+    "price": 46600,
+    "responsible_user_id": 522864,
+    "group_id": 162924,
+    "status_id": 31332714,
+    "pipeline_id": 721876,
+    "loss_reason_id": null,
+    "created_by": 3277920,
+    "updated_by": 1572358,
+    "created_at": 1596020108,
+    "updated_at": 1607073466,
+    "closed_at": null,
+    "closest_task_at": 1607932800,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Вологда"
+          }
+        ]
+      },
+      {
+        "field_id": 629302,
+        "field_name": "проект в Natrium",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://natrium.insaitov.ru/node/173834"
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26661880"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44056988,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44056988"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26686768,
+    "name": "Нет тел / Заявка на почту",
+    "price": 0,
+    "responsible_user_id": 6350412,
+    "group_id": 0,
+    "status_id": 28985871,
+    "pipeline_id": 7038,
+    "loss_reason_id": null,
+    "created_by": 3715131,
+    "updated_by": 3715131,
+    "created_at": 1596112461,
+    "updated_at": 1606987643,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Контекст",
+            "enum_id": 1326190
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "на почту (узнать откуда)",
+            "enum_id": 1394823
+          }
+        ]
+      },
+      {
+        "field_id": 593152,
+        "field_name": "Причина закрытия",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "брак / нет номеров",
+            "enum_id": 1455814
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26686768"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44226014,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44226014"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26686952,
+    "name": "Алексей хотел портал услышал от 150 и скинул",
+    "price": 1,
+    "responsible_user_id": 6350412,
+    "group_id": 0,
+    "status_id": 29160522,
+    "pipeline_id": 28752,
+    "loss_reason_id": null,
+    "created_by": 549672,
+    "updated_by": 549672,
+    "created_at": 1596115106,
+    "updated_at": 1606987643,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "CRM/IP",
+            "enum_id": 1326194
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "С рекламы",
+            "enum_id": 1394829
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Гусь-Хрустальный"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "http://gus-info.ru/org/758"
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26686952"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44226068,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44226068"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26689934,
+    "name": "ИМ одежда",
+    "price": 0,
+    "responsible_user_id": 6350412,
+    "group_id": 0,
+    "status_id": 33018708,
+    "pipeline_id": 28752,
+    "loss_reason_id": null,
+    "created_by": 3813342,
+    "updated_by": 6350412,
+    "created_at": 1596188704,
+    "updated_at": 1606987643,
+    "closed_at": null,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Search Yandex",
+            "enum_id": 1431746
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Воронеж"
+          }
+        ]
+      },
+      {
+        "field_id": 525504,
+        "field_name": "Описание",
+        "field_code": null,
+        "field_type": "textarea",
+        "values": [
+          {
+            "value": "Наталья\n+7 (952) 559 37 29"
+          }
+        ]
+      },
+      {
+        "field_id": 589816,
+        "field_name": "ID piwik",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "81ac71322237d0d8"
+          }
+        ]
+      },
+      {
+        "field_id": 589818,
+        "field_name": "ID google",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Воронеж"
+          }
+        ]
+      },
+      {
+        "field_id": 587868,
+        "field_name": "Форма с сайта",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "воронеж.synapse-studio.ru/w/sozdanie-internet-magazina"
+          }
+        ]
+      },
+      {
+        "field_id": 632884,
+        "field_name": "Utm-метка",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "source=yandex, medium=search, campaign=25600, keyword=49433079-4102154843-8613869559--7--none--создание_интернет_магазина_под_ключ, content=web"
+          }
+        ]
+      },
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "ИМ (типовые)",
+            "enum_id": 1449346
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "ИМ (типовые)",
+            "enum_id": 1462114
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26689934"
+      }
+    },
+    "_embedded": {
+      "tags": [
+        {
+          "id": 335770,
+          "name": "c сайтa"
+        }
+      ],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44228920,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44228920"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26689114,
+    "name": "ЗАО Ростокс-Н",
+    "price": 163300,
+    "responsible_user_id": 1086540,
+    "group_id": 162924,
+    "status_id": 24863292,
+    "pipeline_id": 721876,
+    "loss_reason_id": null,
+    "created_by": 1086540,
+    "updated_by": 1086540,
+    "created_at": 1596185863,
+    "updated_at": 1607093179,
+    "closed_at": null,
+    "closest_task_at": 1607093479,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 629302,
+        "field_name": "проект в Natrium",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://natrium.insaitov.ru/node/172060"
+          }
+        ]
+      },
+      {
+        "field_id": 638244,
+        "field_name": "Проект 2",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "https://natrium.insaitov.ru/node/172061"
+          }
+        ]
+      },
+      {
+        "field_id": 636476,
+        "field_name": "Дата запуска",
+        "field_code": null,
+        "field_type": "date",
+        "values": [
+          {
+            "value": 1605214800
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26689114"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44098966,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44098966"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 26690354,
+    "name": "шпаклевка",
+    "price": 180000,
+    "responsible_user_id": 6484200,
+    "group_id": 0,
+    "status_id": 29162241,
+    "pipeline_id": 28752,
+    "loss_reason_id": null,
+    "created_by": 549672,
+    "updated_by": 6484200,
+    "created_at": 1596202071,
+    "updated_at": 1607088602,
+    "closed_at": null,
+    "closest_task_at": 1607326500,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Сайт",
+            "enum_id": 1326192
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "С рекламы",
+            "enum_id": 1394829
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "Череповец"
+          }
+        ]
+      },
+      {
+        "field_id": 613482,
+        "field_name": "Сайт",
+        "field_code": null,
+        "field_type": "url",
+        "values": [
+          {
+            "value": "http://нет"
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "ИМ (типовые)",
+            "enum_id": 1462114
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/26690354"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 44229148,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/44229148"
+            }
+          }
+        }
+      ]
+    }
+  }
+]

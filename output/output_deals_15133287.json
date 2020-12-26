@@ -1,0 +1,169 @@
+[
+  {
+    "id": 15139555,
+    "name": "Нейминг+ФС, Колл центр, продажа",
+    "price": 105000,
+    "responsible_user_id": 6350412,
+    "group_id": 0,
+    "status_id": 143,
+    "pipeline_id": 28752,
+    "loss_reason_id": null,
+    "created_by": 581856,
+    "updated_by": 1683700,
+    "created_at": 1495003162,
+    "updated_at": 1606987141,
+    "closed_at": 1507186708,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Дизайн",
+            "enum_id": 1326198
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/15139555"
+      }
+    },
+    "_embedded": {
+      "tags": [],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [],
+      "contacts": [
+        {
+          "id": 30512221,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/30512221"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 15133287,
+    "name": "Вишерский доработки",
+    "price": 10000,
+    "responsible_user_id": 5608884,
+    "group_id": 27837,
+    "status_id": 10220319,
+    "pipeline_id": 86220,
+    "loss_reason_id": null,
+    "created_by": 336148,
+    "updated_by": 5608884,
+    "created_at": 1494933597,
+    "updated_at": 1607081486,
+    "closed_at": null,
+    "closest_task_at": 1607201940,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 562024,
+        "field_name": "Устаревшее (услуга)",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Доработки",
+            "enum_id": 1389831
+          }
+        ]
+      },
+      {
+        "field_id": 535552,
+        "field_name": "Сайт еще",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "vishersky.ru"
+          }
+        ]
+      },
+      {
+        "field_id": 588346,
+        "field_name": "Ссылка на КП",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "https://docs.google.com/spreadsheets/d/1josKEvCt8NiHktvaWHn7U27l_lDfCBL1XCIeJoz80dg/edit#gid=2142646699"
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "Доработки",
+            "enum_id": 1462132
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/15133287"
+      }
+    },
+    "_embedded": {
+      "tags": [
+        {
+          "id": 507310,
+          "name": "декабрь"
+        }
+      ],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [
+        {
+          "id": 29221574,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/companies/29221574"
+            }
+          }
+        }
+      ],
+      "contacts": [
+        {
+          "id": 30526231,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/30526231"
+            }
+          }
+        },
+        {
+          "id": 43597368,
+          "is_main": false,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/43597368"
+            }
+          }
+        }
+      ]
+    }
+  }
+]

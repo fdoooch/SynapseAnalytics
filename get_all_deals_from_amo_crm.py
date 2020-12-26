@@ -3,56 +3,44 @@
 #Складываем их на сервере в AMO DEALS JSON WEEK
 #Загружаем в BigQuery
 #
+import AmoCRM
+import GoogleBQ_deals
 import config
 import os
-import amo_crm as amo
-import google_bigquery as gb
-import json
 from loguru import logger
 from heapq import merge
 
-#Добавляем к датафрейму дополнительные поля для упрощения поиска в BQ
-def add_bq_special_fields_to_amo_deals_dataframe(df_amo_deals):
-    add_bq_special_fields_to_amo_deals_dataframe(df_amo_deals)
-    return 0
-
-
-#Загружаем сделки в BigQuery
-def put_deals_from_amo_week_json_to_bigquery():
-    week_json_path = config.AMO_LEADS_WEEK_JSON_PATH
-    #создаём таблицу, если её нет
-    with open(config.BQ_TB_AMO_DEALS_RAW_SHEMA, 'r', encoding="utf8") as json_schema:
-        tb_schema = json.load(json_schema)
-    gb.create_table(config.BQ_DS_MAIN, config.BQ_TB_AMO_DEALS_RAW, tb_schema)
-    #Получаем список json week файлов
-    files_list = os.listdir(week_json_path)
-    #Обрабатываем файлы
-    for filename in files_list:    
-        with open(week_json_path + filename, 'r', encoding="utf8") as json_file:
-            #Загружаем json в датафрейм
-            json_deals = json.load(json_file)
-            df_deals = amo.get_dataframe_from_json_deals(json_deals)
-            df_deals = add_bq_special_fields_to_amo_deals_dataframe(df_deals)
-            logger.info(f'Файл {filename} загружен в датафрейм.')
-            #Мерджим датафрейм в BigQuery
-            amo_deal_fields_list = list(merge(config.AMO_DEALS_BASE_FIELDS, config.BQ_DEALS_SPECIAL_FIELDS, set(config.AMO_DEALS_SPECIAL_FIELDS.keys), set(config.AMO_DEALS_CUSTOM_FIELDS.keys())))
-            gb.merge_bq_table_with_dataframe(df_deals, config.BQ_DS_MAIN, config.BQ_TB_AMO_DEALS_RAW, tb_schema, amo_deal_fields_list, 'id')
-            logger.info(f'Файл {filename} добавлен в BigQuery.')
 
 logger.add("info.log", format="{time} {level} {module} : {function} - {message}", level="INFO", rotation="10:00", compression="zip")
+logger.add("connection_errors.log", format="{time} {level} {module} : {function} - {message}", level="ERROR", rotation="10:00", compression="zip")
+logger.level('df_errors.log', no=14, color='<red>', icon='❌❌')
+logger.level('connection_errors', no=15, color='<red>', icon='❌❌❌')
 
-logger.info('Загружаем все сделки из AmoCRM на сервер')
-#amo.amo_get_token_fdoooch()
-#amo.amo_get_all_deals_ext_to_json(config.AMO_LEADS_RAW_JSON_PATH, 
- #                                 config.AMO_PAGE_SIZE, 
- #                                 config.AMO_PAGES_COUNT_PER_LOAD, 
- #                                 config.AMO_ALL_LEADS_EXT_JSON_FILENAME)
-logger.info('Все сделки из AmoCRM успешно выгружены на сервер')
-logger.info('Добавляем сделки в AMO LEADS WEEK JSON')
-#amo.amo_put_deals_from_raw_json_to_week_json(config.AMO_LEADS_RAW_JSON_PATH, config.AMO_LEADS_WEEK_JSON_PATH)
-logger.info('сделки добавлены в AMO LEADS WEEK JSON')
+logger.info('Запускаю скрипт update_deals_from_amo_crm.py')
+amo_robot = AmoCRM.AmoCRM()
+bq_robot = GoogleBQ_deals.GoogleBQ_deals()
+head = bq_robot.get_deals_table_head()
+pipelines_list = [7038, 28752] #идентификаторы воронок, из которых хотим забирать сделки
+
+
+#Скачиваем все сделки из AmoCRM в JSON файлы и разбиваем их по неделям
+amo_robot.get_all_deals_from_crm()
+
+logger.info('Все сделки из AmoCRM успешно выгружены на сервер и добавлены в AMO DEALS WEEK JSON')
+
 logger.info('Загружаем сделки в BigQuery')
-put_deals_from_amo_week_json_to_bigquery()
+#получаем путь к Amo Deals Week Json
+week_json_path = amo_robot.get_deals_week_json_path()
+#получаем список файлов:
+files_list = os.listdir(week_json_path)
+for filename in files_list:
+    #получаем датафрейм из json-файла
+    df_deals = amo_robot.get_deals_dataframe_from_file(week_json_path, filename, head, pipelines_list)
+    #мерджим датафрейм в BigQuery
+    bq_robot.merge_deals_dataframe_to_bigquery(df_deals)
+    logger.info(f'файл {filename} успешно загружен в BigQuery')
+
+#put_deals_from_amo_week_json_to_bigquery()
 logger.info('Все сделки успешно загружены в BigQuery')
 
 

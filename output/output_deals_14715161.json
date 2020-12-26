@@ -1,0 +1,199 @@
+[
+  {
+    "id": 14700777,
+    "name": "Нижне-Свирский заповедник",
+    "price": 1,
+    "responsible_user_id": 3813342,
+    "group_id": 0,
+    "status_id": 32586528,
+    "pipeline_id": 2059851,
+    "loss_reason_id": null,
+    "created_by": 549672,
+    "updated_by": 3813342,
+    "created_at": 1490700308,
+    "updated_at": 1607007452,
+    "closed_at": null,
+    "closest_task_at": 1607374740,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 535552,
+        "field_name": "Сайт еще",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "http://www.n-svirsky.ru/"
+          }
+        ]
+      },
+      {
+        "field_id": 645508,
+        "field_name": "Дата первого звонка",
+        "field_code": null,
+        "field_type": "date",
+        "values": [
+          {
+            "value": 1574283600
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/14700777"
+      }
+    },
+    "_embedded": {
+      "tags": [
+        {
+          "id": 356918,
+          "name": "заповедники"
+        },
+        {
+          "id": 506122,
+          "name": "заповедники2018"
+        }
+      ],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [
+        {
+          "id": 29221664,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/companies/29221664"
+            }
+          }
+        }
+      ],
+      "contacts": [
+        {
+          "id": 29828715,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/29828715"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 14715161,
+    "name": "переезд  Полакс",
+    "price": 29800,
+    "responsible_user_id": 5608884,
+    "group_id": 27837,
+    "status_id": 142,
+    "pipeline_id": 28752,
+    "loss_reason_id": null,
+    "created_by": 522864,
+    "updated_by": 0,
+    "created_at": 1490796994,
+    "updated_at": 1607087474,
+    "closed_at": 1505118254,
+    "closest_task_at": null,
+    "is_deleted": false,
+    "custom_fields_values": [
+      {
+        "field_id": 535552,
+        "field_name": "Сайт еще",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "http://polaxe.ru/Katalogi.html"
+          }
+        ]
+      },
+      {
+        "field_id": 525504,
+        "field_name": "Описание",
+        "field_code": null,
+        "field_type": "textarea",
+        "values": [
+          {
+            "value": "нужно посчитать переезд сайта"
+          }
+        ]
+      },
+      {
+        "field_id": 512318,
+        "field_name": "Город",
+        "field_code": null,
+        "field_type": "text",
+        "values": [
+          {
+            "value": "СПБ"
+          }
+        ]
+      },
+      {
+        "field_id": 648028,
+        "field_name": "Услуга",
+        "field_code": null,
+        "field_type": "multiselect",
+        "values": [
+          {
+            "value": "Переезд сайт",
+            "enum_id": 1462128
+          }
+        ]
+      },
+      {
+        "field_id": 600935,
+        "field_name": "Канал",
+        "field_code": null,
+        "field_type": "select",
+        "values": [
+          {
+            "value": "Рекомендация",
+            "enum_id": 1394825
+          }
+        ]
+      }
+    ],
+    "score": null,
+    "account_id": 9221109,
+    "_links": {
+      "self": {
+        "href": "https://syn.amocrm.ru/api/v4/leads/14715161"
+      }
+    },
+    "_embedded": {
+      "tags": [
+        {
+          "id": 207382,
+          "name": "пауза"
+        }
+      ],
+      "catalog_elements": [],
+      "loss_reason": [],
+      "companies": [
+        {
+          "id": 28057024,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/companies/28057024"
+            }
+          }
+        }
+      ],
+      "contacts": [
+        {
+          "id": 28057026,
+          "is_main": true,
+          "_links": {
+            "self": {
+              "href": "https://syn.amocrm.ru/api/v4/contacts/28057026"
+            }
+          }
+        }
+      ]
+    }
+  }
+]
